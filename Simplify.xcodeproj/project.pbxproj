@@ -13,9 +13,11 @@
 		5EBF689E1BD1D09C0095281C /* Simplify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5EBF689C1BD1D09C0095281C /* Simplify.xcdatamodeld */; };
 		5EBF68A01BD1D09C0095281C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBF689F1BD1D09C0095281C /* Assets.xcassets */; };
 		5EBF68A31BD1D09C0095281C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EBF68A11BD1D09C0095281C /* LaunchScreen.storyboard */; };
+		7E5D54C7F39E6FB646810D5B /* libPods-Simplify.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 198726B8264BC35F8E02EBDF /* libPods-Simplify.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		198726B8264BC35F8E02EBDF /* libPods-Simplify.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Simplify.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBF68921BD1D09B0095281C /* Simplify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simplify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBF68951BD1D09C0095281C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EBF68971BD1D09C0095281C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		5EBF689F1BD1D09C0095281C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EBF68A21BD1D09C0095281C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EBF68A41BD1D09C0095281C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC8491DF3551EA649E525D83 /* Pods-Simplify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simplify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Simplify/Pods-Simplify.release.xcconfig"; sourceTree = "<group>"; };
+		D28EEC840954EC9E3B66A02E /* Pods-Simplify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simplify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Simplify/Pods-Simplify.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E5D54C7F39E6FB646810D5B /* libPods-Simplify.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03ADE88F15922BA36F8CED18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D28EEC840954EC9E3B66A02E /* Pods-Simplify.debug.xcconfig */,
+				CC8491DF3551EA649E525D83 /* Pods-Simplify.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		0A63BD03275DE892A725BFAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				198726B8264BC35F8E02EBDF /* libPods-Simplify.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5EBF68891BD1D09B0095281C = {
 			isa = PBXGroup;
 			children = (
 				5EBF68941BD1D09B0095281C /* Simplify */,
 				5EBF68931BD1D09B0095281C /* Products */,
+				03ADE88F15922BA36F8CED18 /* Pods */,
+				0A63BD03275DE892A725BFAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EBF68A71BD1D09C0095281C /* Build configuration list for PBXNativeTarget "Simplify" */;
 			buildPhases = (
+				6B7EB656D7A577ECBFFB1771 /* Check Pods Manifest.lock */,
 				5EBF688E1BD1D09B0095281C /* Sources */,
 				5EBF688F1BD1D09B0095281C /* Frameworks */,
 				5EBF68901BD1D09B0095281C /* Resources */,
+				E2D73719E1EAB0DA82745757 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +157,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B7EB656D7A577ECBFFB1771 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E2D73719E1EAB0DA82745757 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Simplify/Pods-Simplify-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5EBF688E1BD1D09B0095281C /* Sources */ = {
@@ -250,23 +309,27 @@
 		};
 		5EBF68A81BD1D09C0095281C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D28EEC840954EC9E3B66A02E /* Pods-Simplify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Simplify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.boilermakeIOT.Simplify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
 		5EBF68A91BD1D09C0095281C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC8491DF3551EA649E525D83 /* Pods-Simplify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Simplify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.boilermakeIOT.Simplify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -289,6 +352,7 @@
 				5EBF68A91BD1D09C0095281C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
