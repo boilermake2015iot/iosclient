@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		5EBF68961BD1D09C0095281C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBF68951BD1D09C0095281C /* AppDelegate.swift */; };
-		5EBF68981BD1D09C0095281C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBF68971BD1D09C0095281C /* ViewController.swift */; };
+		5EBF68981BD1D09C0095281C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBF68971BD1D09C0095281C /* HomeViewController.swift */; };
 		5EBF689B1BD1D09C0095281C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EBF68991BD1D09C0095281C /* Main.storyboard */; };
 		5EBF689E1BD1D09C0095281C /* Simplify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5EBF689C1BD1D09C0095281C /* Simplify.xcdatamodeld */; };
 		5EBF68A01BD1D09C0095281C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBF689F1BD1D09C0095281C /* Assets.xcassets */; };
 		5EBF68A31BD1D09C0095281C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EBF68A11BD1D09C0095281C /* LaunchScreen.storyboard */; };
-		7E5D54C7F39E6FB646810D5B /* libPods-Simplify.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 198726B8264BC35F8E02EBDF /* libPods-Simplify.a */; };
+		BAEFB89639451DBF89CC9A87 /* Pods_Simplify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DAFCE53613CD8CA3481EF9 /* Pods_Simplify.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		198726B8264BC35F8E02EBDF /* libPods-Simplify.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Simplify.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBF68921BD1D09B0095281C /* Simplify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simplify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBF68951BD1D09C0095281C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5EBF68971BD1D09C0095281C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5EBF68971BD1D09C0095281C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5EBF689A1BD1D09C0095281C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EBF689D1BD1D09C0095281C /* Simplify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Simplify.xcdatamodel; sourceTree = "<group>"; };
 		5EBF689F1BD1D09C0095281C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EBF68A21BD1D09C0095281C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EBF68A41BD1D09C0095281C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80DAFCE53613CD8CA3481EF9 /* Pods_Simplify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simplify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8491DF3551EA649E525D83 /* Pods-Simplify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simplify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Simplify/Pods-Simplify.release.xcconfig"; sourceTree = "<group>"; };
 		D28EEC840954EC9E3B66A02E /* Pods-Simplify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simplify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Simplify/Pods-Simplify.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -35,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E5D54C7F39E6FB646810D5B /* libPods-Simplify.a in Frameworks */,
+				BAEFB89639451DBF89CC9A87 /* Pods_Simplify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +54,7 @@
 		0A63BD03275DE892A725BFAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				198726B8264BC35F8E02EBDF /* libPods-Simplify.a */,
+				80DAFCE53613CD8CA3481EF9 /* Pods_Simplify.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -81,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				5EBF68951BD1D09C0095281C /* AppDelegate.swift */,
-				5EBF68971BD1D09C0095281C /* ViewController.swift */,
+				5EBF68971BD1D09C0095281C /* HomeViewController.swift */,
 				5EBF68991BD1D09C0095281C /* Main.storyboard */,
 				5EBF689F1BD1D09C0095281C /* Assets.xcassets */,
 				5EBF68A11BD1D09C0095281C /* LaunchScreen.storyboard */,
@@ -103,6 +103,7 @@
 				5EBF688F1BD1D09B0095281C /* Frameworks */,
 				5EBF68901BD1D09B0095281C /* Resources */,
 				E2D73719E1EAB0DA82745757 /* Copy Pods Resources */,
+				5C932CCEAA1048345B46650A /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,6 +160,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5C932CCEAA1048345B46650A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Simplify/Pods-Simplify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6B7EB656D7A577ECBFFB1771 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -196,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EBF68981BD1D09C0095281C /* ViewController.swift in Sources */,
+				5EBF68981BD1D09C0095281C /* HomeViewController.swift in Sources */,
 				5EBF689E1BD1D09C0095281C /* Simplify.xcdatamodeld in Sources */,
 				5EBF68961BD1D09C0095281C /* AppDelegate.swift in Sources */,
 			);
