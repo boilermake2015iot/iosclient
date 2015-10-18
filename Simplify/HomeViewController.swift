@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import Alamofire
+import MRProgress
 
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, ProjectCellDelegate {
     
+    var collectionView: UICollectionView?
     let sunImageView = UIImageView(image: UIImage(named: "Sun"))
     let backImageView = UIImageView(image: UIImage(named: "BackWave"))
     let frontImageView = UIImageView(image: UIImage(named: "FrontWave"))
@@ -21,9 +24,13 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "saveProjects", name: "SaveProjects", object: nil)
+        
         self.view.backgroundColor = UIColor(red: 244.0/255, green: 240.0/255, blue: 236.0/255, alpha: 1)
         
-        self.setupDummyData()
+        if let object = NSUserDefaults.standardUserDefaults().objectForKey("Projects") as? NSData {
+            self.projects = NSKeyedUnarchiver.unarchiveObjectWithData(object) as! [Project]
+        }
         
         self.setupTopViews()
         self.setupMiddleViews()
@@ -33,9 +40,44 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        for var i = 0; i < projects.count; i++ {
+            self.addTimeCacheForIndex(i)
+        }
+        
         self.startAnimateSun()
         self.startAnimateBackWave()
         self.startAnimateFrontWave()
+    }
+    
+    func saveProjects() {
+        let object = NSKeyedArchiver.archivedDataWithRootObject(self.projects)
+        NSUserDefaults.standardUserDefaults().setObject(object, forKey: "Projects")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        self.timeCache.removeAllObjects()
+        for var i = 0; i < projects.count; i++ {
+            self.addTimeCacheForIndex(i)
+        }
+        self.collectionView?.reloadData()
+    }
+    
+    func addTimeCacheForIndex(i: Int) {
+        let project = projects[i]
+        if project.deployTimes == 0 {
+            timeCache[i] = "Never"
+        } else {
+            let timeInterval = abs(project.lastModified.timeIntervalSinceNow)
+            if timeInterval < 60 {
+                timeCache[i] = "\(Int(round(timeInterval))) sec ago"
+            } else if timeInterval / 60 < 60 {
+                timeCache[i] = "\(Int(round(timeInterval / 60))) min ago"
+            } else if timeInterval / 3600 < 24 {
+                timeCache[i] = "\(Int(round(timeInterval / 3600))) hr ago"
+            } else {
+                let dateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = "MMM dd"
+                timeCache[i] = dateFormatter.stringFromDate(project.lastModified)
+            }
+        }
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -44,15 +86,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     override func viewWillDisappear(animated: Bool) {
         timeCache.removeAllObjects()
-    }
-    
-    func setupDummyData() {
-        let project1 = Project(name: "Raspberry Pi 2", lastModified: NSDate(), photoData: UIImagePNGRepresentation(UIImage(named: "RPI2")!)!)
-        let project2 = Project(name: "Raspberry Pi", lastModified: NSDate(), photoData: UIImagePNGRepresentation(UIImage(named: "RPI")!)!)
-        let project3 = Project(name: "Arduino Uno", lastModified: NSDate(), photoData: UIImagePNGRepresentation(UIImage(named: "ArduinoUno")!)!)
-        projects.append(project1)
-        projects.append(project2)
-        projects.append(project3)
     }
     
     // MARK: Top Views
@@ -69,11 +102,50 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         self.view.addSubview(titleLabel)
         
         let addButton = UIButton(type: UIButtonType.RoundedRect)
+        addButton.addTarget(self, action: "addProject", forControlEvents: UIControlEvents.TouchUpInside)
         addButton.frame = CGRectMake(ScreenWidth - 200, 50, 120, 100)
         addButton.setTitle("+ Add", forState: UIControlState.Normal)
         addButton.setTitleColor(UIColor.lightGrayColor(), forState: UIControlState.Normal)
         addButton.titleLabel?.font = UIFont.boldSystemFontOfSize(30)
         self.view.addSubview(addButton)
+    }
+    
+    func addProject() {
+        let alertController = UIAlertController(title: "New Project", message: nil, preferredStyle: .Alert)
+        alertController.addTextFieldWithConfigurationHandler({ (textField: UITextField) in
+            textField.placeholder = "Project Name"
+        })
+        alertController.addTextFieldWithConfigurationHandler({ (textField: UITextField) in
+            textField.placeholder = "Image Name"
+        })
+        let okAction = UIAlertAction(title: "OK", style: .Default, handler: {(action: UIAlertAction) in
+            let projectName = alertController.textFields![0].text!
+            let imageName = alertController.textFields![1].text!
+            if projectName.characters.count == 0 {
+                let alertController2 = UIAlertController(title: "Error", message: "Project Name and Image Name cannot be empty", preferredStyle: .Alert)
+                let okAction = UIAlertAction(title: "OK", style: .Default, handler: {(action: UIAlertAction) in
+                    self.addProject()
+                })
+                alertController2.addAction(okAction)
+                self.presentViewController(alertController2, animated: true, completion: nil)
+            } else {
+                if let image = UIImage(named: imageName) {
+                    self.projects.append(Project(name: projectName, deployTimes: 0, lastModified: NSDate(), photoData: UIImagePNGRepresentation(image)!))
+                } else {
+                    self.projects.append(Project(name: projectName, deployTimes: 0, lastModified: NSDate(), photoData: UIImagePNGRepresentation(UIImage(named: "DefaultImage")!)!))
+                }
+                let object = NSKeyedArchiver.archivedDataWithRootObject(self.projects)
+                NSUserDefaults.standardUserDefaults().setObject(object, forKey: "Projects")
+                NSUserDefaults.standardUserDefaults().synchronize()
+                self.collectionView?.insertItemsAtIndexPaths([NSIndexPath(forRow: self.projects.count - 1, inSection: 0)])
+                self.collectionView?.scrollToItemAtIndexPath(NSIndexPath(forRow: self.projects.count - 1, inSection: 0), atScrollPosition: UICollectionViewScrollPosition.Right, animated: true)
+                
+            }
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
     func startAnimateSun() {
@@ -99,6 +171,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         projectView.showsHorizontalScrollIndicator = false
         projectView.dataSource = self
         projectView.delegate = self
+        self.collectionView = projectView
         self.view.addSubview(projectView)
     }
     
@@ -149,23 +222,10 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         cell.titleLabel.text = project.name
         cell.imageView.image = UIImage(data: project.photoData)
         
-        if indexPath.row < timeCache.count {
-            cell.timeLabel.text = timeCache[indexPath.row] as? String
-        } else {
-            let timeInterval = abs(project.lastModified.timeIntervalSinceNow)
-            if timeInterval < 60 {
-                cell.timeLabel.text = "\(Int(round(timeInterval))) sec ago"
-            } else if timeInterval / 60 < 60 {
-                cell.timeLabel.text = "\(Int(round(timeInterval / 60))) min ago"
-            } else if timeInterval / 3600 < 24 {
-                cell.timeLabel.text = "\(Int(round(timeInterval / 3600))) hr ago"
-            } else {
-                let dateFormatter = NSDateFormatter()
-                dateFormatter.dateFormat = "MMM dd"
-                cell.timeLabel.text = dateFormatter.stringFromDate(project.lastModified)
-            }
-            timeCache[indexPath.row] = cell.timeLabel.text!
+        if timeCache.count <= indexPath.row {
+            self.addTimeCacheForIndex(indexPath.row)
         }
+        cell.timeLabel.text = timeCache[indexPath.row] as? String
         cell.tag = indexPath.row
         cell.delegate = self
         
@@ -181,296 +241,22 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     // MARK: Project cell delegate
     
     func deployTappedForCellAtIndexPath(indexPath: NSIndexPath) {
-        let key = projects[indexPath.row].name
-        let data = NSUserDefaults.standardUserDefaults().objectForKey(key) as? NSData
-        if data == nil {
-            let alertController = UIAlertController(title: "Error", message: "No Data in this project", preferredStyle: .Alert)
-            self.presentViewController(alertController, animated: true, completion: nil)
-        } else {
-            let bricks = NSKeyedUnarchiver.unarchiveObjectWithData(data!) as! [Brick]
-            let json = self.generateJSONObject(bricks)
-            var jsonString = JSONStringify(json)
-            print(jsonString)
-        }
-    }
-    
-    func generateJSONObject(bricks: [Brick]) -> NSMutableDictionary {
-        var beginCount = 0
-        let ret = NSMutableDictionary()
-        let pages = NSMutableArray()
-        let page = NSMutableDictionary()
-        let nodes = NSMutableArray()
-        for brick in bricks {
-            let dict = NSMutableDictionary()
-            if brick.type == .LED {
-                if brick.label1Text == "Set Red LED" {
-                    dict.setObject("LedSet", forKey: "Type")
-                    dict.setObject("RedLed", forKey: "Device")
-                    dict.setObject(brick.button1Text!, forKey: "Value")
-                } else if brick.label1Text == "Set Green LED" {
-                    dict.setObject("LedSet", forKey: "Type")
-                    dict.setObject("GreenLed", forKey: "Device")
-                    dict.setObject(brick.button1Text!, forKey: "Value")
-                } else if brick.label1Text == "Set Blue LED" {
-                    dict.setObject("LedSet", forKey: "Type")
-                    dict.setObject("BlueLed", forKey: "Device")
-                    dict.setObject(brick.button1Text!, forKey: "Value")
-                } else if brick.label1Text == "Blink Red LED" {
-                    dict.setObject("LedBlink", forKey: "Type")
-                    dict.setObject("RedLed", forKey: "Device")
-                    dict.setObject(brick.button1Text!, forKey: "BlinkInterval")
-                    dict.setObject(brick.button2Text!, forKey: "NumberOfBlinks")
-                } else if brick.label1Text == "Blink Green LED" {
-                    dict.setObject("LedBlink", forKey: "Type")
-                    dict.setObject("GreenLed", forKey: "Device")
-                    dict.setObject(brick.button1Text!, forKey: "BlinkInterval")
-                    dict.setObject(brick.button2Text!, forKey: "NumberOfBlinks")
-                } else if brick.label1Text == "Blink Blue LED" {
-                    dict.setObject("LedBlink", forKey: "Type")
-                    dict.setObject("BlueLed", forKey: "Device")
-                    dict.setObject(brick.button1Text!, forKey: "BlinkInterval")
-                    dict.setObject(brick.button2Text!, forKey: "NumberOfBlinks")
-                } else if brick.label1Text == "Set RGBLED" {
-                    dict.setObject("SetRgbLed", forKey: "Type")
-                    dict.setObject("RgbLed", forKey: "Device")
-                    let rgb = brick.button1Text!.componentsSeparatedByString(",") as [String]
-                    dict.setObject(rgb[0], forKey: "R")
-                    dict.setObject(rgb[1], forKey: "G")
-                    dict.setObject(rgb[2], forKey: "B")
-                } else {
-                    print("\"\(brick.label1Text)\"")
-                }
-            } else if brick.type == .Devices {
-                if brick.label1Text == "Wait Button Press" {
-                    dict.setObject("WaitButtonPress", forKey: "Type")
-                    dict.setObject("Button", forKey: "Device")
-                } else if brick.label1Text == "Set Servo Angle" {
-                    dict.setObject("SetServoAngle", forKey: "Type")
-                    dict.setObject("Servo", forKey: "Device")
-                    dict.setObject(brick.button1Text!, forKey: "Angle")
-                } else if brick.label1Text == "Step Servo Angle" {
-                    dict.setObject("StepServoAngle", forKey: "Type")
-                    dict.setObject("Servo", forKey: "Device")
-                    dict.setObject(brick.button1Text!, forKey: "Increment")
-                }
-            } else if brick.type == .If {
-                if brick.bricks.count > 0 {
-                    dict.setObject("If", forKey: "Type")
-                    let condition = NSMutableDictionary()
-                    condition.setObject("Expression", forKey: "Type")
-                    condition.setObject(brick.label2Text!, forKey: "Op")
-                    condition.setObject(self.generateDictForText(brick.button1Text!), forKey: "Left")
-                    condition.setObject(self.generateDictForText(brick.button2Text!), forKey: "Right")
-                    dict.setObject(condition, forKey: "Condition")
-                    dict.setObject("SubPage\(++beginCount)", forKey: "Page")
-                    var tempPages: NSMutableArray
-                    (tempPages, beginCount) = traverseAndGetJSONObject(brick.bricks, count: beginCount)
-                    pages.addObjectsFromArray(tempPages as [AnyObject])
-                } else {
-                    continue
-                }
-            } else if brick.type == .RepeatFor {
-                if brick.bricks.count > 0 {
-                    dict.setObject("Repeat", forKey: "Type")
-                    let condition = NSMutableDictionary()
-                    condition.setValue("Constant", forKey: "Type")
-                    condition.setValue(brick.button1Text, forKey: "Value")
-                    dict.setObject(condition, forKey: "Condition")
-                    dict.setObject("SubPage\(++beginCount)", forKey: "Page")
-                    var tempPages: NSMutableArray
-                    (tempPages, beginCount) = traverseAndGetJSONObject(brick.bricks, count: beginCount)
-                    pages.addObjectsFromArray(tempPages as [AnyObject])
-                } else {
-                    continue
-                }
-            } else if brick.type == .RepeatUntil {
-                if brick.bricks.count > 0 {
-                    dict.setObject("Repeat", forKey: "Type")
-                    let condition = NSMutableDictionary()
-                    condition.setObject("Expression", forKey: "Type")
-                    condition.setObject(brick.label2Text!, forKey: "Op")
-                    condition.setObject(self.generateDictForText(brick.button1Text!), forKey: "Left")
-                    condition.setObject(self.generateDictForText(brick.button2Text!), forKey: "Right")
-                    dict.setObject(condition, forKey: "Condition")
-                    dict.setObject("SubPage\(++beginCount)", forKey: "Page")
-                    var tempPages: NSMutableArray
-                    (tempPages, beginCount) = traverseAndGetJSONObject(brick.bricks, count: beginCount)
-                    pages.addObjectsFromArray(tempPages as [AnyObject])
-                } else {
-                    continue
-                }
-            } else if brick.type == .Sleep {
-                dict.setObject("Sleep", forKey: "Type")
-                dict.setObject(self.generateDictForText(brick.button1Text!), forKey: "Param")
-            } else if brick.type == .IFTTTMaker {
-                if brick.label1Text == "Get Weather" {
-                    dict.setObject("IFTTTMaker", forKey: "Type")
-                    dict.setObject("https://maker.ifttt.com/trigger/iot4us_weather/with/key/ciwt1IvJ6CICVWDs3mvejO", forKey: "Url")
-                    dict.setObject([["Type": "CurrentTemperature", "Device": "TempSensor"], ["Type": "CurrentHumidity", "Device": "TempSensor"]], forKey: "Params")
-                } else if brick.label1Text == "Button Pressed" {
-                    dict.setObject("IFTTTMaker", forKey: "Type")
-                    dict.setObject("https://maker.ifttt.com/trigger/iot4us_button_pressed/with/key/ciwt1IvJ6CICVWDs3mvejO", forKey: "Url")
-                    dict.setObject([], forKey: "Params")
-                } else {
-                    continue
-                }
-            }
-            nodes.addObject(dict)
-        }
-        
-        page.setObject(nodes, forKey: "Nodes")
-        page.setObject("Main", forKey: "Name")
-        pages.addObject(page)
-        ret.setObject(pages, forKey: "Pages")
-        
-        return ret
-    }
-    
-    func generateDictForText(text: String) -> NSDictionary {
-        if text == "Get Button Status" {
-            return ["Type": "GetButtonStatus", "Device": "Button"]
-        } else if text == "Current Temperature" {
-            return ["Type": "CurrentTemperature", "Device": "TempSensor"]
-        } else if text == "Current Humidity" {
-            return ["Type": "CurrentHumidity", "Device": "TempSensor"]
-        } else {
-            return ["Type": "Constant", "Value": text]
-        }
-    }
-    
-    func traverseAndGetJSONObject(bricks: [Brick], count: Int) -> (NSMutableArray, Int) {
-        var beginCount = count + 1
-        let ret = NSMutableArray()
-        let page = NSMutableDictionary()
-        let nodes = NSMutableArray()
-        for brick in bricks {
-            let dict = NSMutableDictionary()
-            if brick.type == .LED {
-                if brick.label1Text == "Set Red LED" {
-                    dict.setObject("LedSet", forKey: "Type")
-                    dict.setObject("RedLed", forKey: "Device")
-                    dict.setObject(brick.button1Text!, forKey: "Value")
-                } else if brick.label1Text == "Set Green LED" {
-                    dict.setObject("LedSet", forKey: "Type")
-                    dict.setObject("GreenLed", forKey: "Device")
-                    dict.setObject(brick.button1Text!, forKey: "Value")
-                } else if brick.label1Text == "Set Blue LED" {
-                    dict.setObject("LedSet", forKey: "Type")
-                    dict.setObject("BlueLed", forKey: "Device")
-                    dict.setObject(brick.button1Text!, forKey: "Value")
-                } else if brick.label1Text == "Blink Red LED" {
-                    dict.setObject("LedBlink", forKey: "Type")
-                    dict.setObject("RedLed", forKey: "Device")
-                    dict.setObject(brick.button1Text!, forKey: "BlinkInterval")
-                    dict.setObject(brick.button2Text!, forKey: "NumberOfBlinks")
-                } else if brick.label1Text == "Blink Green LED" {
-                    dict.setObject("LedBlink", forKey: "Type")
-                    dict.setObject("GreenLed", forKey: "Device")
-                    dict.setObject(brick.button1Text!, forKey: "BlinkInterval")
-                    dict.setObject(brick.button2Text!, forKey: "NumberOfBlinks")
-                } else if brick.label1Text == "Blink Blue LED" {
-                    dict.setObject("LedBlink", forKey: "Type")
-                    dict.setObject("BlueLed", forKey: "Device")
-                    dict.setObject(brick.button1Text!, forKey: "BlinkInterval")
-                    dict.setObject(brick.button2Text!, forKey: "NumberOfBlinks")
-                } else if brick.label1Text == "Set RGBLED" {
-                    dict.setObject("SetRgbLed", forKey: "Type")
-                    dict.setObject("RgbLed", forKey: "Device")
-                    let rgb = brick.button1Text!.componentsSeparatedByString(",") as [String]
-                    dict.setObject(rgb[0], forKey: "R")
-                    dict.setObject(rgb[1], forKey: "G")
-                    dict.setObject(rgb[2], forKey: "B")
-                } else {
-                    print("\"\(brick.label1Text)\"")
-                }
-            } else if brick.type == .Devices {
-                if brick.label1Text == "Wait Button Press" {
-                    dict.setObject("WaitButtonPress", forKey: "Type")
-                    dict.setObject("Button", forKey: "Device")
-                } else if brick.label1Text == "Set Servo Angle" {
-                    dict.setObject("SetServoAngle", forKey: "Type")
-                    dict.setObject("Servo", forKey: "Device")
-                    dict.setObject(brick.button1Text!, forKey: "Angle")
-                } else if brick.label1Text == "Step Servo Angle" {
-                    dict.setObject("StepServoAngle", forKey: "Type")
-                    dict.setObject("Servo", forKey: "Device")
-                    dict.setObject(brick.button1Text!, forKey: "Increment")
-                }
-            } else if brick.type == .If {
-                if brick.bricks.count > 0 {
-                    dict.setObject("If", forKey: "Type")
-                    let condition = NSMutableDictionary()
-                    condition.setObject("Expression", forKey: "Type")
-                    condition.setObject(brick.label2Text!, forKey: "Op")
-                    condition.setObject(self.generateDictForText(brick.button1Text!), forKey: "Left")
-                    condition.setObject(self.generateDictForText(brick.button2Text!), forKey: "Right")
-                    dict.setObject(condition, forKey: "Condition")
-                    dict.setObject("SubPage\(beginCount)", forKey: "Page")
-                    var tempPages: NSMutableArray
-                    (tempPages, beginCount) = traverseAndGetJSONObject(brick.bricks, count: beginCount)
-                    ret.addObjectsFromArray(tempPages as [AnyObject])
-                } else {
-                    continue
-                }
-            } else if brick.type == .RepeatFor {
-                if brick.bricks.count > 0 {
-                    dict.setObject("Repeat", forKey: "Type")
-                    let condition = NSMutableDictionary()
-                    condition.setValue("Constant", forKey: "Type")
-                    condition.setValue(brick.button1Text, forKey: "Value")
-                    dict.setObject(condition, forKey: "Condition")
-                    dict.setObject("SubPage\(beginCount)", forKey: "Page")
-                    var tempPages: NSMutableArray
-                    (tempPages, beginCount) = traverseAndGetJSONObject(brick.bricks, count: beginCount)
-                    ret.addObjectsFromArray(tempPages as [AnyObject])
-                } else {
-                    continue
-                }
-            } else if brick.type == .RepeatUntil {
-                if brick.bricks.count > 0 {
-                    dict.setObject("Repeat", forKey: "Type")
-                    let condition = NSMutableDictionary()
-                    condition.setObject("Expression", forKey: "Type")
-                    condition.setObject(brick.label2Text!, forKey: "Op")
-                    condition.setObject(self.generateDictForText(brick.button1Text!), forKey: "Left")
-                    condition.setObject(self.generateDictForText(brick.button2Text!), forKey: "Right")
-                    dict.setObject(condition, forKey: "Condition")
-                    dict.setObject("SubPage\(beginCount)", forKey: "Page")
-                    var tempPages: NSMutableArray
-                    (tempPages, beginCount) = traverseAndGetJSONObject(brick.bricks, count: beginCount)
-                    ret.addObjectsFromArray(tempPages as [AnyObject])
-                } else {
-                    continue
-                }
-            } else if brick.type == .Sleep {
-                dict.setObject("Sleep", forKey: "Type")
-                dict.setObject(self.generateDictForText(brick.button1Text!), forKey: "Param")
-            } else if brick.type == .IFTTTMaker {
-                if brick.label1Text == "Get Weather" {
-                    dict.setObject("IFTTTMaker", forKey: "Type")
-                    dict.setObject("https://maker.ifttt.com/trigger/iot4us_weather/with/key/ciwt1IvJ6CICVWDs3mvejO", forKey: "Url")
-                    dict.setObject([["Type": "CurrentTemperature", "Device": "TempSensor"], ["Type": "CurrentHumidity", "Device": "TempSensor"]], forKey: "Params")
-                } else if brick.label1Text == "Button Pressed" {
-                    dict.setObject("IFTTTMaker", forKey: "Type")
-                    dict.setObject("https://maker.ifttt.com/trigger/iot4us_button_pressed/with/key/ciwt1IvJ6CICVWDs3mvejO", forKey: "Url")
-                    dict.setObject([], forKey: "Params")
-                } else {
-                    continue
-                }
-            }
-            nodes.addObject(dict)
-        }
-        
-        page.setObject("SubPage\(count)", forKey: "Name")
-        page.setObject(nodes, forKey: "Nodes")
-        ret.addObject(page)
-        
-        return (ret, beginCount)
+        DeployFactory.deploy(projects[indexPath.row], viewcontroller: self)
     }
     
     func editTappedForCellAtIndexPath(indexPath: NSIndexPath) {
         self.selectedRow = indexPath.row
         self.performSegueWithIdentifier("toProject", sender: self)
+    }
+    
+    func deleteTappedForCellAtIndexPath(indexPath: NSIndexPath) {
+        let project = self.projects[indexPath.row]
+        NSUserDefaults.standardUserDefaults().removeObjectForKey(project.name)
+        self.projects.removeAtIndex(indexPath.row)
+        let object = NSKeyedArchiver.archivedDataWithRootObject(self.projects)
+        NSUserDefaults.standardUserDefaults().setObject(object, forKey: "Projects")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        self.collectionView?.deleteItemsAtIndexPaths([indexPath])
     }
     
     // MARK: Navigation
@@ -485,21 +271,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func JSONStringify(value: AnyObject,prettyPrinted:Bool = false) -> String{
-        let options = prettyPrinted ? NSJSONWritingOptions.PrettyPrinted : NSJSONWritingOptions(rawValue: 0)
-        if NSJSONSerialization.isValidJSONObject(value) {
-            do {
-                let data = try NSJSONSerialization.dataWithJSONObject(value, options: options)
-                if let string = NSString(data: data, encoding: NSUTF8StringEncoding) {
-                    return (string) as String
-                }
-            } catch {
-                print("error")
-            }
-        }
-        return ""
     }
 
 }

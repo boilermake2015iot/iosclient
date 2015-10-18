@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MRProgress
 
 protocol BrickTransactionDelegate {
     func addBrick(brick: Brick)
@@ -51,16 +52,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         ]
     ]
     
+    // MARK: View controller cycles
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "writeBricksToUserDefaults:", name: "SaveBricks", object: nil)
-    }
-    
-    func writeBricksToUserDefaults(notification: NSNotification) {
-        let bricksToSave = notification.userInfo!["bricks"] as! [Brick]
-        let object = NSKeyedArchiver.archivedDataWithRootObject(bricksToSave)
-        NSUserDefaults.standardUserDefaults().setObject(object, forKey: project!.name)
-        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -74,13 +70,14 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.project = (self.splitViewController as! ProjectViewController).project
         self.view.backgroundColor = UIColor(red: 215/255, green: 215/255, blue: 215/255, alpha: 1)
         
-        let leftView = UITableView(frame: CGRectMake(5, 20, 320 - 7.5, self.view.frame.height - 25), style: .Plain)
+        let leftView = UITableView(frame: CGRectMake(5, 20, 320 - 7.5, self.view.frame.height - 90), style: .Plain)
         leftView.contentInset = UIEdgeInsets(top: 320, left: 0, bottom: 0, right: 0)
         leftView.rowHeight = 80
         leftView.dataSource = self
         leftView.delegate = self
         leftView.layer.cornerRadius = 5
         leftView.registerNib(UINib(nibName: "MiniBrick", bundle: nil), forCellReuseIdentifier: "Cell")
+        leftView.showsVerticalScrollIndicator = false
         self.tableView = leftView
         self.view.addSubview(leftView)
         
@@ -92,7 +89,23 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         maskLayer.path = UIBezierPath(roundedRect: headerView.bounds, byRoundingCorners: [UIRectCorner.TopLeft, UIRectCorner.TopRight], cornerRadii: CGSize(width: 5, height: 5)).CGPath
         headerView.layer.mask = maskLayer
         self.view.addSubview(headerView)
+        
+        let deployButton = UIButton(type: UIButtonType.RoundedRect)
+        deployButton.addTarget(self, action: "deploy", forControlEvents: UIControlEvents.TouchUpInside)
+        deployButton.frame = CGRectMake(5, self.view.frame.height - 65, 320 - 7.5, 60)
+        deployButton.setTitle("Deploy", forState: UIControlState.Normal)
+        deployButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        deployButton.backgroundColor = UIColor(red: 124.0/255, green: 166.0/255, blue: 192.0/255, alpha: 1)
+        deployButton.layer.cornerRadius = 5
+        deployButton.titleLabel?.font = UIFont.boldSystemFontOfSize(20)
+        self.view.addSubview(deployButton)
     }
+    
+    func deploy() {
+        DeployFactory.deploy(self.project!, viewcontroller: self.splitViewController!)
+    }
+    
+    // MARK: Left views
     
     func createTitleView(width: CGFloat) -> UIView {
         let titleView = UIView(frame: CGRectMake(0, 0, width, 90))
@@ -226,13 +239,24 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
+    // MARK: Table view delegate
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        delegate?.addBrick(bricks[indexPath.row])
+        delegate?.addBrick(bricks[indexPath.row].copy() as! Brick)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: Helper
+    
+    func writeBricksToUserDefaults(notification: NSNotification) {
+        let bricksToSave = notification.userInfo!["bricks"] as! [Brick]
+        let object = NSKeyedArchiver.archivedDataWithRootObject(bricksToSave)
+        NSUserDefaults.standardUserDefaults().setObject(object, forKey: project!.name)
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
 

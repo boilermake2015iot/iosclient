@@ -30,7 +30,7 @@
                         <constraint firstAttribute="height" constant="222" id="uIb-ZA-5MX"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modified" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noy-WP-syY">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deployed" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noy-WP-syY">
                     <rect key="frame" x="0.0" y="302" width="100" height="60"/>
                     <animations/>
                     <constraints>
@@ -53,12 +53,12 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="duX-IW-Jii">
-                    <rect key="frame" x="25" y="362" width="275" height="1"/>
+                    <rect key="frame" x="20" y="362" width="280" height="1"/>
                     <animations/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="jwV-SI-ApZ"/>
-                        <constraint firstAttribute="width" constant="275" id="tQY-eU-9LY"/>
+                        <constraint firstAttribute="width" constant="280" id="tQY-eU-9LY"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IIW-zt-G1L">
@@ -80,7 +80,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTN-ZJ-BKP">
-                    <rect key="frame" x="70" y="373" width="50" height="50"/>
+                    <rect key="frame" x="40" y="373" width="50" height="50"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="ad8-lk-TEJ"/>
@@ -92,15 +92,27 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMB-br-tI8">
-                    <rect key="frame" x="190" y="378" width="40" height="40"/>
+                    <rect key="frame" x="130" y="377" width="40" height="42"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="92a-k8-2xc"/>
-                        <constraint firstAttribute="height" constant="40" id="IBo-Ya-KSF"/>
+                        <constraint firstAttribute="height" constant="42" id="IBo-Ya-KSF"/>
                     </constraints>
                     <state key="normal" image="Edit"/>
                     <connections>
                         <action selector="editTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="dlL-bT-c7J"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hj3-nw-DCk">
+                    <rect key="frame" x="217" y="375" width="43" height="43"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="0OG-mU-ihe"/>
+                        <constraint firstAttribute="width" constant="43" id="P6G-FZ-cw2"/>
+                    </constraints>
+                    <state key="normal" image="Delete"/>
+                    <connections>
+                        <action selector="deleteTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="k0a-or-bwY"/>
                     </connections>
                 </button>
             </subviews>
@@ -112,19 +124,21 @@
                 <constraint firstItem="duX-IW-Jii" firstAttribute="top" secondItem="SEy-zC-ziI" secondAttribute="bottom" id="9qC-3H-g6C"/>
                 <constraint firstItem="uTN-ZJ-BKP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="CRJ-Hl-Muo"/>
                 <constraint firstItem="I7S-bY-nwP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KKV-Q4-sdh"/>
-                <constraint firstItem="UMB-br-tI8" firstAttribute="top" secondItem="duX-IW-Jii" secondAttribute="bottom" constant="15" id="Lfl-QQ-LjT"/>
+                <constraint firstItem="UMB-br-tI8" firstAttribute="top" secondItem="duX-IW-Jii" secondAttribute="bottom" constant="14" id="Lfl-QQ-LjT"/>
                 <constraint firstItem="HS0-ff-nUs" firstAttribute="top" secondItem="1BI-TW-lyt" secondAttribute="top" constant="-1" id="MDt-fL-sDy"/>
                 <constraint firstItem="1BI-TW-lyt" firstAttribute="top" secondItem="I7S-bY-nwP" secondAttribute="bottom" id="SAJ-sL-34f"/>
                 <constraint firstItem="uTN-ZJ-BKP" firstAttribute="top" secondItem="duX-IW-Jii" secondAttribute="bottom" constant="10" id="WEP-Ih-2Cv"/>
-                <constraint firstItem="uTN-ZJ-BKP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="70" id="cCm-5d-tbU"/>
+                <constraint firstItem="uTN-ZJ-BKP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="cCm-5d-tbU"/>
+                <constraint firstItem="Hj3-nw-DCk" firstAttribute="top" secondItem="duX-IW-Jii" secondAttribute="bottom" constant="12" id="cLX-Ea-7oj"/>
                 <constraint firstItem="1BI-TW-lyt" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dmB-pF-o7A"/>
+                <constraint firstAttribute="trailing" secondItem="Hj3-nw-DCk" secondAttribute="trailing" constant="40" id="duP-Cr-3cj"/>
                 <constraint firstItem="HS0-ff-nUs" firstAttribute="centerY" secondItem="1BI-TW-lyt" secondAttribute="centerY" id="e16-ce-UpX"/>
                 <constraint firstItem="HS0-ff-nUs" firstAttribute="centerX" secondItem="1BI-TW-lyt" secondAttribute="centerX" id="krI-lX-caY"/>
                 <constraint firstItem="noy-WP-syY" firstAttribute="top" secondItem="1BI-TW-lyt" secondAttribute="bottom" id="ozR-N8-gm0"/>
+                <constraint firstItem="UMB-br-tI8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="q9m-Ex-ZKN"/>
                 <constraint firstItem="IIW-zt-G1L" firstAttribute="top" secondItem="1BI-TW-lyt" secondAttribute="bottom" id="r6X-SW-6Jg"/>
                 <constraint firstItem="I7S-bY-nwP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="sav-JP-l3S"/>
                 <constraint firstItem="IIW-zt-G1L" firstAttribute="centerX" secondItem="1BI-TW-lyt" secondAttribute="centerX" id="sxu-oT-Sfv"/>
-                <constraint firstAttribute="trailing" secondItem="UMB-br-tI8" secondAttribute="trailing" constant="70" id="wCS-Dz-56O"/>
                 <constraint firstAttribute="trailing" secondItem="SEy-zC-ziI" secondAttribute="trailing" id="xDQ-NV-xRu"/>
                 <constraint firstItem="SEy-zC-ziI" firstAttribute="top" secondItem="1BI-TW-lyt" secondAttribute="bottom" id="xFO-CR-b3n"/>
                 <constraint firstItem="SEy-zC-ziI" firstAttribute="leading" secondItem="noy-WP-syY" secondAttribute="trailing" id="yqe-3h-aVb"/>
@@ -141,6 +155,7 @@
                 </mask>
             </variation>
             <connections>
+                <outlet property="deleteButton" destination="Hj3-nw-DCk" id="n03-cM-fTG"/>
                 <outlet property="deployButton" destination="uTN-ZJ-BKP" id="7tC-Wz-YQB"/>
                 <outlet property="editButton" destination="UMB-br-tI8" id="OW0-5w-7hA"/>
                 <outlet property="imageView" destination="1BI-TW-lyt" id="a8h-Dr-zlc"/>
@@ -151,6 +166,7 @@
     </objects>
     <resources>
         <image name="Cloud" width="50" height="50"/>
+        <image name="Delete" width="100" height="100"/>
         <image name="Edit" width="50" height="50"/>
     </resources>
 </document>

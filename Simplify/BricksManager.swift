@@ -45,15 +45,16 @@ class BricksManager: NSObject {
     }
     
     class func getDevicesBricks() -> [DevicesBrick] {
-        let brick1 = DevicesBrick()
-        brick1.label1Text = "Wait Button Press"
+//        let brick1 = DevicesBrick()
+//        brick1.label1Text = "Wait Button Press"
         let brick2 = DevicesBrick()
         brick2.label1Text = "Set Servo Angle"
         brick2.button1Text = "180"
-        let brick3 = DevicesBrick()
-        brick3.label1Text = "Step Servo Angle"
-        brick3.button1Text = "180"
-        return [brick1, brick2, brick3]
+//        let brick3 = DevicesBrick()
+//        brick3.label1Text = "Step Servo Angle"
+//        brick3.button1Text = "180"
+//        return [brick1, brick2, brick3]
+        return [brick2]
     }
     
     class func getIfBricks() -> [IfBrick] {
@@ -143,9 +144,9 @@ class BricksManager: NSObject {
     class func getIFTTTBricks() -> [IFTTTBrick] {
         let brick1 = IFTTTBrick()
         brick1.label1Text = "Get Weather"
-        let brick2 = IFTTTBrick()
-        brick2.label1Text = "Button Pressed"
-        return [brick1, brick2]
+//        let brick2 = IFTTTBrick()
+//        brick2.label1Text = "Button Pressed"
+        return [brick1]
     }
     
 }

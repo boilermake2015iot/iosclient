@@ -210,8 +210,10 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.proceedToDetail()
     }
     
+    // MARK: Change Buttons' Text
+    
     func changeButton1Text(sender: UIButton) {
-        let alertController = UIAlertController(title: "First", message: "Old value: \(sender.titleLabel!.text!)", preferredStyle: UIAlertControllerStyle.Alert)
+        let alertController = UIAlertController(title: "First", message: "Example(Old Value): \(sender.titleLabel!.text!)", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addTextFieldWithConfigurationHandler({(textField: UITextField) in
                 textField.placeholder = "Value"
         })
@@ -221,12 +223,12 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
         })
         let deviceAction = UIAlertAction(title: "Choose a device value", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
-            let alertController2 = UIAlertController(title: "First", message: "Old value: \(sender.titleLabel!.text!)", preferredStyle: UIAlertControllerStyle.Alert)
-            let buttonAction = UIAlertAction(title: "Get Button Status", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
-                self.bricks[sender.tag].button1Text = "Get Button Status"
-                self.attemptToSaveBrick()
-                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
-            })
+            let alertController2 = UIAlertController(title: "First", message: "Example(Old Value): \(sender.titleLabel!.text!)", preferredStyle: UIAlertControllerStyle.Alert)
+//            let buttonAction = UIAlertAction(title: "Get Button Status", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+//                self.bricks[sender.tag].button1Text = "Get Button Status"
+//                self.attemptToSaveBrick()
+//                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+//            })
             let temperatureAction = UIAlertAction(title: "Current Temperature", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
                 self.bricks[sender.tag].button1Text = "Current Temperature"
                 self.attemptToSaveBrick()
@@ -238,7 +240,7 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
             })
             let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction) in })
-            alertController2.addAction(buttonAction)
+//            alertController2.addAction(buttonAction)
             alertController2.addAction(temperatureAction)
             alertController2.addAction(humidityAction)
             alertController2.addAction(cancelAction)
@@ -252,7 +254,7 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func changeButton2Text(sender: UIButton) {
-        let alertController = UIAlertController(title: "Second", message: "Old value: \(sender.titleLabel!.text!)", preferredStyle: UIAlertControllerStyle.Alert)
+        let alertController = UIAlertController(title: "Second", message: "Example(Old Value): \(sender.titleLabel!.text!)", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addTextFieldWithConfigurationHandler({(textField: UITextField) in
             textField.placeholder = "Value"
         })
@@ -261,11 +263,38 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.attemptToSaveBrick()
             self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
         })
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction) in })
+        let deviceAction = UIAlertAction(title: "Choose a device value", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+            let alertController2 = UIAlertController(title: "First", message: "Example(Old Value): \(sender.titleLabel!.text!)", preferredStyle: UIAlertControllerStyle.Alert)
+//            let buttonAction = UIAlertAction(title: "Get Button Status", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+//                self.bricks[sender.tag].button2Text = "Get Button Status"
+//                self.attemptToSaveBrick()
+//                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+//            })
+            let temperatureAction = UIAlertAction(title: "Current Temperature", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+                self.bricks[sender.tag].button2Text = "Current Temperature"
+                self.attemptToSaveBrick()
+                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            })
+            let humidityAction = UIAlertAction(title: "Current Humidity", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+                self.bricks[sender.tag].button2Text = "Current Humidity"
+                self.attemptToSaveBrick()
+                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction) in })
+//            alertController2.addAction(buttonAction)
+            alertController2.addAction(temperatureAction)
+            alertController2.addAction(humidityAction)
+            alertController2.addAction(cancelAction)
+            self.presentViewController(alertController2, animated: true, completion: nil)
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction) in })
+        alertController.addAction(deviceAction)
         alertController.addAction(okAction)
         alertController.addAction(cancelAction)
         self.presentViewController(alertController, animated: true, completion: nil)
     }
+    
+    // MARK: Table view delegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let brickType = bricks[indexPath.row].type
@@ -290,6 +319,8 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
         viewController.bricks = self.bricks[selectedRow].bricks
         self.navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    // MARK: Brick operations
     
     func attemptToSaveBrick() {
         if self.isAtRoot {

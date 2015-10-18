@@ -27,7 +27,7 @@ enum BrickStyle: Int {
          TextInputTextInputText = 3
 }
 
-class Brick: NSObject, NSCoding {
+class Brick: NSObject, NSCoding, NSCopying {
     var label1Text: String
     var button1Text: String?
     var label2Text: String?
@@ -64,5 +64,18 @@ class Brick: NSObject, NSCoding {
         aCoder.encodeObject(self.bricks, forKey: "6")
         aCoder.encodeInteger(self.type.rawValue, forKey: "7")
         aCoder.encodeInteger(self.style.rawValue, forKey: "8")
+    }
+    
+    func copyWithZone(zone: NSZone) -> AnyObject {
+        let brick = Brick()
+        brick.label1Text = self.label1Text
+        brick.button1Text = self.button1Text
+        brick.label2Text = self.label2Text
+        brick.button2Text = self.button2Text
+        brick.label3Text = self.label3Text
+        brick.bricks = self.bricks
+        brick.type = self.type
+        brick.style = self.style
+        return brick
     }
 }
