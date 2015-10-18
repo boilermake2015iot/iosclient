@@ -10,71 +10,50 @@ import UIKit
 
 class BricksManager: NSObject {
     
-    class func getConstantBricks() -> [ConstantBrick] {
-        let brick1 = ConstantBrick()
-        brick1.label1Text = "Constant "
+    class func getLEDBricks() -> [LEDBrick] {
+        let brick1 = LEDBrick()
+        brick1.label1Text = "Set Red LED"
         brick1.button1Text = "1"
-        let brick2 = ConstantBrick()
-        brick2.label1Text = "Constant "
-        brick2.button1Text = "1.0"
-        let brick3 = ConstantBrick()
-        brick3.label1Text = "Constant "
-        brick3.button1Text = "String"
-        return [brick1, brick2, brick3]
+        let brick2 = LEDBrick()
+        brick2.label1Text = "Set Green LED"
+        brick2.button1Text = "1"
+        let brick3 = LEDBrick()
+        brick3.label1Text = "Set Blue LED"
+        brick3.button1Text = "1"
+        let brick4 = LEDBrick()
+        brick4.label1Text = "Blink Red LED"
+        brick4.button1Text = "1"
+        brick4.label2Text = "sec"
+        brick4.button2Text = "2"
+        brick4.label3Text = "blinks"
+        let brick5 = LEDBrick()
+        brick5.label1Text = "Blink Green LED"
+        brick5.button1Text = "1"
+        brick5.label2Text = "sec"
+        brick5.button2Text = "2"
+        brick5.label3Text = "blinks"
+        let brick6 = LEDBrick()
+        brick6.label1Text = "Blink Blue LED"
+        brick6.button1Text = "1"
+        brick6.label2Text = "sec"
+        brick6.button2Text = "2"
+        brick6.label3Text = "blinks"
+        let brick7 = LEDBrick()
+        brick7.label1Text = "Set RGBLED"
+        brick7.button1Text = "244,244,244"
+        return [brick1, brick2, brick3, brick4, brick5, brick6, brick7]
     }
     
-    class func getExpressionBricks() -> [ExpressionBrick] {
-        let brick1 = ExpressionBrick()
-        brick1.label1Text = ""
-        brick1.button1Text = "10"
-        brick1.label2Text = "+"
-        brick1.button2Text = "10"
-        let brick2 = ExpressionBrick()
-        brick2.label1Text = ""
-        brick2.button1Text = "10"
-        brick2.label2Text = "-"
-        brick2.button2Text = "10"
-        let brick3 = ExpressionBrick()
-        brick3.label1Text = ""
-        brick3.button1Text = "10"
-        brick3.label2Text = "*"
-        brick3.button2Text = "10"
-        let brick4 = ExpressionBrick()
-        brick4.label1Text = ""
-        brick4.button1Text = "10"
-        brick4.label2Text = "/"
-        brick4.button2Text = "10"
-        let brick5 = ExpressionBrick()
-        brick5.label1Text = ""
-        brick5.button1Text = "10"
-        brick5.label2Text = ">"
-        brick5.button2Text = "10"
-        let brick6 = ExpressionBrick()
-        brick6.label1Text = ""
-        brick6.button1Text = "10"
-        brick6.label2Text = "<"
-        brick6.button2Text = "10"
-        let brick7 = ExpressionBrick()
-        brick7.label1Text = ""
-        brick7.button1Text = "10"
-        brick7.label2Text = ">="
-        brick7.button2Text = "10"
-        let brick8 = ExpressionBrick()
-        brick8.label1Text = ""
-        brick8.button1Text = "10"
-        brick8.label2Text = "<="
-        brick8.button2Text = "10"
-        let brick9 = ExpressionBrick()
-        brick9.label1Text = ""
-        brick9.button1Text = "10"
-        brick9.label2Text = "="
-        brick9.button2Text = "10"
-        let brick10 = ExpressionBrick()
-        brick10.label1Text = ""
-        brick10.button1Text = "10"
-        brick10.label2Text = "!="
-        brick10.button2Text = "10"
-        return [brick1, brick2, brick3, brick4, brick5, brick6, brick7, brick8, brick9, brick10]
+    class func getDevicesBricks() -> [DevicesBrick] {
+        let brick1 = DevicesBrick()
+        brick1.label1Text = "Wait Button Press"
+        let brick2 = DevicesBrick()
+        brick2.label1Text = "Set Servo Angle"
+        brick2.button1Text = "180"
+        let brick3 = DevicesBrick()
+        brick3.label1Text = "Step Servo Angle"
+        brick3.button1Text = "180"
+        return [brick1, brick2, brick3]
     }
     
     class func getIfBricks() -> [IfBrick] {
@@ -163,15 +142,9 @@ class BricksManager: NSObject {
     
     class func getIFTTTBricks() -> [IFTTTBrick] {
         let brick1 = IFTTTBrick()
-        brick1.label1Text = "Data1"
-        brick1.button1Text = "5"
-        brick1.label2Text = "Data2"
-        brick1.button2Text = "LightSensor"
+        brick1.label1Text = "Get Weather"
         let brick2 = IFTTTBrick()
-        brick2.label1Text = "Data1"
-        brick2.button1Text = "MotionSensor"
-        brick2.label2Text = "Data2"
-        brick2.button2Text = "10"
+        brick2.label1Text = "Button Pressed"
         return [brick1, brick2]
     }
     

@@ -40,10 +40,10 @@ class BrickCell: UITableViewCell {
     }
     
     func setType(type: BrickType) {
-        if type == .Constant {
-            self.backView.backgroundColor = ConstantColor
-        } else if type == .Expression {
-            self.backView.backgroundColor = ExpressionColor
+        if type == .LED {
+            self.backView.backgroundColor = LEDColor
+        } else if type == .Devices {
+            self.backView.backgroundColor = DevicesColor
         } else if type == .If {
             self.backView.backgroundColor = IfColor
         } else if type == .RepeatFor {

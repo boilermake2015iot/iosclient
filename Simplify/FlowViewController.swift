@@ -9,7 +9,7 @@
 import UIKit
 
 protocol FlowViewDelegate {
-    func finishWithBricks(bricks: [Brick])
+    func saveBricks(bricks: [Brick])
 }
 
 class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FlowViewDelegate, BrickTransactionDelegate {
@@ -29,6 +29,13 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let mainVC = self.splitViewController!.viewControllers[0] as! MainViewController
+        if isAtRoot {
+            if let object = NSUserDefaults.standardUserDefaults().objectForKey(mainVC.project!.name) as? NSData {
+                self.bricks = NSKeyedUnarchiver.unarchiveObjectWithData(object) as! [Brick]
+            }
+        }
         
         self.navigationController?.navigationBarHidden = true
         self.view.backgroundColor = UIColor(red: 215/255, green: 215/255, blue: 215/255, alpha: 1)
@@ -93,7 +100,7 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func goBack() {
-        delegate?.finishWithBricks(bricks)
+        self.attemptToSaveBrick()
         self.navigationController?.popViewControllerAnimated(true)
     }
 
@@ -126,7 +133,9 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            bricks.removeAtIndex(indexPath.row)
+            self.bricks.removeAtIndex(indexPath.row)
+            self.attemptToSaveBrick()
+            tableView.reloadData()
         }
     }
     
@@ -138,6 +147,7 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let brick = bricks[sourceIndexPath.row]
         bricks.removeAtIndex(sourceIndexPath.row)
         bricks.insert(brick, atIndex: destinationIndexPath.row)
+        self.attemptToSaveBrick()
         self.tableView?.reloadData()
     }
 
@@ -207,9 +217,35 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
         })
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
             self.bricks[sender.tag].button1Text = alertController.textFields![0].text
+            self.attemptToSaveBrick()
             self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
         })
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction) in })
+        let deviceAction = UIAlertAction(title: "Choose a device value", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+            let alertController2 = UIAlertController(title: "First", message: "Old value: \(sender.titleLabel!.text!)", preferredStyle: UIAlertControllerStyle.Alert)
+            let buttonAction = UIAlertAction(title: "Get Button Status", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+                self.bricks[sender.tag].button1Text = "Get Button Status"
+                self.attemptToSaveBrick()
+                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            })
+            let temperatureAction = UIAlertAction(title: "Current Temperature", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+                self.bricks[sender.tag].button1Text = "Current Temperature"
+                self.attemptToSaveBrick()
+                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            })
+            let humidityAction = UIAlertAction(title: "Current Humidity", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+                self.bricks[sender.tag].button1Text = "Current Humidity"
+                self.attemptToSaveBrick()
+                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction) in })
+            alertController2.addAction(buttonAction)
+            alertController2.addAction(temperatureAction)
+            alertController2.addAction(humidityAction)
+            alertController2.addAction(cancelAction)
+            self.presentViewController(alertController2, animated: true, completion: nil)
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction) in })
+        alertController.addAction(deviceAction)
         alertController.addAction(okAction)
         alertController.addAction(cancelAction)
         self.presentViewController(alertController, animated: true, completion: nil)
@@ -222,6 +258,7 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
         })
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
             self.bricks[sender.tag].button2Text = alertController.textFields![0].text
+            self.attemptToSaveBrick()
             self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
         })
         let cancelAction = UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction) in })
@@ -254,13 +291,27 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
-    func finishWithBricks(bricks: [Brick]) {
+    func attemptToSaveBrick() {
+        if self.isAtRoot {
+            NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "SaveBricks", object: nil, userInfo: ["bricks": self.bricks]))
+        } else {
+            delegate?.saveBricks(self.bricks)
+        }
+    }
+    
+    func saveBricks(bricks: [Brick]) {
         self.bricks[selectedRow].bricks = bricks
+        delegate?.saveBricks(self.bricks)
+        if self.isAtRoot {
+            NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "SaveBricks", object: nil, userInfo: ["bricks": self.bricks]))
+        }
     }
     
     func addBrick(brick: Brick) {
-        bricks.append(brick)
+        self.bricks.append(brick)
+        self.attemptToSaveBrick()
         self.tableView?.reloadData()
+        self.tableView?.scrollToRowAtIndexPath(NSIndexPath(forRow: bricks.count - 1, inSection: 0), atScrollPosition: UITableViewScrollPosition.Bottom, animated: false)
     }
 
 }

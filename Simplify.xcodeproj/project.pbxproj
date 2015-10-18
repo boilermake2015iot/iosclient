@@ -15,8 +15,8 @@
 		5E391FE51BD2AA62009B69CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FE41BD2AA62009B69CC /* MainViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		5E391FE71BD2ABFC009B69CC /* FlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FE61BD2ABFC009B69CC /* FlowViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		5E391FE91BD2BC2B009B69CC /* Brick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FE81BD2BC2B009B69CC /* Brick.swift */; settings = {ASSET_TAGS = (); }; };
-		5E391FEE1BD2BE72009B69CC /* ConstantBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FED1BD2BE72009B69CC /* ConstantBrick.swift */; settings = {ASSET_TAGS = (); }; };
-		5E391FF01BD2BE8A009B69CC /* ExpressionBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FEF1BD2BE8A009B69CC /* ExpressionBrick.swift */; settings = {ASSET_TAGS = (); }; };
+		5E391FEE1BD2BE72009B69CC /* LEDBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FED1BD2BE72009B69CC /* LEDBrick.swift */; settings = {ASSET_TAGS = (); }; };
+		5E391FF01BD2BE8A009B69CC /* DevicesBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FEF1BD2BE8A009B69CC /* DevicesBrick.swift */; settings = {ASSET_TAGS = (); }; };
 		5E391FF21BD2BE98009B69CC /* IfBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FF11BD2BE98009B69CC /* IfBrick.swift */; settings = {ASSET_TAGS = (); }; };
 		5E391FF41BD2BEA2009B69CC /* RepeatUntilBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FF31BD2BEA2009B69CC /* RepeatUntilBrick.swift */; settings = {ASSET_TAGS = (); }; };
 		5E391FF61BD2BEA8009B69CC /* RepeatForBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FF51BD2BEA8009B69CC /* RepeatForBrick.swift */; settings = {ASSET_TAGS = (); }; };
@@ -46,8 +46,8 @@
 		5E391FE41BD2AA62009B69CC /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5E391FE61BD2ABFC009B69CC /* FlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowViewController.swift; sourceTree = "<group>"; };
 		5E391FE81BD2BC2B009B69CC /* Brick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brick.swift; sourceTree = "<group>"; };
-		5E391FED1BD2BE72009B69CC /* ConstantBrick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantBrick.swift; sourceTree = "<group>"; };
-		5E391FEF1BD2BE8A009B69CC /* ExpressionBrick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionBrick.swift; sourceTree = "<group>"; };
+		5E391FED1BD2BE72009B69CC /* LEDBrick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LEDBrick.swift; sourceTree = "<group>"; };
+		5E391FEF1BD2BE8A009B69CC /* DevicesBrick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesBrick.swift; sourceTree = "<group>"; };
 		5E391FF11BD2BE98009B69CC /* IfBrick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IfBrick.swift; sourceTree = "<group>"; };
 		5E391FF31BD2BEA2009B69CC /* RepeatUntilBrick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatUntilBrick.swift; sourceTree = "<group>"; };
 		5E391FF51BD2BEA8009B69CC /* RepeatForBrick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatForBrick.swift; sourceTree = "<group>"; };
@@ -140,8 +140,8 @@
 				5E391FF31BD2BEA2009B69CC /* RepeatUntilBrick.swift */,
 				5E391FF51BD2BEA8009B69CC /* RepeatForBrick.swift */,
 				5E391FF11BD2BE98009B69CC /* IfBrick.swift */,
-				5E391FEF1BD2BE8A009B69CC /* ExpressionBrick.swift */,
-				5E391FED1BD2BE72009B69CC /* ConstantBrick.swift */,
+				5E391FEF1BD2BE8A009B69CC /* DevicesBrick.swift */,
+				5E391FED1BD2BE72009B69CC /* LEDBrick.swift */,
 			);
 			name = Bricks;
 			sourceTree = "<group>";
@@ -339,7 +339,7 @@
 				5E391FE11BD202FA009B69CC /* ProjectCell.swift in Sources */,
 				5E391FFA1BD2BEBC009B69CC /* SleepBrick.swift in Sources */,
 				5EBF68981BD1D09C0095281C /* HomeViewController.swift in Sources */,
-				5E391FEE1BD2BE72009B69CC /* ConstantBrick.swift in Sources */,
+				5E391FEE1BD2BE72009B69CC /* LEDBrick.swift in Sources */,
 				5EBF689E1BD1D09C0095281C /* Simplify.xcdatamodeld in Sources */,
 				5E391FDD1BD1FBA4009B69CC /* Project.swift in Sources */,
 				5E39200C1BD2CA37009B69CC /* Extensions.swift in Sources */,
@@ -353,7 +353,7 @@
 				5E391FF41BD2BEA2009B69CC /* RepeatUntilBrick.swift in Sources */,
 				5E391FF81BD2BEB3009B69CC /* IFTTTBrick.swift in Sources */,
 				5E391FF61BD2BEA8009B69CC /* RepeatForBrick.swift in Sources */,
-				5E391FF01BD2BE8A009B69CC /* ExpressionBrick.swift in Sources */,
+				5E391FF01BD2BE8A009B69CC /* DevicesBrick.swift in Sources */,
 				5E391FE71BD2ABFC009B69CC /* FlowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,4 +13,12 @@ class IFTTTBrick: Brick {
         super.init()
         self.type = .IFTTTMaker
     }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override func encodeWithCoder(aCoder: NSCoder) {
+        super.encodeWithCoder(aCoder)
+    }
 }

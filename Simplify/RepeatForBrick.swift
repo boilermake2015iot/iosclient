@@ -13,4 +13,12 @@ class RepeatForBrick: Brick {
         super.init()
         self.type = .RepeatFor
     }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override func encodeWithCoder(aCoder: NSCoder) {
+        super.encodeWithCoder(aCoder)
+    }
 }

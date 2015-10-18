@@ -22,12 +22,12 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var tags = [
         [
-            "title": "Constant",
-            "color": ConstantColor
+            "title": "LED",
+            "color": LEDColor
         ],
         [
-            "title": "Expression",
-            "color": ExpressionColor
+            "title": "Devices",
+            "color": DevicesColor
         ],
         [
             "title": "If",
@@ -50,11 +50,28 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             "color": IFTTTMakerColor
         ]
     ]
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "writeBricksToUserDefaults:", name: "SaveBricks", object: nil)
+    }
+    
+    func writeBricksToUserDefaults(notification: NSNotification) {
+        let bricksToSave = notification.userInfo!["bricks"] as! [Brick]
+        let object = NSKeyedArchiver.archivedDataWithRootObject(bricksToSave)
+        NSUserDefaults.standardUserDefaults().setObject(object, forKey: project!.name)
+        NSUserDefaults.standardUserDefaults().synchronize()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        bricks = BricksManager.getConstantBricks()
-        project = (self.splitViewController as! ProjectViewController).project
+        self.bricks = BricksManager.getLEDBricks()
+        self.project = (self.splitViewController as! ProjectViewController).project
         self.view.backgroundColor = UIColor(red: 215/255, green: 215/255, blue: 215/255, alpha: 1)
         
         let leftView = UITableView(frame: CGRectMake(5, 20, 320 - 7.5, self.view.frame.height - 25), style: .Plain)
@@ -136,9 +153,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func selectTag(sender: UIButton) {
         let index = sender.tag
         if index == 0 {
-            bricks = BricksManager.getConstantBricks()
+            bricks = BricksManager.getLEDBricks()
         } else if index == 1 {
-            bricks = BricksManager.getExpressionBricks()
+            bricks = BricksManager.getDevicesBricks()
         } else if index == 2 {
             bricks = BricksManager.getIfBricks()
         } else if index == 3 {

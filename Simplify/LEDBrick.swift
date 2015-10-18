@@ -1,5 +1,5 @@
 //
-//  SleepBrick.swift
+//  LEDBrick
 //  Simplify
 //
 //  Created by George Lo on 10/17/15.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class SleepBrick: Brick {
+class LEDBrick: Brick {
     override init() {
         super.init()
-        self.type = .Sleep
+        self.type = .LED
     }
     
     required init?(coder aDecoder: NSCoder) {

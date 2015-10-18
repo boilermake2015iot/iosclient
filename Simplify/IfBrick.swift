@@ -13,4 +13,12 @@ class IfBrick: Brick {
         super.init()
         self.type = .If
     }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override func encodeWithCoder(aCoder: NSCoder) {
+        super.encodeWithCoder(aCoder)
+    }
 }
