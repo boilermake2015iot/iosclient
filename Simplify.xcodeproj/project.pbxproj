@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E391FDB1BD1EFEC009B69CC /* Macro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FDA1BD1EFEC009B69CC /* Macro.swift */; settings = {ASSET_TAGS = (); }; };
+		5E391FDD1BD1FBA4009B69CC /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FDC1BD1FBA4009B69CC /* Project.swift */; settings = {ASSET_TAGS = (); }; };
+		5E391FDF1BD1FDE5009B69CC /* ProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E391FDE1BD1FDE5009B69CC /* ProjectCell.xib */; settings = {ASSET_TAGS = (); }; };
+		5E391FE11BD202FA009B69CC /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FE01BD202FA009B69CC /* ProjectCell.swift */; settings = {ASSET_TAGS = (); }; };
+		5E391FE31BD29BA5009B69CC /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FE21BD29BA5009B69CC /* ProjectViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		5E391FE51BD2AA62009B69CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FE41BD2AA62009B69CC /* MainViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		5E391FE71BD2ABFC009B69CC /* FlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FE61BD2ABFC009B69CC /* FlowViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		5E391FE91BD2BC2B009B69CC /* Brick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FE81BD2BC2B009B69CC /* Brick.swift */; settings = {ASSET_TAGS = (); }; };
+		5E391FEE1BD2BE72009B69CC /* ConstantBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FED1BD2BE72009B69CC /* ConstantBrick.swift */; settings = {ASSET_TAGS = (); }; };
+		5E391FF01BD2BE8A009B69CC /* ExpressionBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FEF1BD2BE8A009B69CC /* ExpressionBrick.swift */; settings = {ASSET_TAGS = (); }; };
+		5E391FF21BD2BE98009B69CC /* IfBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FF11BD2BE98009B69CC /* IfBrick.swift */; settings = {ASSET_TAGS = (); }; };
+		5E391FF41BD2BEA2009B69CC /* RepeatUntilBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FF31BD2BEA2009B69CC /* RepeatUntilBrick.swift */; settings = {ASSET_TAGS = (); }; };
+		5E391FF61BD2BEA8009B69CC /* RepeatForBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FF51BD2BEA8009B69CC /* RepeatForBrick.swift */; settings = {ASSET_TAGS = (); }; };
+		5E391FF81BD2BEB3009B69CC /* IFTTTBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FF71BD2BEB3009B69CC /* IFTTTBrick.swift */; settings = {ASSET_TAGS = (); }; };
+		5E391FFA1BD2BEBC009B69CC /* SleepBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FF91BD2BEBC009B69CC /* SleepBrick.swift */; settings = {ASSET_TAGS = (); }; };
+		5E3920031BD2C090009B69CC /* MiniBrick.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E3920021BD2C090009B69CC /* MiniBrick.xib */; settings = {ASSET_TAGS = (); }; };
+		5E3920081BD2C35D009B69CC /* MiniCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3920071BD2C35D009B69CC /* MiniCell.swift */; settings = {ASSET_TAGS = (); }; };
+		5E39200C1BD2CA37009B69CC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39200B1BD2CA37009B69CC /* Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		5E39200F1BD2CE3F009B69CC /* BricksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39200E1BD2CE3F009B69CC /* BricksManager.swift */; settings = {ASSET_TAGS = (); }; };
+		5E3920111BD2E94E009B69CC /* BrickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E3920101BD2E94E009B69CC /* BrickCell.xib */; settings = {ASSET_TAGS = (); }; };
+		5E3920131BD2E961009B69CC /* BrickCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3920121BD2E961009B69CC /* BrickCell.swift */; settings = {ASSET_TAGS = (); }; };
 		5EBF68961BD1D09C0095281C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBF68951BD1D09C0095281C /* AppDelegate.swift */; };
 		5EBF68981BD1D09C0095281C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBF68971BD1D09C0095281C /* HomeViewController.swift */; };
 		5EBF689B1BD1D09C0095281C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EBF68991BD1D09C0095281C /* Main.storyboard */; };
@@ -17,6 +38,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E391FDA1BD1EFEC009B69CC /* Macro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Macro.swift; path = ../Macro.swift; sourceTree = "<group>"; };
+		5E391FDC1BD1FBA4009B69CC /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		5E391FDE1BD1FDE5009B69CC /* ProjectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectCell.xib; sourceTree = "<group>"; };
+		5E391FE01BD202FA009B69CC /* ProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
+		5E391FE21BD29BA5009B69CC /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		5E391FE41BD2AA62009B69CC /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5E391FE61BD2ABFC009B69CC /* FlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowViewController.swift; sourceTree = "<group>"; };
+		5E391FE81BD2BC2B009B69CC /* Brick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brick.swift; sourceTree = "<group>"; };
+		5E391FED1BD2BE72009B69CC /* ConstantBrick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantBrick.swift; sourceTree = "<group>"; };
+		5E391FEF1BD2BE8A009B69CC /* ExpressionBrick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionBrick.swift; sourceTree = "<group>"; };
+		5E391FF11BD2BE98009B69CC /* IfBrick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IfBrick.swift; sourceTree = "<group>"; };
+		5E391FF31BD2BEA2009B69CC /* RepeatUntilBrick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatUntilBrick.swift; sourceTree = "<group>"; };
+		5E391FF51BD2BEA8009B69CC /* RepeatForBrick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatForBrick.swift; sourceTree = "<group>"; };
+		5E391FF71BD2BEB3009B69CC /* IFTTTBrick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFTTTBrick.swift; sourceTree = "<group>"; };
+		5E391FF91BD2BEBC009B69CC /* SleepBrick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepBrick.swift; sourceTree = "<group>"; };
+		5E3920021BD2C090009B69CC /* MiniBrick.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniBrick.xib; sourceTree = "<group>"; };
+		5E3920071BD2C35D009B69CC /* MiniCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCell.swift; sourceTree = "<group>"; };
+		5E39200B1BD2CA37009B69CC /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5E39200E1BD2CE3F009B69CC /* BricksManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BricksManager.swift; sourceTree = "<group>"; };
+		5E3920101BD2E94E009B69CC /* BrickCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrickCell.xib; sourceTree = "<group>"; };
+		5E3920121BD2E961009B69CC /* BrickCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrickCell.swift; sourceTree = "<group>"; };
 		5EBF68921BD1D09B0095281C /* Simplify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simplify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBF68951BD1D09C0095281C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EBF68971BD1D09C0095281C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +101,78 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5E391FEA1BD2BD78009B69CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5E391FE81BD2BC2B009B69CC /* Brick.swift */,
+				5E391FFF1BD2BEEB009B69CC /* Bricks */,
+				5E391FDC1BD1FBA4009B69CC /* Project.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5E391FEB1BD2BD7E009B69CC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5E391FE61BD2ABFC009B69CC /* FlowViewController.swift */,
+				5EBF68971BD1D09C0095281C /* HomeViewController.swift */,
+				5E391FE21BD29BA5009B69CC /* ProjectViewController.swift */,
+				5E391FE41BD2AA62009B69CC /* MainViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5E391FEC1BD2BD8C009B69CC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5E3920011BD2C011009B69CC /* Tiny Bricks */,
+				5E3920001BD2C002009B69CC /* Bricks */,
+				5E3920141BD2E97E009B69CC /* Project */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		5E391FFF1BD2BEEB009B69CC /* Bricks */ = {
+			isa = PBXGroup;
+			children = (
+				5E391FF71BD2BEB3009B69CC /* IFTTTBrick.swift */,
+				5E391FF91BD2BEBC009B69CC /* SleepBrick.swift */,
+				5E391FF31BD2BEA2009B69CC /* RepeatUntilBrick.swift */,
+				5E391FF51BD2BEA8009B69CC /* RepeatForBrick.swift */,
+				5E391FF11BD2BE98009B69CC /* IfBrick.swift */,
+				5E391FEF1BD2BE8A009B69CC /* ExpressionBrick.swift */,
+				5E391FED1BD2BE72009B69CC /* ConstantBrick.swift */,
+			);
+			name = Bricks;
+			sourceTree = "<group>";
+		};
+		5E3920001BD2C002009B69CC /* Bricks */ = {
+			isa = PBXGroup;
+			children = (
+				5E3920101BD2E94E009B69CC /* BrickCell.xib */,
+				5E3920121BD2E961009B69CC /* BrickCell.swift */,
+			);
+			name = Bricks;
+			sourceTree = "<group>";
+		};
+		5E3920011BD2C011009B69CC /* Tiny Bricks */ = {
+			isa = PBXGroup;
+			children = (
+				5E3920021BD2C090009B69CC /* MiniBrick.xib */,
+				5E3920071BD2C35D009B69CC /* MiniCell.swift */,
+			);
+			name = "Tiny Bricks";
+			sourceTree = "<group>";
+		};
+		5E3920141BD2E97E009B69CC /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				5E391FDE1BD1FDE5009B69CC /* ProjectCell.xib */,
+				5E391FE01BD202FA009B69CC /* ProjectCell.swift */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
 		5EBF68891BD1D09B0095281C = {
 			isa = PBXGroup;
 			children = (
@@ -80,13 +194,18 @@
 		5EBF68941BD1D09B0095281C /* Simplify */ = {
 			isa = PBXGroup;
 			children = (
-				5EBF68951BD1D09C0095281C /* AppDelegate.swift */,
-				5EBF68971BD1D09C0095281C /* HomeViewController.swift */,
-				5EBF68991BD1D09C0095281C /* Main.storyboard */,
-				5EBF689F1BD1D09C0095281C /* Assets.xcassets */,
-				5EBF68A11BD1D09C0095281C /* LaunchScreen.storyboard */,
 				5EBF68A41BD1D09C0095281C /* Info.plist */,
+				5EBF68951BD1D09C0095281C /* AppDelegate.swift */,
+				5E39200E1BD2CE3F009B69CC /* BricksManager.swift */,
+				5E39200B1BD2CA37009B69CC /* Extensions.swift */,
+				5E391FDA1BD1EFEC009B69CC /* Macro.swift */,
+				5EBF689F1BD1D09C0095281C /* Assets.xcassets */,
+				5E391FEC1BD2BD8C009B69CC /* Cells */,
+				5EBF68A11BD1D09C0095281C /* LaunchScreen.storyboard */,
+				5EBF68991BD1D09C0095281C /* Main.storyboard */,
+				5E391FEA1BD2BD78009B69CC /* Models */,
 				5EBF689C1BD1D09C0095281C /* Simplify.xcdatamodeld */,
+				5E391FEB1BD2BD7E009B69CC /* ViewControllers */,
 			);
 			path = Simplify;
 			sourceTree = "<group>";
@@ -152,8 +271,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EBF68A31BD1D09C0095281C /* LaunchScreen.storyboard in Resources */,
+				5E3920111BD2E94E009B69CC /* BrickCell.xib in Resources */,
 				5EBF68A01BD1D09C0095281C /* Assets.xcassets in Resources */,
 				5EBF689B1BD1D09C0095281C /* Main.storyboard in Resources */,
+				5E391FDF1BD1FDE5009B69CC /* ProjectCell.xib in Resources */,
+				5E3920031BD2C090009B69CC /* MiniBrick.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,9 +334,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E3920131BD2E961009B69CC /* BrickCell.swift in Sources */,
+				5E391FDB1BD1EFEC009B69CC /* Macro.swift in Sources */,
+				5E391FE11BD202FA009B69CC /* ProjectCell.swift in Sources */,
+				5E391FFA1BD2BEBC009B69CC /* SleepBrick.swift in Sources */,
 				5EBF68981BD1D09C0095281C /* HomeViewController.swift in Sources */,
+				5E391FEE1BD2BE72009B69CC /* ConstantBrick.swift in Sources */,
 				5EBF689E1BD1D09C0095281C /* Simplify.xcdatamodeld in Sources */,
+				5E391FDD1BD1FBA4009B69CC /* Project.swift in Sources */,
+				5E39200C1BD2CA37009B69CC /* Extensions.swift in Sources */,
+				5E39200F1BD2CE3F009B69CC /* BricksManager.swift in Sources */,
+				5E391FE91BD2BC2B009B69CC /* Brick.swift in Sources */,
+				5E3920081BD2C35D009B69CC /* MiniCell.swift in Sources */,
+				5E391FE31BD29BA5009B69CC /* ProjectViewController.swift in Sources */,
 				5EBF68961BD1D09C0095281C /* AppDelegate.swift in Sources */,
+				5E391FF21BD2BE98009B69CC /* IfBrick.swift in Sources */,
+				5E391FE51BD2AA62009B69CC /* MainViewController.swift in Sources */,
+				5E391FF41BD2BEA2009B69CC /* RepeatUntilBrick.swift in Sources */,
+				5E391FF81BD2BEB3009B69CC /* IFTTTBrick.swift in Sources */,
+				5E391FF61BD2BEA8009B69CC /* RepeatForBrick.swift in Sources */,
+				5E391FF01BD2BE8A009B69CC /* ExpressionBrick.swift in Sources */,
+				5E391FE71BD2ABFC009B69CC /* FlowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
