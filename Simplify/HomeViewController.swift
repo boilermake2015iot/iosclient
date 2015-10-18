@@ -20,6 +20,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     var projects = [Project]()
     var timeCache = NSMutableArray()
     var selectedRow = Int()
+    var animationStarted: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,13 +41,27 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        for var i = 0; i < projects.count; i++ {
-            self.addTimeCacheForIndex(i)
-        }
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "appDidBecomeActive", name: "AppDidBecomeActive", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "appWillResignActive", name: "AppWillResignActive", object: nil)
         
-        self.startAnimateSun()
-        self.startAnimateBackWave()
-        self.startAnimateFrontWave()
+        self.appDidBecomeActive()
+    }
+    
+    func appDidBecomeActive() {
+        if animationStarted == false {
+            animationStarted = true
+            for var i = 0; i < projects.count; i++ {
+                self.addTimeCacheForIndex(i)
+            }
+            
+            self.startAnimateSun()
+            self.startAnimateBackWave()
+            self.startAnimateFrontWave()
+        }
+    }
+    
+    func appWillResignActive() {
+        self.animationStarted = false
     }
     
     func saveProjects() {
@@ -85,7 +100,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     override func viewWillDisappear(animated: Bool) {
+        animationStarted = false
         timeCache.removeAllObjects()
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     // MARK: Top Views
@@ -180,7 +197,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     func setupBottomViews() {
         let scale = ScreenWidth / frontImageView.frame.width * 2
         
-        self.backImageView.frame = CGRectMake(0 - (backImageView.frame.width * scale / 2), ScreenHeight - backImageView.frame.height * scale, backImageView.frame.width * scale, backImageView.frame.height * scale)
+        self.backImageView.frame = CGRectMake(-1024, ScreenHeight - backImageView.frame.height * scale, 2048, backImageView.frame.height * scale)
         self.view.addSubview(self.backImageView)
         
         self.frontImageView.frame = CGRectMake(0, ScreenHeight - frontImageView.frame.height * scale, frontImageView.frame.width * scale, frontImageView.frame.height * scale)
@@ -188,18 +205,16 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func startAnimateBackWave() {
-        let scale = ScreenWidth / frontImageView.frame.width * 2
-        
         UIView.animateWithDuration(5, delay: 0, options: [UIViewAnimationOptions.CurveLinear, UIViewAnimationOptions.Repeat], animations: {
             self.backImageView.frame.origin.x = 0
         }, completion: { (success: Bool) in
-            self.backImageView.frame.origin.x = 0 - (self.backImageView.frame.width * scale / 2)
+            self.backImageView.frame.origin.x = -1024
         })
     }
     
     func startAnimateFrontWave() {
         UIView.animateWithDuration(5, delay: 0, options: [UIViewAnimationOptions.CurveLinear, UIViewAnimationOptions.Repeat], animations: {
-            self.frontImageView.frame.origin.x = 0 - self.frontImageView.frame.width / 2
+            self.frontImageView.frame.origin.x = -1024
         }, completion: { (success: Bool) in
             self.frontImageView.frame.origin.x = 0
         })

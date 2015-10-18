@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Alamofire.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>MRProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4784C22340466143F20B3CF5EDC503AD</key>
+		<key>3B17283643268D6E3B014C5C2DB87FB5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>51FC7D0393A72251BEC806511F5A739A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E75A06A311E12CDEEE651368E128DA8D</key>
+		<key>51E4254CDBB5D9D766E9BBFC4C544B92</key>
 		<dict>
 			<key>primary</key>
 			<true/>
