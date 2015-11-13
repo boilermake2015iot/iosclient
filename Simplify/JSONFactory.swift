@@ -26,57 +26,37 @@ class JSONFactory: NSObject {
         let nodes = NSMutableArray()
         for brick in bricks {
             let dict = NSMutableDictionary()
-            if brick.type == .LED {
-                if brick.label1Text == "Set Red LED" {
-                    dict.setObject("LedSet", forKey: "Type")
-                    dict.setObject("RedLed", forKey: "Device")
-                    dict.setValue(self.generateDictForText(brick.button1Text!), forKey: "Value")
-                } else if brick.label1Text == "Set Green LED" {
-                    dict.setObject("LedSet", forKey: "Type")
-                    dict.setObject("GreenLed", forKey: "Device")
-                    dict.setValue(self.generateDictForText(brick.button1Text!), forKey: "Value")
-                } else if brick.label1Text == "Set Blue LED" {
-                    dict.setObject("LedSet", forKey: "Type")
-                    dict.setObject("BlueLed", forKey: "Device")
-                    dict.setValue(self.generateDictForText(brick.button1Text!), forKey: "Value")
-                } else if brick.label1Text == "Blink Red LED" {
-                    dict.setObject("LedBlink", forKey: "Type")
-                    dict.setObject("RedLed", forKey: "Device")
-                    dict.setObject(self.generateDictForText(brick.button1Text!), forKey: "BlinkInterval")
-                    dict.setObject(self.generateDictForText(brick.button2Text!), forKey: "NumberOfBlinks")
-                } else if brick.label1Text == "Blink Green LED" {
-                    dict.setObject("LedBlink", forKey: "Type")
-                    dict.setObject("GreenLed", forKey: "Device")
-                    dict.setObject(self.generateDictForText(brick.button1Text!), forKey: "BlinkInterval")
-                    dict.setObject(self.generateDictForText(brick.button2Text!), forKey: "NumberOfBlinks")
-                } else if brick.label1Text == "Blink Blue LED" {
-                    dict.setObject("LedBlink", forKey: "Type")
-                    dict.setObject("BlueLed", forKey: "Device")
-                    dict.setObject(self.generateDictForText(brick.button1Text!), forKey: "BlinkInterval")
-                    dict.setObject(self.generateDictForText(brick.button2Text!), forKey: "NumberOfBlinks")
-                } else if brick.label1Text == "Set RGBLED" {
-                    dict.setObject("SetRgbLed", forKey: "Type")
-                    dict.setObject("RgbLed", forKey: "Device")
-                    let rgb = brick.button1Text!.componentsSeparatedByString(",") as [String]
-                    dict.setObject(self.generateDictForText(rgb[0]), forKey: "R")
-                    dict.setObject(self.generateDictForText(rgb[1]), forKey: "G")
-                    dict.setObject(self.generateDictForText(rgb[2]), forKey: "B")
+            if brick.type == .Message {
+                if brick.label1Text != "pitch " && brick.label1Text != "roll " && brick.label1Text != "yaw " && brick.label1Text != "north " {
+                    var formatString = "\(brick.label1Text){}"
+                    if brick.label2Text != nil {
+                        formatString = "\(brick.label1Text){}\(brick.label2Text!)"
+                    }
+                    let temp = NSMutableDictionary()
+                    temp.setObject("Format", forKey: "Type")
+                    temp.setObject(formatString, forKey: "Text")
+                    temp.setObject([self.generateDictForText(brick.button1Text!)], forKey: "Params")
+                    let params = [temp]
+                    dict.setObject("SenseHat", forKey: "Type")
+                    dict.setObject("show_message", forKey: "Command")
+                    dict.setObject(params, forKey: "Params")
                 } else {
-                    print("\"\(brick.label1Text)\"")
+                    let temp = NSMutableDictionary()
+                    temp.setObject("Format", forKey: "Type")
+                    temp.setObject("\(brick.label1Text){}", forKey: "Text")
+                    temp.setObject([self.generateKeyDictForText(brick.button1Text!, key: brick.label1Text)], forKey: "Params")
+                    let params = [temp]
+                    dict.setObject("SenseHat", forKey: "Type")
+                    dict.setObject("show_message", forKey: "Command")
+                    dict.setObject(params, forKey: "Params")
                 }
             } else if brick.type == .Devices {
-                if brick.label1Text == "Wait Button Press" {
-                    dict.setObject("WaitButtonPress", forKey: "Type")
-                    dict.setObject("Button", forKey: "Device")
-                } else if brick.label1Text == "Set Servo Angle" {
-                    dict.setObject("SetServoAngle", forKey: "Type")
-                    dict.setObject("Servo", forKey: "Device")
-                    dict.setObject(self.generateDictForText(brick.button1Text!), forKey: "Angle")
-                } else if brick.label1Text == "Step Servo Angle" {
-                    dict.setObject("StepServoAngle", forKey: "Type")
-                    dict.setObject("Servo", forKey: "Device")
-                    dict.setObject(self.generateDictForText(brick.button1Text!), forKey: "Increment")
-                }
+                dict.setObject("SenseHat", forKey: "Type")
+                dict.setObject("set_rotation", forKey: "Command")
+                let temp = NSMutableDictionary()
+                temp.setObject("Constant", forKey: "Type")
+                temp.setValue(Int(brick.label1Text.componentsSeparatedByString(" ")[3]), forKey: "Value")
+                dict.setObject([temp], forKey: "Params")
             } else if brick.type == .If {
                 if brick.bricks.count > 0 {
                     dict.setObject("If", forKey: "Type")
@@ -137,6 +117,28 @@ class JSONFactory: NSObject {
                     dict.setObject([], forKey: "Data")
                 } else {
                     continue
+                }
+            } else if brick.type == .Grid {
+                if brick.label1Text == "8 x 8" {
+                    let textComps = brick.button1Text!.componentsSeparatedByString(" | ")
+                    var rgbAry = [[Int]]()
+                    for textComp in textComps {
+                        let comp = textComp.componentsSeparatedByString(",")
+                        let rgb = [Int(comp[0])!, Int(comp[1])!, Int(comp[2])!]
+                        rgbAry.append(rgb)
+                    }
+                    dict.setObject("SenseHat", forKey: "Type")
+                    dict.setObject("set_pixels", forKey: "Command")
+                    dict.setObject([["Type": "Constant", "Value": rgbAry]], forKey: "Params")
+                } else {
+                    var params = [NSDictionary]()
+                    var comps = brick.button3Text!.componentsSeparatedByString(",")
+                    params.append(["Type": "Constant", "Value": Int(brick.button1Text!)!])
+                    params.append(["Type": "Constant", "Value": Int(brick.button2Text!)!])
+                    params.append(["Type": "Constant", "Value": [Int(comps[0])!, Int(comps[1])!, Int(comps[2])!]])
+                    dict.setObject("SenseHat", forKey: "Type")
+                    dict.setObject("set_pixel", forKey: "Command")
+                    dict.setObject(params, forKey: "Params")
                 }
             }
             nodes.addObject(dict)
@@ -151,16 +153,30 @@ class JSONFactory: NSObject {
     }
     
     class func generateDictForText(text: String) -> NSDictionary {
-        if text == "Get Button Status" {
-            return ["Type": "GetButtonStatus", "Device": "Button"]
-        } else if text == "Current Temperature" {
-            return ["Type": "CurrentTemperature", "Device": "TempSensor"]
+        if text == "Current Temperature" {
+            return ["Type": "SenseHat", "Command": "get_temperature", "Params": []]
         } else if text == "Current Humidity" {
-            return ["Type": "CurrentHumidity", "Device": "TempSensor"]
+            return ["Type": "SenseHat", "Command": "get_humidity", "Params": []]
         } else {
-            let num = NSNumber(double: Double(text)!)
-            return ["Type": "Constant",
-                "Value": num]
+            return ["Type": "Constant", "Value": Double(text)!]
+        }
+    }
+    
+    class func generateKeyDictForText(text: String, key: String?) -> NSDictionary {
+        if text == "Accelerometer value" {
+            let dict = NSMutableDictionary()
+            dict.setObject("SenseHat", forKey: "Type")
+            dict.setObject("get_accelerometer", forKey: "Command")
+            dict.setObject([], forKey: "Params")
+            return ["Type": "GetKey", "Key": key!.stringByReplacingOccurrencesOfString(" ", withString: ""), "Dict": dict]
+        } else if text == "Gyroscope value" {
+            let dict = NSMutableDictionary()
+            dict.setObject("SenseHat", forKey: "Type")
+            dict.setObject("get_gyroscope", forKey: "Command")
+            dict.setObject([], forKey: "Params")
+            return ["Type": "GetKey", "Key": key!.stringByReplacingOccurrencesOfString(" ", withString: ""), "Dict": dict]
+        } else {
+            return ["Type": "SenseHat", "Command": "get_compass", "Params": []]
         }
     }
     
@@ -171,57 +187,37 @@ class JSONFactory: NSObject {
         let nodes = NSMutableArray()
         for brick in bricks {
             let dict = NSMutableDictionary()
-            if brick.type == .LED {
-                if brick.label1Text == "Set Red LED" {
-                    dict.setObject("LedSet", forKey: "Type")
-                    dict.setObject("RedLed", forKey: "Device")
-                    dict.setValue(self.generateDictForText(brick.button1Text!), forKey: "Value")
-                } else if brick.label1Text == "Set Green LED" {
-                    dict.setObject("LedSet", forKey: "Type")
-                    dict.setObject("GreenLed", forKey: "Device")
-                    dict.setValue(self.generateDictForText(brick.button1Text!), forKey: "Value")
-                } else if brick.label1Text == "Set Blue LED" {
-                    dict.setObject("LedSet", forKey: "Type")
-                    dict.setObject("BlueLed", forKey: "Device")
-                    dict.setValue(self.generateDictForText(brick.button1Text!), forKey: "Value")
-                } else if brick.label1Text == "Blink Red LED" {
-                    dict.setObject("LedBlink", forKey: "Type")
-                    dict.setObject("RedLed", forKey: "Device")
-                    dict.setObject(self.generateDictForText(brick.button1Text!), forKey: "BlinkInterval")
-                    dict.setObject(self.generateDictForText(brick.button2Text!), forKey: "NumberOfBlinks")
-                } else if brick.label1Text == "Blink Green LED" {
-                    dict.setObject("LedBlink", forKey: "Type")
-                    dict.setObject("GreenLed", forKey: "Device")
-                    dict.setObject(self.generateDictForText(brick.button1Text!), forKey: "BlinkInterval")
-                    dict.setObject(self.generateDictForText(brick.button2Text!), forKey: "NumberOfBlinks")
-                } else if brick.label1Text == "Blink Blue LED" {
-                    dict.setObject("LedBlink", forKey: "Type")
-                    dict.setObject("BlueLed", forKey: "Device")
-                    dict.setObject(self.generateDictForText(brick.button1Text!), forKey: "BlinkInterval")
-                    dict.setObject(self.generateDictForText(brick.button2Text!), forKey: "NumberOfBlinks")
-                } else if brick.label1Text == "Set RGBLED" {
-                    dict.setObject("SetRgbLed", forKey: "Type")
-                    dict.setObject("RgbLed", forKey: "Device")
-                    let rgb = brick.button1Text!.componentsSeparatedByString(",") as [String]
-                    dict.setObject(self.generateDictForText(rgb[0]), forKey: "R")
-                    dict.setObject(self.generateDictForText(rgb[1]), forKey: "G")
-                    dict.setObject(self.generateDictForText(rgb[2]), forKey: "B")
+            if brick.type == .Message {
+                if brick.label1Text != "pitch " && brick.label1Text != "roll " && brick.label1Text != "yaw " && brick.label1Text != "north " {
+                    var formatString = "\(brick.label1Text){}"
+                    if brick.label2Text != nil {
+                        formatString = "\(brick.label1Text){}\(brick.label2Text!)"
+                    }
+                    let temp = NSMutableDictionary()
+                    temp.setObject("Format", forKey: "Type")
+                    temp.setObject(formatString, forKey: "Text")
+                    temp.setObject([self.generateDictForText(brick.button1Text!)], forKey: "Params")
+                    let params = [temp]
+                    dict.setObject("SenseHat", forKey: "Type")
+                    dict.setObject("show_message", forKey: "Command")
+                    dict.setObject(params, forKey: "Params")
                 } else {
-                    print("\"\(brick.label1Text)\"")
+                    let temp = NSMutableDictionary()
+                    temp.setObject("Format", forKey: "Type")
+                    temp.setObject("\(brick.label1Text){}", forKey: "Text")
+                    temp.setObject([self.generateKeyDictForText(brick.button1Text!, key: brick.label1Text)], forKey: "Params")
+                    let params = [temp]
+                    dict.setObject("SenseHat", forKey: "Type")
+                    dict.setObject("show_message", forKey: "Command")
+                    dict.setObject(params, forKey: "Params")
                 }
             } else if brick.type == .Devices {
-                if brick.label1Text == "Wait Button Press" {
-                    dict.setObject("WaitButtonPress", forKey: "Type")
-                    dict.setObject("Button", forKey: "Device")
-                } else if brick.label1Text == "Set Servo Angle" {
-                    dict.setObject("SetServoAngle", forKey: "Type")
-                    dict.setObject("Servo", forKey: "Device")
-                    dict.setObject(self.generateDictForText(brick.button1Text!), forKey: "Angle")
-                } else if brick.label1Text == "Step Servo Angle" {
-                    dict.setObject("StepServoAngle", forKey: "Type")
-                    dict.setObject("Servo", forKey: "Device")
-                    dict.setObject(self.generateDictForText(brick.button1Text!), forKey: "Increment")
-                }
+                dict.setObject("SenseHat", forKey: "Type")
+                dict.setObject("set_rotation", forKey: "Command")
+                let temp = NSMutableDictionary()
+                temp.setObject("Constant", forKey: "Type")
+                temp.setValue(Int(brick.label1Text.componentsSeparatedByString(" ")[3]), forKey: "Value")
+                dict.setObject([temp], forKey: "Params")
             } else if brick.type == .If {
                 if brick.bricks.count > 0 {
                     dict.setObject("If", forKey: "Type")
@@ -282,6 +278,28 @@ class JSONFactory: NSObject {
                     dict.setObject([], forKey: "Data")
                 } else {
                     continue
+                }
+            } else if brick.type == .Grid {
+                if brick.label1Text == "8 x 8" {
+                    let textComps = brick.button1Text!.componentsSeparatedByString(" | ")
+                    var rgbAry = [[Int]]()
+                    for textComp in textComps {
+                        let comp = textComp.componentsSeparatedByString(",")
+                        let rgb = [Int(comp[0])!, Int(comp[1])!, Int(comp[2])!]
+                        rgbAry.append(rgb)
+                    }
+                    dict.setObject("SenseHat", forKey: "Type")
+                    dict.setObject("set_pixels", forKey: "Command")
+                    dict.setObject([["Type": "Constant", "Value": rgbAry]], forKey: "Params")
+                } else {
+                    var params = [NSDictionary]()
+                    var comps = brick.button3Text!.componentsSeparatedByString(",")
+                    params.append(["Type": "Constant", "Value": Int(brick.button1Text!)!])
+                    params.append(["Type": "Constant", "Value": Int(brick.button2Text!)!])
+                    params.append(["Type": "Constant", "Value": [Int(comps[0])!, Int(comps[1])!, Int(comps[2])!]])
+                    dict.setObject("SenseHat", forKey: "Type")
+                    dict.setObject("set_pixel", forKey: "Command")
+                    dict.setObject(params, forKey: "Params")
                 }
             }
             nodes.addObject(dict)

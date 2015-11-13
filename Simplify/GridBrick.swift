@@ -1,17 +1,17 @@
 //
-//  MessageBrick
+//  GridBrick.swift
 //  Simplify
 //
-//  Created by George Lo on 10/17/15.
+//  Created by George Lo on 11/13/15.
 //  Copyright © 2015 BoilerMakeIOT. All rights reserved.
 //
 
 import UIKit
 
-class MessageBrick: Brick {
+class GridBrick: Brick {
     override init() {
         super.init()
-        self.type = .Message
+        self.type = .Grid
     }
     
     required init?(coder aDecoder: NSCoder) {

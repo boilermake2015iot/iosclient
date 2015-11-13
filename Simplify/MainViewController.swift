@@ -23,11 +23,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var tags = [
         [
-            "title": "LED",
-            "color": LEDColor
+            "title": "Message",
+            "color": MessageColor
         ],
         [
-            "title": "Devices",
+            "title": "Rotate",
             "color": DevicesColor
         ],
         [
@@ -49,6 +49,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         [
             "title": "IFTTTMaker",
             "color": IFTTTMakerColor
+        ],
+        [
+            "title": "Grid",
+            "color": GridColor
         ]
     ]
     
@@ -66,7 +70,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.bricks = BricksManager.getLEDBricks()
+        self.bricks = BricksManager.getMessageBricks()
         self.project = (self.splitViewController as! ProjectViewController).project
         self.view.backgroundColor = UIColor(red: 215/255, green: 215/255, blue: 215/255, alpha: 1)
         
@@ -166,7 +170,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func selectTag(sender: UIButton) {
         let index = sender.tag
         if index == 0 {
-            bricks = BricksManager.getLEDBricks()
+            bricks = BricksManager.getMessageBricks()
         } else if index == 1 {
             bricks = BricksManager.getDevicesBricks()
         } else if index == 2 {
@@ -179,6 +183,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             bricks = BricksManager.getSleepBricks()
         } else if index == 6 {
             bricks = BricksManager.getIFTTTBricks()
+        } else if index == 7 {
+            bricks = BricksManager.getGridBricks()
         }
         self.tableView?.reloadData()
     }
@@ -217,6 +223,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.label2.text = ""
         cell.button2.setTitle("", forState: UIControlState.Normal)
         cell.label3.text = ""
+        cell.button3.setTitle("", forState: UIControlState.Normal)
         if let button1Text = bricks[indexPath.row].button1Text {
             cell.button1.setTitle(button1Text, forState: UIControlState.Normal)
             cell.button1.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
@@ -234,6 +241,12 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         if let label3Text = bricks[indexPath.row].label3Text {
             cell.label3.text = label3Text
+        }
+        if let button3Text = bricks[indexPath.row].button3Text {
+            cell.button3.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
+            cell.button3.setTitle(button3Text, forState: UIControlState.Normal)
+        } else {
+            cell.button3.backgroundColor = UIColor.clearColor()
         }
         
         return cell

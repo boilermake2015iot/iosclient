@@ -16,6 +16,7 @@ class MiniCell: UITableViewCell {
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var label3: UILabel!
+    @IBOutlet weak var button3: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,11 +27,12 @@ class MiniCell: UITableViewCell {
         
         self.button1.layer.cornerRadius = 5
         self.button2.layer.cornerRadius = 5
+        self.button3.layer.cornerRadius = 5
     }
     
     func setType(type: BrickType) {
-        if type == .LED {
-            self.backView.backgroundColor = LEDColor
+        if type == .Message {
+            self.backView.backgroundColor = MessageColor
         } else if type == .Devices {
             self.backView.backgroundColor = DevicesColor
         } else if type == .If {
@@ -43,6 +45,8 @@ class MiniCell: UITableViewCell {
             self.backView.backgroundColor = SleepColor
         } else if type == .IFTTTMaker {
             self.backView.backgroundColor = IFTTTMakerColor
+        } else if type == .Grid {
+            self.backView.backgroundColor = GridColor
         }
         self.backView.layer.borderWidth = 1
         self.backView.layer.borderColor = self.backView.backgroundColor?.darkerColor().CGColor

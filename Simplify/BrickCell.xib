@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -81,6 +81,14 @@
                                 </constraints>
                                 <state key="normal" image="Right"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btn-n7-BRe">
+                                <rect key="frame" x="476.5" y="34" width="78" height="42"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.55505123190000005" green="0.74826128049999996" blue="0.86320233589999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -91,9 +99,11 @@
                             <constraint firstItem="Vvi-jM-Ddn" firstAttribute="centerY" secondItem="Rva-IW-OKG" secondAttribute="centerY" id="AYV-PE-yU1"/>
                             <constraint firstItem="vYs-of-7UU" firstAttribute="centerY" secondItem="Rva-IW-OKG" secondAttribute="centerY" id="FKp-L1-hth"/>
                             <constraint firstItem="dD5-VZ-iiC" firstAttribute="leading" secondItem="Vvi-jM-Ddn" secondAttribute="trailing" constant="15" id="Fqv-ou-ioa"/>
+                            <constraint firstItem="Btn-n7-BRe" firstAttribute="centerY" secondItem="Rva-IW-OKG" secondAttribute="centerY" id="GEb-eW-tz4"/>
                             <constraint firstItem="7UP-7t-yIr" firstAttribute="leading" secondItem="Rva-IW-OKG" secondAttribute="leading" constant="20" id="Ije-9q-IUr"/>
                             <constraint firstItem="hy4-Vg-kY8" firstAttribute="leading" secondItem="7UP-7t-yIr" secondAttribute="trailing" constant="15" id="Jb8-h2-fiQ"/>
                             <constraint firstAttribute="trailing" secondItem="YFI-g3-l21" secondAttribute="trailing" constant="15" id="M0F-3e-56c"/>
+                            <constraint firstItem="Btn-n7-BRe" firstAttribute="leading" secondItem="dD5-VZ-iiC" secondAttribute="trailing" constant="15" id="UhX-uM-d5U"/>
                             <constraint firstItem="7UP-7t-yIr" firstAttribute="centerY" secondItem="Rva-IW-OKG" secondAttribute="centerY" id="Who-zt-IVT"/>
                             <constraint firstItem="dD5-VZ-iiC" firstAttribute="centerY" secondItem="Rva-IW-OKG" secondAttribute="centerY" id="Ypb-mC-jzc"/>
                             <constraint firstItem="Vvi-jM-Ddn" firstAttribute="leading" secondItem="vYs-of-7UU" secondAttribute="trailing" constant="15" id="joj-00-FVi"/>
@@ -102,9 +112,9 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="8kd-oK-aXO"/>
                                 <exclude reference="M0F-3e-56c"/>
                                 <exclude reference="mhI-z8-pEX"/>
-                                <exclude reference="8kd-oK-aXO"/>
                             </mask>
                         </variation>
                     </view>
@@ -138,6 +148,7 @@
                 <outlet property="bottomLine" destination="RYg-nh-pPD" id="mNQ-ce-GPX"/>
                 <outlet property="button1" destination="hy4-Vg-kY8" id="Z5D-jW-iiC"/>
                 <outlet property="button2" destination="Vvi-jM-Ddn" id="PFl-lL-2XB"/>
+                <outlet property="button3" destination="Btn-n7-BRe" id="frX-8C-4U7"/>
                 <outlet property="detailButton" destination="YFI-g3-l21" id="87n-Ko-teP"/>
                 <outlet property="label1" destination="7UP-7t-yIr" id="NuZ-Mg-uLu"/>
                 <outlet property="label2" destination="vYs-of-7UU" id="1Ir-2P-8cT"/>

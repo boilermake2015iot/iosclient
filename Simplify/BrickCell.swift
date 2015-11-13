@@ -16,6 +16,7 @@ class BrickCell: UITableViewCell {
     @IBOutlet weak var label3: UILabel!
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
+    @IBOutlet weak var button3: UIButton!
     @IBOutlet weak var topLine: UIView!
     @IBOutlet weak var bottomLine: UIView!
     @IBOutlet weak var detailButton: UIButton!
@@ -30,6 +31,7 @@ class BrickCell: UITableViewCell {
         
         self.button1.layer.cornerRadius = 5
         self.button2.layer.cornerRadius = 5
+        self.button3.layer.cornerRadius = 5
         
         self.detailButton.setImage(UIImage(named: "Right")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate), forState: UIControlState.Normal)
         self.detailButton.tintColor = UIColor.whiteColor()
@@ -40,8 +42,8 @@ class BrickCell: UITableViewCell {
     }
     
     func setType(type: BrickType) {
-        if type == .LED {
-            self.backView.backgroundColor = LEDColor
+        if type == .Message {
+            self.backView.backgroundColor = MessageColor
         } else if type == .Devices {
             self.backView.backgroundColor = DevicesColor
         } else if type == .If {
@@ -54,6 +56,8 @@ class BrickCell: UITableViewCell {
             self.backView.backgroundColor = SleepColor
         } else if type == .IFTTTMaker {
             self.backView.backgroundColor = IFTTTMakerColor
+        } else if type == .Grid {
+            self.backView.backgroundColor = GridColor
         }
         self.backView.layer.borderWidth = 1
         self.backView.layer.borderColor = self.backView.backgroundColor?.darkerColor().CGColor

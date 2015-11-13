@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 import MRProgress
 
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, ProjectCellDelegate {

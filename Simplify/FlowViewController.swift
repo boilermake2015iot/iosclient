@@ -12,8 +12,10 @@ protocol FlowViewDelegate {
     func saveBricks(bricks: [Brick])
 }
 
-class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FlowViewDelegate, BrickTransactionDelegate {
+class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FlowViewDelegate, BrickTransactionDelegate, GridEditorDelegate {
     
+    var currentButton = UIButton()
+    var buttonTag = 0
     var isAtRoot = true
     var navigationTitle = "FLOW"
     var bricks = [Brick]()
@@ -162,10 +164,15 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.label2.text = ""
         cell.button2.setTitle("", forState: UIControlState.Normal)
         cell.label3.text = ""
+        cell.button3.setTitle("", forState: UIControlState.Normal)
         if let button1Text = bricks[indexPath.row].button1Text {
             cell.button1.tag = indexPath.row
             cell.button1.setTitle(button1Text, forState: UIControlState.Normal)
-            cell.button1.addTarget(self, action: "changeButton1Text:", forControlEvents: UIControlEvents.TouchUpInside)
+            if brickType == .Grid && cell.label1.text == "8 x 8" {
+                cell.button1.addTarget(self, action: "changeGrid:", forControlEvents: UIControlEvents.TouchUpInside)
+            } else {
+                cell.button1.addTarget(self, action: "changeButton1Text:", forControlEvents: UIControlEvents.TouchUpInside)
+            }
             cell.button1.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
         } else {
             cell.button1.backgroundColor = UIColor.clearColor()
@@ -183,6 +190,14 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         if let label3Text = bricks[indexPath.row].label3Text {
             cell.label3.text = label3Text
+        }
+        if let button3Text = bricks[indexPath.row].button3Text {
+            cell.button3.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
+            cell.button3.tag = indexPath.row
+            cell.button3.addTarget(self, action: "changeButton3Text:", forControlEvents: UIControlEvents.TouchUpInside)
+            cell.button3.setTitle(button3Text, forState: UIControlState.Normal)
+        } else {
+            cell.button3.backgroundColor = UIColor.clearColor()
         }
         
         cell.topLine.alpha = 1
@@ -239,10 +254,28 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 self.attemptToSaveBrick()
                 self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
             })
+            let accelerometerAction = UIAlertAction(title: "Accelerometer value", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+                self.bricks[sender.tag].button1Text = "Accelerometer value"
+                self.attemptToSaveBrick()
+                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            })
+            let gyroscopeAction = UIAlertAction(title: "Gyroscope value", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+                self.bricks[sender.tag].button1Text = "Gyroscope value"
+                self.attemptToSaveBrick()
+                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            })
+            let compassAction = UIAlertAction(title: "Compass value", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+                self.bricks[sender.tag].button1Text = "Compass value"
+                self.attemptToSaveBrick()
+                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            })
             let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction) in })
 //            alertController2.addAction(buttonAction)
             alertController2.addAction(temperatureAction)
             alertController2.addAction(humidityAction)
+            alertController2.addAction(accelerometerAction)
+            alertController2.addAction(gyroscopeAction)
+            alertController2.addAction(compassAction)
             alertController2.addAction(cancelAction)
             self.presentViewController(alertController2, animated: true, completion: nil)
         })
@@ -280,10 +313,87 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 self.attemptToSaveBrick()
                 self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
             })
+            let accelerometerAction = UIAlertAction(title: "Accelerometer value", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+                self.bricks[sender.tag].button2Text = "Accelerometer value"
+                self.attemptToSaveBrick()
+                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            })
+            let gyroscopeAction = UIAlertAction(title: "Gyroscope value", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+                self.bricks[sender.tag].button2Text = "Gyroscope value"
+                self.attemptToSaveBrick()
+                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            })
+            let compassAction = UIAlertAction(title: "Compass value", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+                self.bricks[sender.tag].button2Text = "Compass value"
+                self.attemptToSaveBrick()
+                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            })
             let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction) in })
 //            alertController2.addAction(buttonAction)
             alertController2.addAction(temperatureAction)
             alertController2.addAction(humidityAction)
+            alertController2.addAction(accelerometerAction)
+            alertController2.addAction(gyroscopeAction)
+            alertController2.addAction(compassAction)
+            alertController2.addAction(cancelAction)
+            self.presentViewController(alertController2, animated: true, completion: nil)
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction) in })
+        alertController.addAction(deviceAction)
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func changeButton3Text(sender: UIButton) {
+        let alertController = UIAlertController(title: "Second", message: "Example(Old Value): \(sender.titleLabel!.text!)", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addTextFieldWithConfigurationHandler({(textField: UITextField) in
+            textField.placeholder = "Value"
+        })
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+            self.bricks[sender.tag].button3Text = alertController.textFields![0].text
+            self.attemptToSaveBrick()
+            self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+        })
+        let deviceAction = UIAlertAction(title: "Choose a device value", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+            let alertController2 = UIAlertController(title: "First", message: "Example(Old Value): \(sender.titleLabel!.text!)", preferredStyle: UIAlertControllerStyle.Alert)
+            //            let buttonAction = UIAlertAction(title: "Get Button Status", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+            //                self.bricks[sender.tag].button3Text = "Get Button Status"
+            //                self.attemptToSaveBrick()
+            //                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            //            })
+            let temperatureAction = UIAlertAction(title: "Current Temperature", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+                self.bricks[sender.tag].button3Text = "Current Temperature"
+                self.attemptToSaveBrick()
+                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            })
+            let humidityAction = UIAlertAction(title: "Current Humidity", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+                self.bricks[sender.tag].button3Text = "Current Humidity"
+                self.attemptToSaveBrick()
+                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            })
+            let accelerometerAction = UIAlertAction(title: "Accelerometer value", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+                self.bricks[sender.tag].button3Text = "Accelerometer value"
+                self.attemptToSaveBrick()
+                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            })
+            let gyroscopeAction = UIAlertAction(title: "Gyroscope value", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+                self.bricks[sender.tag].button3Text = "Gyroscope value"
+                self.attemptToSaveBrick()
+                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            })
+            let compassAction = UIAlertAction(title: "Compass value", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
+                self.bricks[sender.tag].button3Text = "Compass value"
+                self.attemptToSaveBrick()
+                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction) in })
+            //            alertController2.addAction(buttonAction)
+            alertController2.addAction(temperatureAction)
+            alertController2.addAction(humidityAction)
+            alertController2.addAction(accelerometerAction)
+            alertController2.addAction(gyroscopeAction)
+            alertController2.addAction(compassAction)
             alertController2.addAction(cancelAction)
             self.presentViewController(alertController2, animated: true, completion: nil)
         })
@@ -343,6 +453,33 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.attemptToSaveBrick()
         self.tableView?.reloadData()
         self.tableView?.scrollToRowAtIndexPath(NSIndexPath(forRow: bricks.count - 1, inSection: 0), atScrollPosition: UITableViewScrollPosition.Bottom, animated: false)
+    }
+    
+    // MARK: Grid operations
+    
+    func changeGrid(sender: UIButton) {
+        self.currentButton = sender
+        self.buttonTag = sender.tag
+        self.performSegueWithIdentifier("toGridEditor", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toGridEditor" {
+            let detailVC = (segue.destinationViewController as! UINavigationController).viewControllers[0] as! GridEditorViewController
+            detailVC.delegate = self
+            let textComponents = self.currentButton.titleLabel!.text!.componentsSeparatedByString(" | ")
+            var colors = [[Int]]()
+            for textComponent in textComponents {
+                let components = textComponent.componentsSeparatedByString(",")
+                colors.append([Int(components[0])!, Int(components[1])!, Int(components[2])!])
+            }
+            detailVC.colors = colors
+        }
+    }
+    
+    func gridEditorDidFinishedEditing(code: String) {
+        self.bricks[buttonTag].button1Text = code
+        self.currentButton.setTitle(code, forState: .Normal)
     }
 
 }

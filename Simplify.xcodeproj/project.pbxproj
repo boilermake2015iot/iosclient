@@ -7,29 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E391FDB1BD1EFEC009B69CC /* Macro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FDA1BD1EFEC009B69CC /* Macro.swift */; settings = {ASSET_TAGS = (); }; };
-		5E391FDD1BD1FBA4009B69CC /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FDC1BD1FBA4009B69CC /* Project.swift */; settings = {ASSET_TAGS = (); }; };
-		5E391FDF1BD1FDE5009B69CC /* ProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E391FDE1BD1FDE5009B69CC /* ProjectCell.xib */; settings = {ASSET_TAGS = (); }; };
-		5E391FE11BD202FA009B69CC /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FE01BD202FA009B69CC /* ProjectCell.swift */; settings = {ASSET_TAGS = (); }; };
-		5E391FE31BD29BA5009B69CC /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FE21BD29BA5009B69CC /* ProjectViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		5E391FE51BD2AA62009B69CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FE41BD2AA62009B69CC /* MainViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		5E391FE71BD2ABFC009B69CC /* FlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FE61BD2ABFC009B69CC /* FlowViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		5E391FE91BD2BC2B009B69CC /* Brick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FE81BD2BC2B009B69CC /* Brick.swift */; settings = {ASSET_TAGS = (); }; };
-		5E391FEE1BD2BE72009B69CC /* LEDBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FED1BD2BE72009B69CC /* LEDBrick.swift */; settings = {ASSET_TAGS = (); }; };
-		5E391FF01BD2BE8A009B69CC /* DevicesBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FEF1BD2BE8A009B69CC /* DevicesBrick.swift */; settings = {ASSET_TAGS = (); }; };
-		5E391FF21BD2BE98009B69CC /* IfBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FF11BD2BE98009B69CC /* IfBrick.swift */; settings = {ASSET_TAGS = (); }; };
-		5E391FF41BD2BEA2009B69CC /* RepeatUntilBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FF31BD2BEA2009B69CC /* RepeatUntilBrick.swift */; settings = {ASSET_TAGS = (); }; };
-		5E391FF61BD2BEA8009B69CC /* RepeatForBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FF51BD2BEA8009B69CC /* RepeatForBrick.swift */; settings = {ASSET_TAGS = (); }; };
-		5E391FF81BD2BEB3009B69CC /* IFTTTBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FF71BD2BEB3009B69CC /* IFTTTBrick.swift */; settings = {ASSET_TAGS = (); }; };
-		5E391FFA1BD2BEBC009B69CC /* SleepBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FF91BD2BEBC009B69CC /* SleepBrick.swift */; settings = {ASSET_TAGS = (); }; };
-		5E3920031BD2C090009B69CC /* MiniBrick.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E3920021BD2C090009B69CC /* MiniBrick.xib */; settings = {ASSET_TAGS = (); }; };
-		5E3920081BD2C35D009B69CC /* MiniCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3920071BD2C35D009B69CC /* MiniCell.swift */; settings = {ASSET_TAGS = (); }; };
-		5E39200C1BD2CA37009B69CC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39200B1BD2CA37009B69CC /* Extensions.swift */; settings = {ASSET_TAGS = (); }; };
-		5E39200F1BD2CE3F009B69CC /* BricksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39200E1BD2CE3F009B69CC /* BricksManager.swift */; settings = {ASSET_TAGS = (); }; };
-		5E3920111BD2E94E009B69CC /* BrickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E3920101BD2E94E009B69CC /* BrickCell.xib */; settings = {ASSET_TAGS = (); }; };
-		5E3920131BD2E961009B69CC /* BrickCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3920121BD2E961009B69CC /* BrickCell.swift */; settings = {ASSET_TAGS = (); }; };
-		5E3920171BD39228009B69CC /* JSONFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3920161BD39228009B69CC /* JSONFactory.swift */; settings = {ASSET_TAGS = (); }; };
-		5E3920191BD39414009B69CC /* DeployFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3920181BD39414009B69CC /* DeployFactory.swift */; settings = {ASSET_TAGS = (); }; };
+		5E391FDB1BD1EFEC009B69CC /* Macro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FDA1BD1EFEC009B69CC /* Macro.swift */; };
+		5E391FDD1BD1FBA4009B69CC /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FDC1BD1FBA4009B69CC /* Project.swift */; };
+		5E391FDF1BD1FDE5009B69CC /* ProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E391FDE1BD1FDE5009B69CC /* ProjectCell.xib */; };
+		5E391FE11BD202FA009B69CC /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FE01BD202FA009B69CC /* ProjectCell.swift */; };
+		5E391FE31BD29BA5009B69CC /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FE21BD29BA5009B69CC /* ProjectViewController.swift */; };
+		5E391FE51BD2AA62009B69CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FE41BD2AA62009B69CC /* MainViewController.swift */; };
+		5E391FE71BD2ABFC009B69CC /* FlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FE61BD2ABFC009B69CC /* FlowViewController.swift */; };
+		5E391FE91BD2BC2B009B69CC /* Brick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FE81BD2BC2B009B69CC /* Brick.swift */; };
+		5E391FEE1BD2BE72009B69CC /* LEDBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FED1BD2BE72009B69CC /* LEDBrick.swift */; };
+		5E391FF01BD2BE8A009B69CC /* DevicesBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FEF1BD2BE8A009B69CC /* DevicesBrick.swift */; };
+		5E391FF21BD2BE98009B69CC /* IfBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FF11BD2BE98009B69CC /* IfBrick.swift */; };
+		5E391FF41BD2BEA2009B69CC /* RepeatUntilBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FF31BD2BEA2009B69CC /* RepeatUntilBrick.swift */; };
+		5E391FF61BD2BEA8009B69CC /* RepeatForBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FF51BD2BEA8009B69CC /* RepeatForBrick.swift */; };
+		5E391FF81BD2BEB3009B69CC /* IFTTTBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FF71BD2BEB3009B69CC /* IFTTTBrick.swift */; };
+		5E391FFA1BD2BEBC009B69CC /* SleepBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E391FF91BD2BEBC009B69CC /* SleepBrick.swift */; };
+		5E3920031BD2C090009B69CC /* MiniBrick.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E3920021BD2C090009B69CC /* MiniBrick.xib */; };
+		5E3920081BD2C35D009B69CC /* MiniCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3920071BD2C35D009B69CC /* MiniCell.swift */; };
+		5E39200C1BD2CA37009B69CC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39200B1BD2CA37009B69CC /* Extensions.swift */; };
+		5E39200F1BD2CE3F009B69CC /* BricksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39200E1BD2CE3F009B69CC /* BricksManager.swift */; };
+		5E3920111BD2E94E009B69CC /* BrickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E3920101BD2E94E009B69CC /* BrickCell.xib */; };
+		5E3920131BD2E961009B69CC /* BrickCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3920121BD2E961009B69CC /* BrickCell.swift */; };
+		5E3920171BD39228009B69CC /* JSONFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3920161BD39228009B69CC /* JSONFactory.swift */; };
+		5E3920191BD39414009B69CC /* DeployFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3920181BD39414009B69CC /* DeployFactory.swift */; };
+		5E39B7451BF66CE900A89637 /* GridBrick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39B7441BF66CE900A89637 /* GridBrick.swift */; };
+		5E39B7471BF66F9700A89637 /* GridEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39B7461BF66F9700A89637 /* GridEditorViewController.swift */; };
 		5EBF68961BD1D09C0095281C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBF68951BD1D09C0095281C /* AppDelegate.swift */; };
 		5EBF68981BD1D09C0095281C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBF68971BD1D09C0095281C /* HomeViewController.swift */; };
 		5EBF689B1BD1D09C0095281C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EBF68991BD1D09C0095281C /* Main.storyboard */; };
@@ -63,6 +65,8 @@
 		5E3920121BD2E961009B69CC /* BrickCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrickCell.swift; sourceTree = "<group>"; };
 		5E3920161BD39228009B69CC /* JSONFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFactory.swift; sourceTree = "<group>"; };
 		5E3920181BD39414009B69CC /* DeployFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeployFactory.swift; sourceTree = "<group>"; };
+		5E39B7441BF66CE900A89637 /* GridBrick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridBrick.swift; sourceTree = "<group>"; };
+		5E39B7461BF66F9700A89637 /* GridEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridEditorViewController.swift; sourceTree = "<group>"; };
 		5EBF68921BD1D09B0095281C /* Simplify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simplify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBF68951BD1D09C0095281C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EBF68971BD1D09C0095281C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				5E391FE61BD2ABFC009B69CC /* FlowViewController.swift */,
+				5E39B7461BF66F9700A89637 /* GridEditorViewController.swift */,
 				5EBF68971BD1D09C0095281C /* HomeViewController.swift */,
 				5E391FE21BD29BA5009B69CC /* ProjectViewController.swift */,
 				5E391FE41BD2AA62009B69CC /* MainViewController.swift */,
@@ -146,6 +151,7 @@
 				5E391FF11BD2BE98009B69CC /* IfBrick.swift */,
 				5E391FEF1BD2BE8A009B69CC /* DevicesBrick.swift */,
 				5E391FED1BD2BE72009B69CC /* LEDBrick.swift */,
+				5E39B7441BF66CE900A89637 /* GridBrick.swift */,
 			);
 			name = Bricks;
 			sourceTree = "<group>";
@@ -340,9 +346,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E39B7471BF66F9700A89637 /* GridEditorViewController.swift in Sources */,
 				5E3920131BD2E961009B69CC /* BrickCell.swift in Sources */,
 				5E391FDB1BD1EFEC009B69CC /* Macro.swift in Sources */,
 				5E3920171BD39228009B69CC /* JSONFactory.swift in Sources */,
+				5E39B7451BF66CE900A89637 /* GridBrick.swift in Sources */,
 				5E391FE11BD202FA009B69CC /* ProjectCell.swift in Sources */,
 				5E391FFA1BD2BEBC009B69CC /* SleepBrick.swift in Sources */,
 				5EBF68981BD1D09C0095281C /* HomeViewController.swift in Sources */,

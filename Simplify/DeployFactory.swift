@@ -31,7 +31,8 @@ class DeployFactory: NSObject {
             if bricks.count == 0 {
                 displayErrorMessage()
             }
-            let jsonString = JSONFactory.getJSONStringForBricks(bricks)
+            var jsonString = JSONFactory.getJSONStringForBricks(bricks)
+            jsonString = jsonString.stringByReplacingOccurrencesOfString("\\\"", withString: "\"")
             print(jsonString)
             
             let overlayView = MRProgressOverlayView.showOverlayAddedTo(viewcontroller.view, title: "Executing", mode: .Indeterminate, animated: true)
@@ -48,6 +49,7 @@ class DeployFactory: NSObject {
                 var fail = true
                 if data != nil {
                     if let dict = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as? NSDictionary {
+                        print(dict)
                         if dict.objectForKey("success") != nil {
                             fail = false
                         }
