@@ -4,6 +4,26 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ChameleonFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ColorUtils.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JHColorPicker-JHColorPicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JHColorPicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MRProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -14,15 +34,55 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UIColor-Crayola.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UIColor-Pantone.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3B17283643268D6E3B014C5C2DB87FB5</key>
+		<key>09A088E92C3ED5F4A0FD3F97A25630EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>51E4254CDBB5D9D766E9BBFC4C544B92</key>
+		<key>3DE89710E87EB8755CFCFB07BDEDB8A8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>46F513BB5D3B39D85037641F08F17966</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E4C13B4CC5E883C6500E673D89BB763</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9883DF06E8D2D66F932D42F0FCA1F6E9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9CAAB2A1855182D992E2945796B03B4D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B219ED651A542650C5832ADC1C31C025</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F7FA51AD3FB1D297C5D843E0321E6ABE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

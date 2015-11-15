@@ -3,5 +3,6 @@ use_frameworks!
 
 target 'Simplify' do
 	pod 'MRProgress'
+    pod 'JHColorPicker'
 end
 

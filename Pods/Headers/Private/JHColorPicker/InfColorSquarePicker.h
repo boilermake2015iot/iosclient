@@ -1,0 +1,1 @@
+../../../JHColorPicker/Pod/Classes/InfColorSquarePicker.h

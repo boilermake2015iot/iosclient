@@ -7,116 +7,422 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		072EC5A3FE8B7A5D12CD5C27C4DB5FAF /* MRActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB28077D5366751810FB5FEA973B2F64 /* MRActivityIndicatorView.m */; };
-		0AD45065AC5CDE40B12748818E8B8271 /* MRProgressHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = FFA3E0E1B6C4CB633027D5E8E40AEC8C /* MRProgressHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1E1507C797638797B14CB0BA6E06110F /* MRBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F0B4248285302A7A41F70C4BE522C81 /* MRBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		21D541B314DA4623F5177EE3ADED5911 /* MRProgressOverlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BF5CB8FB12742B6AD3631A1F12B0679 /* MRProgressOverlayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2421AB6A32141476ADF19B8E4421AB73 /* Pods-Simplify-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8118129A17B22255114CC4E080A0B8F0 /* Pods-Simplify-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		296A7F94F28CE4C35DB9ABCE8EA25F70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9CDF0F41D7776ED0629C59F015C062 /* Foundation.framework */; };
-		2BC43BF7337E4CA2019A4BB0BA9E4F5D /* MRProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = B607963B0913A7E445CA3BF97E85666D /* MRProgress.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2EF75B37C0318906C68AF54587C8CD18 /* MRCircularProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 14646B766E0C7E6910A3AA4C8FB538B2 /* MRCircularProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		44B9FB5394B5AF0E4D8AAFEA52A5A93C /* MRProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 815913F49767FA8F8DFAC15DC72423DF /* MRProgressView.m */; };
-		51319C0988F220779E45DE98ECFD4AA0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F0F40FE06A418D02BF42551DC6B92D /* UIKit.framework */; };
-		587E0FE02B473EDB0D909036665FA41C /* MRActivityIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = DE6C005B7D2787AA765BC094C6ABC7B8 /* MRActivityIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6044340D4CE729968FCA865961319F9F /* MRNavigationBarProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 66924CE9C299E4616500C13C9D23ED78 /* MRNavigationBarProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6A1143D1633BAB0B9DAAA8856899C2CA /* MRNavigationBarProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 209F77FD4A9F861568E28C65B886DAD8 /* MRNavigationBarProgressView.m */; };
-		6E4722EFB66497BB6D2222A937656D5D /* UIImage+MRImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 4978C4A570AEC4F84CCEEF84F6613EE9 /* UIImage+MRImageEffects.m */; };
-		78D9BCE41F6082585E5F9BCD07A28DF8 /* MRStopButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 631A0F784F896DF5ABEF86CF0216CDBE /* MRStopButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B4B85621FD04456CB132A8A20E21B5D /* MRStopableView.h in Headers */ = {isa = PBXBuildFile; fileRef = AA05A34FC65391549E869C37BEB1C33F /* MRStopableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7C6C2E68FD903A7BB304C26F434CD496 /* MRStopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 822DB19F612D4DA655070D2613FD715E /* MRStopButton.m */; };
-		80394429E81538B18EBD76392A81E985 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9CDF0F41D7776ED0629C59F015C062 /* Foundation.framework */; };
-		9C9E12459E8FA73102B9AAE0F5AEDF88 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A498811D2AF069843DAD56A22096BE /* QuartzCore.framework */; };
-		B3F3DEA7E21061B51B5CCF8305F3CAC4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5FCEBB580D21805C2AB78E4347B99B /* Accelerate.framework */; };
-		B62C32981ACB10EEBB025D4BE1525EC5 /* MRIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C86B8AE101E937BD06F73FDEA1C6FE9 /* MRIconView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B80D5D4B0136C863609F2087610D190A /* MRIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = D886BF904D925343BCFED761CC0E82BC /* MRIconView.m */; };
-		C0B00AD365EB389E31385142209B0FF4 /* Pods-Simplify-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0822392E9D10310CB9F7BED9423B86 /* Pods-Simplify-dummy.m */; };
-		CF8228C5CCA23744C6F451B5C0922A65 /* MRBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6B75235A9F589C738E43D617A38A4C /* MRBlurView.m */; };
-		CFEE9E273E1E70ADA2DC6E83E594F4FC /* MRProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5287D80FB3890C1DB3D835B223596BF0 /* MRProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D3156FE3004A581C6B1A056B00128CF3 /* MRProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51899FAA30339578BDEBFA3F7094069A /* MRProgress-dummy.m */; };
-		D6E39A4C18E3C1E1EAFA4BF35203743A /* MRProgress-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A6FAA51896431BC4E70F832488FF96E /* MRProgress-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EAE27A1C0C91D3CBAB9E7A92630B8B7B /* UIImage+MRImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 36923E4860B9485735F567940B2697C2 /* UIImage+MRImageEffects.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EB86F532581DBD6CD230F97E1F940B9F /* MRProgressOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC480069EF1C78765FEC41587D1674D /* MRProgressOverlayView.m */; };
-		EF51FC2841560BB7A64EEB386C04E183 /* MRCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3A108A73D9C0B928B25C2DF49D3A9D /* MRCircularProgressView.m */; };
-		EFF04AF6D546634A2A4274D852B69129 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A017D91F7BB82CFD053BF67FC537BE /* CoreGraphics.framework */; };
+		035CE9022B59D44B20E963B508EF7501 /* InfColorPickerNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DA4403143080C45DDF8E6B4F09BAE6 /* InfColorPickerNavigationController.m */; };
+		08C3DEB4785E0A5F165214103FBCA9F7 /* UIColor-Pantone-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CDA9015D4AF825A6050F8CA67FB26DC7 /* UIColor-Pantone-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B87AEED887108FF3FDA89B00E048E1B /* MRCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8681FDD28A3F6801F9DDED486DC14788 /* MRCircularProgressView.m */; };
+		0E1802BD94F3A513C7941C4C7995773C /* brightness_icon_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = C75C831009BA79C304CEB8FE16FEC589 /* brightness_icon_dark.png */; };
+		0F8EFD6E04BC300EE8F3E061A1F99C24 /* Chameleon_.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F5BEA5F7C4AD99D6E8FF3F90E4D3FF /* Chameleon_.m */; };
+		0FCEAA9EFB1760439123D024661918EE /* brightness_icon_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E90D3AFE85A204FE6520FFC9AEFCBDA /* brightness_icon_dark@2x.png */; };
+		10210854CBA662066177AD8F4AE4DB18 /* UIView+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EDA43B30277C17301EF205D77D887CD /* UIView+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		193674F4D01172221A753BF6AF19345E /* InfColorPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4753C4382EAE2AF97F400B517E30332E /* InfColorPickerController.m */; };
+		196F0E5D2DFCF0BAEDFAC69C00F2FDB4 /* ColorUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B6423CBEE8E2E11B6959EE2F676E9E5D /* ColorUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19A44C55B25612B9721A27E7C49E03CF /* MRIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A03CE66B7E1F79CB86405981CF7C10 /* MRIconView.m */; };
+		1A8AF121EA32A85F29D0C25489252E67 /* brightness_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 19402B083431FFF652FE88250F5E5FCF /* brightness_icon.png */; };
+		1B87A5C0CCE79E2D8E99220A974B65FD /* JHColorPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7D03760E146931BFE21A9CA766941807 /* JHColorPicker.bundle */; };
+		1BE977D21CB76D5FBF41F0A3C1A76FCA /* UIColor+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F0C0148A8186D3B1FD8379A315E1E8 /* UIColor+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C99FE67DA4EEAAA04472844AF91F666 /* Chameleon_.h in Headers */ = {isa = PBXBuildFile; fileRef = DD1BBBA9D2A6B961DED308ED4208EFE0 /* Chameleon_.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D4B00FF6FE0BB34E52A55D4307F4E1B /* brightness_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AC8EA0120FCCF73F9886306DA64C4F4 /* brightness_icon@2x.png */; };
+		20914F22F61E59DE0D01C67E11E21BB9 /* ColorUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F83C9BE5B25AB4A46869EC34BA8380BF /* ColorUtils.framework */; };
+		2099A9669913B4E817910296DA210AB0 /* UILabel+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B333CCDEACC45827651C133E174DCA /* UILabel+Chameleon.m */; };
+		24D8E6650FA6889C73C4B08134C618DD /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C3493268D22FA3D268374E78F1037E /* UIViewController+Chameleon.m */; };
+		2508DEEEAA5E8D1666C68FB19CE47515 /* UIColor+Pantone.h in Headers */ = {isa = PBXBuildFile; fileRef = 37991C671F4C5AACB23BD714BE4EC774 /* UIColor+Pantone.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2635D9581BAB859D16CEF8B623DCB67C /* InfColorBarPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF523B3248F970816151F3E81148D8C /* InfColorBarPicker.m */; };
+		27F47F073A275C8181450F8EEE87C114 /* InfColorPickerNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = F911A08313FA9DA74CFEC398AE941925 /* InfColorPickerNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28BFEF0F25609E5CF6D310771B92CD24 /* MRStopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 19463E5F4E28988EF536090105DF694C /* MRStopButton.m */; };
+		2B760213EE78830957A29FF2AEC63E40 /* MRProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E6F03BD277A8AA34D44AEBEF3670A2 /* MRProgress-dummy.m */; };
+		2C448A85F47127966D8F6703BFE65ED7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50714AA572610D798E941592EA14 /* UIKit.framework */; };
+		3084B72EA21046D2E806C9661E8FF54E /* MRCircularProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C996C9ADF32EB0AB98F74314A26F6DD /* MRCircularProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30C18C204206BA8ADB7A70E1572657EF /* brightness_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47852B0BB90C0F1E2546FD10B1BEF13A /* brightness_icon@3x.png */; };
+		38DACD6D18D4F614DFA68B961B134B72 /* Pods-Simplify-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F305DF5B9F0AEFB458F5DA1A80880A35 /* Pods-Simplify-dummy.m */; };
+		39D758991DF3725B4C3CCF4C55D0D122 /* Pods-Simplify-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E949EAFEABDB3EFEEF1BAC640D353AB1 /* Pods-Simplify-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AADA8A23B62EED30AEA2F76F5017FC7 /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 023AFE733120E3EF40ED84A2FDE38006 /* NSArray+Chameleon.m */; };
+		3D2367124B9607084EDD31DBFFE44482 /* ChameleonFramework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3990D0427C2B596A7755F81B7C166BBD /* ChameleonFramework-dummy.m */; };
+		411463B5D67DED3575833517F9D58011 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182D727402F09D8EF406DE2D5036CCD6 /* Foundation.framework */; };
+		43F9FAAC37CDDC26AB1CBD195E8E77ED /* InfColorPickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FE2751F0BB525B1B9D9F44A2FBE3658 /* InfColorPickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44ADC9F03D19E942B69A907361AA26CD /* ColorUtils-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A34FE56E10124ABD998D6A2D5EC432B /* ColorUtils-dummy.m */; };
+		453B49AD793618942338EE4E75EBEF53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182D727402F09D8EF406DE2D5036CCD6 /* Foundation.framework */; };
+		454E1EB4F7B62721B59982B1E983DCFA /* MRProgressOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA752BDDE2F9B3C18A2FC541C3B6FEDA /* MRProgressOverlayView.m */; };
+		462E04E1F70AABB99FC16A3B3344AAC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B037D198B6B3BCB1CD9EA6318F2504A6 /* CoreGraphics.framework */; };
+		49A62D9FB702FA0A269EE0A8E9543B47 /* UIImage+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 97307B586FA24BB5AB6A2FCBCB08C4C2 /* UIImage+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D1150319B058BF2367CA2E90D3F47CD /* UILabel+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = BB30796695248C03C31ED9273EB63151 /* UILabel+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D26940A9B976B79BB7FFD1DBEF4C00B /* JHColorPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F114E41DF4E22A6EA6B970B4685BD /* JHColorPickerController.swift */; };
+		52A5E8263E7C91DDAB94F66A5364369B /* MRProgressOverlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = EB3D9B23B4E88E17A7BEDCAECC2EBD3F /* MRProgressOverlayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		531E90F70DDA52941C8FD84AD941C99B /* UIColor+Crayola.m in Sources */ = {isa = PBXBuildFile; fileRef = 2472B266C7E22EC49AE6A0350320C1A6 /* UIColor+Crayola.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		539125ADFC95C9FC9FA08E112B9CCB44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182D727402F09D8EF406DE2D5036CCD6 /* Foundation.framework */; };
+		549664AE2322CEF24B8D948F874C85A8 /* ChameleonMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 9754FACEBA3CAA59FEC56475F722EC2C /* ChameleonMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55FA0B46D1B8F6593A6F705157A14506 /* JHColorPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD269C3C19AACCF6F13ABA8BE2E18A8 /* JHColorPicker-dummy.m */; };
+		576908A63CDD8E8CB63A9293C3BDCBD3 /* InfSourceColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 910B295928E3E000DCDDCB586F5BF362 /* InfSourceColorView.m */; };
+		5EB256AD85363166C2F9AC08F6AB6CFE /* UIButton+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C4D97B77A2BC831EF29F25D989E04C /* UIButton+Chameleon.m */; };
+		5F7F40B822116B9DABC6B73B8EBE338B /* MRBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = AE1815D34BD5006D44B796DCBA003BE0 /* MRBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		603BB0A5D87E0AA9B10477CA2A6B30BE /* InfColorPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1822F773DC148AB6D3EE412A168CCB90 /* InfColorPickerView.xib */; };
+		67EFFD29A3FAC5A87E0CCAD3C3CB5BC3 /* ChameleonShorthand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B679F02D21084BFB8F54AED6F03DC9E /* ChameleonShorthand.swift */; };
+		68C3352CC71E177C5CC64FE229D14B65 /* InfColorSquarePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 45E6F7EF59BE062809768E2A1B0E8386 /* InfColorSquarePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E62C30D5585FD9F3F8C7E6C63B82074 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50714AA572610D798E941592EA14 /* UIKit.framework */; };
+		705644DC442C6E763A29A443275096B5 /* UIColor+Crayola.h in Headers */ = {isa = PBXBuildFile; fileRef = 14487EA405EC1E760F58AF6ACA59CAF8 /* UIColor+Crayola.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70A5B39E54B659490AA53F377CA2B415 /* InfColorPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4C9EB19601E7E4C6F31704B305E769 /* InfColorPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70BF84E9F40C1728B6FF2A2BF6E48046 /* Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EF19F54CAB617E22FB6218021916165 /* Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72BFCF186D41C3EAFE421812226087C4 /* InfColorIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6FF368A6EBE694FEA1972974A57A5F /* InfColorIndicatorView.m */; };
+		75C2EC4E91C632BA530B5B1E60DC4AEE /* MRNavigationBarProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = EE9376E75FA5A2401547CEC3E197B78C /* MRNavigationBarProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75DED214D25DE7FF5D961CFEE5784E39 /* brightness_icon_dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2155506C810BB6253FDB248E13E3BE71 /* brightness_icon_dark@3x.png */; };
+		788907A105CE1BC948CBF1DC3F0099CD /* MRProgressHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 48F7DCCE2F3BBF0BBF1F328C28958A7D /* MRProgressHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CB3EF453BF31AD2FA2D84AC77B42A61 /* UIColor-Crayola-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 272758545251A6FAF825697D3436605F /* UIColor-Crayola-dummy.m */; };
+		7CFF3D11D2A80054659CB09F8D17A1A1 /* MRProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = 80A32C640C1880683F02F0C76D8B29E3 /* MRProgress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D082DBFA415C5F8BFDBBCD76FA71073 /* InfColorIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = DACE619A06DAFCCB743D94E17C4AEA9F /* InfColorIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80D34BE804773D9AB582687D6FA73E23 /* UIColor+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CA899E69123E6CFDAF020A5D2682AF8 /* UIColor+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		811BF3A1EDF9B595901E2FC404641EE7 /* MRProgress-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EEEE1148F6244CCF99BB93E70A4E47D /* MRProgress-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81694B31763640FB3743C90CF3547673 /* MRStopableView.h in Headers */ = {isa = PBXBuildFile; fileRef = CFA65107D1B04F384646FF26B35688E2 /* MRStopableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83BC947C81CD6B24E1F1B4423A032DE5 /* MRNavigationBarProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AA2F11C9F3FC8C50AFADEE26C82D5B /* MRNavigationBarProgressView.m */; };
+		85CCFD550051FD7542FBC7075168ECA2 /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E19A6ACF998669E39131A3E7D26CF489 /* ChameleonConstants.m */; };
+		86CD5CFCD76BACE050EE7FE3804F683A /* InfColorBarPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DACD4D82C05A293CE98442DA8D8FBC /* InfColorBarPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89CE4E0D4BEDD88C4B05A9D54526CE7E /* MRIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0594F165CE49451191C7B780682D666C /* MRIconView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91B32D78462E0438A18A665B71CD54AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182D727402F09D8EF406DE2D5036CCD6 /* Foundation.framework */; };
+		95167CA6D4FE6CFA3762703F17002FC6 /* UIImage+MRImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 771169E19AFF7A7F0F28D67FCD06FA3B /* UIImage+MRImageEffects.m */; };
+		95DA4DF1CD3C7C571CA1D0EE6A4DE37C /* UIColor-Pantone-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 427D2CFCA6C9D6F9D475259712A7B615 /* UIColor-Pantone-dummy.m */; };
+		991DC5BEACC413D16F5FE49294EB82FB /* InfHSBSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = C5341CD3658E656ADCAA52EE6C13B438 /* InfHSBSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B4AB6F5248C24541B5D4B968DAF4AD3 /* UINavigationController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 629F5D02EB9D675792F6E7480EED4A72 /* UINavigationController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D406797A4A0768569B06248B8894456 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D983D255F9153AA8EF639E049620AB0 /* QuartzCore.framework */; };
+		A28930DA66986E8D161FF256CFA2E2E9 /* MRStopButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 85AD80CB2F381665315E6B3E110FB50B /* MRStopButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3C8626AC35DC46D1291E4B38362F4FB /* MRActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 274E576CB8F76AE47B469E415013434B /* MRActivityIndicatorView.m */; };
+		A6BC12D1B9506CD16E31DC7F02302E55 /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 773E26C8AE9FA8F7FBF133951E3453BB /* UIColor+Chameleon.m */; };
+		A96DC52DFE6DAA8D0623E7128821DB21 /* ChameleonEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 14B28F279744ACFDEB99A9877D87B659 /* ChameleonEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B13A4A7092D57C3F7A5AD9E5B596B905 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6388CA2D39BBA7062357BE41384D86E3 /* Accelerate.framework */; };
+		B46468E03EBBD87D15E78729A4EE6853 /* ChameleonFramework-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2899145C33CF66B421EF2CC424C3AE /* ChameleonFramework-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B82B12FC1545D7222DC2582A1ACDC4CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182D727402F09D8EF406DE2D5036CCD6 /* Foundation.framework */; };
+		B83A4289689B6D85A34359225306CE77 /* UIViewController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A82C67506E15A272E0B2D79B574BE4C /* UIViewController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD9F0543F7B4F444CA4A0948C0F03070 /* MRProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 40EE29A8170D269B1E0B96C2D3EA771E /* MRProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDA423B9D68C1B0E68B3F42519258C21 /* UIButton+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 940FA6712AD9E8FF577D5801E34DC96C /* UIButton+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC0281540324E5A27D70A10BD529254 /* UIImage+MRImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = A4C9F45AC67047245CC81951287CF42C /* UIImage+MRImageEffects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C248B670FB60AF6726BD2B37C0300AC7 /* NSArray+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C993CD076FE1DDDD9C35147AD67DC53 /* NSArray+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C693378991200385D0F3C4C2E6659A82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182D727402F09D8EF406DE2D5036CCD6 /* Foundation.framework */; };
+		C6DD5AAF7350C93043F9EFDBAB686925 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B037D198B6B3BCB1CD9EA6318F2504A6 /* CoreGraphics.framework */; };
+		C919368866A16A9A2278BC3EF53B07EB /* ChameleonFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCB2BDC5BF2CDD12E8C1E8038D594BE /* ChameleonFramework.framework */; };
+		CD3C1E8D1BAFF179B13FDDDD6118D146 /* MRBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = B54C74E1940CF6D240FDF408A54DDA71 /* MRBlurView.m */; };
+		CF0AB94377DB54A66ADA2FFC7FA484DA /* ColorLibraries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFE2973B413EC3A8E3F5D04681288CF /* ColorLibraries.swift */; };
+		D2C4CE3B9A90491BBC457AFC82CDBF76 /* UIColor_Pantone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 862BACDF809B180FFB8AED9D60438F09 /* UIColor_Pantone.framework */; };
+		D2F1F2A8365A97BD1D6774F73C442527 /* InfSourceColorView.h in Headers */ = {isa = PBXBuildFile; fileRef = DFE60614C9D810C95ED699E7A0B28326 /* InfSourceColorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D51DDAC094EF7314DA6183BDC4838C37 /* JHColorPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 118A463123904BDE7501DFB4D3BF4A7F /* JHColorPickerController.xib */; };
+		D6D4B93CEEDC701B705DE60B30187C20 /* InfColorSquarePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F74FDACDD7441C4E996CB470F4B6497C /* InfColorSquarePicker.m */; };
+		D87B0CF4C4FC6B0FA5D9784C529980E4 /* SwatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0470B05837B371A7DE5C53E56DBC0CCC /* SwatchCell.xib */; };
+		D8909DD14303314C105E05897201C46A /* UIImage+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDE335E2CF27B6DB65BE4DC13E35B3F /* UIImage+ChameleonPrivate.m */; };
+		D957D49675BBB0DD56BD361338165896 /* UIColor+Pantone.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DF363172E0AE97AB26EFE3303B11EB /* UIColor+Pantone.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DA482AC3E3F77B49D5A4C6209E6D210D /* InfHSBSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF58847ADFBFAF78F2826D36CFA3EB /* InfHSBSupport.m */; };
+		DAAACB14FDB689BF049F309085B5EA7B /* UIColor+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD6C37A67D460C442AE14182A1AD453 /* UIColor+ChameleonPrivate.m */; };
+		DDC4316F910EB00DDFD7A98231BAAB7D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6256D45FA1F3B35E5A3084633153DF4B /* UIColorExtension.swift */; };
+		DEB2CEF71EB587F7A1197B9284A8D687 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D983D255F9153AA8EF639E049620AB0 /* QuartzCore.framework */; };
+		DFDF45ADD2CD1731700DA27D81DD7E8B /* ColorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D02D7A851C5AE3A79D1E09B6E786ACD3 /* ColorUtils.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E4793933D4849C99DF30AC419B9B01F6 /* UIColor-Crayola-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E84CB10663B54317001B50AA375883A3 /* UIColor-Crayola-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA23D9387AEED85F9D18BF167D2A332D /* ColorUtils-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BF56BAD332ADDCD5FB90431BD76C82A /* ColorUtils-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA3FA19F3EAF7DD1B89CA7EF6CA8D555 /* ChameleonConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 22AB2BB46AF1A354541A7E8A0ADFC342 /* ChameleonConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC22D765E833EFBC2CF88B27BEF144D6 /* UIColor_Crayola.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251815D6C4B7667FB89827EC571C302C /* UIColor_Crayola.framework */; };
+		EE442E93E5BBC6AB805C3E1B2D3482CA /* MRActivityIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2293ED46F8103A329F8BDF3545A2DE53 /* MRActivityIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0062A0D1BD5D56ED254B194BB3B7EB4 /* MRProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = F932BC203556784984B373B855281E19 /* MRProgressView.m */; };
+		F239EC2C1BA606BC2469F2AF3375D1AB /* UINavigationController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 071C642213CBF78BEA3F286DE9D457D5 /* UINavigationController+Chameleon.m */; };
+		FB4E16B23117578B3F241211A42A49D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182D727402F09D8EF406DE2D5036CCD6 /* Foundation.framework */; };
+		FBD8A23B47AF7594688D4EAEA3E1F053 /* UIView+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 240714E573CC9589227078C355B42099 /* UIView+ChameleonPrivate.m */; };
+		FC89DFAD60AD0E553D87AD619AD9A1BF /* JHColorPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 257B1D2FF08E45549762F1B4033D8770 /* JHColorPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF4920D9218B1050004E4B0287749E07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50714AA572610D798E941592EA14 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3B882C6FA2667AFCF734E9EEC157CE8F /* PBXContainerItemProxy */ = {
+		3EE5B6DB9777ADC8F41EAAE72E2AB123 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 51E4254CDBB5D9D766E9BBFC4C544B92;
+			remoteGlobalIDString = 6E4C13B4CC5E883C6500E673D89BB763;
+			remoteInfo = "UIColor-Pantone";
+		};
+		5494DBE5767E45D27691937C9982FA17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CAAB2A1855182D992E2945796B03B4D;
 			remoteInfo = MRProgress;
+		};
+		55C11BA0125E82950EFA7D91D2EEE560 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9883DF06E8D2D66F932D42F0FCA1F6E9;
+			remoteInfo = ChameleonFramework;
+		};
+		792FE3749941A08DD8305F13F4D6E476 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E4C13B4CC5E883C6500E673D89BB763;
+			remoteInfo = "UIColor-Pantone";
+		};
+		8A260D8B43504E895AE3F14800AC2A9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9883DF06E8D2D66F932D42F0FCA1F6E9;
+			remoteInfo = ChameleonFramework;
+		};
+		9671DBC37F8323FD6309A95DB4CBB028 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B219ED651A542650C5832ADC1C31C025;
+			remoteInfo = "UIColor-Crayola";
+		};
+		A517B566E1E0A25313E06E67C02EEF52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DE89710E87EB8755CFCFB07BDEDB8A8;
+			remoteInfo = "JHColorPicker-JHColorPicker";
+		};
+		A6E51BB6A878B87C834B37827A6661EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B219ED651A542650C5832ADC1C31C025;
+			remoteInfo = "UIColor-Crayola";
+		};
+		D173EADB22DA24E2ED3EDFAC187B3AD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46F513BB5D3B39D85037641F08F17966;
+			remoteInfo = JHColorPicker;
+		};
+		DF42F04110001973F2117F26F96A041E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7FA51AD3FB1D297C5D843E0321E6ABE;
+			remoteInfo = ColorUtils;
+		};
+		EFFA616A3648CAD55DC83BD820786AD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7FA51AD3FB1D297C5D843E0321E6ABE;
+			remoteInfo = ColorUtils;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04A017D91F7BB82CFD053BF67FC537BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		0A6FAA51896431BC4E70F832488FF96E /* MRProgress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRProgress-umbrella.h"; sourceTree = "<group>"; };
-		0F5FCEBB580D21805C2AB78E4347B99B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
-		14646B766E0C7E6910A3AA4C8FB538B2 /* MRCircularProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRCircularProgressView.h; path = src/Components/MRCircularProgressView.h; sourceTree = "<group>"; };
-		209F77FD4A9F861568E28C65B886DAD8 /* MRNavigationBarProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRNavigationBarProgressView.m; path = src/Components/MRNavigationBarProgressView.m; sourceTree = "<group>"; };
-		2A38E03FAC4EECA30E6F4A8FA866D108 /* MRProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MRProgress.xcconfig; sourceTree = "<group>"; };
-		2DC2A0D6FF47805E8A25B01CD4798108 /* MRProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRProgress-prefix.pch"; sourceTree = "<group>"; };
-		2F0B4248285302A7A41F70C4BE522C81 /* MRBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRBlurView.h; path = src/Blur/MRBlurView.h; sourceTree = "<group>"; };
-		36923E4860B9485735F567940B2697C2 /* UIImage+MRImageEffects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MRImageEffects.h"; path = "src/Blur/UIImage+MRImageEffects.h"; sourceTree = "<group>"; };
-		4276776810CE62C5CCD9694B314B9F7C /* Pods-Simplify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Simplify.debug.xcconfig"; sourceTree = "<group>"; };
-		45F0F40FE06A418D02BF42551DC6B92D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		4978C4A570AEC4F84CCEEF84F6613EE9 /* UIImage+MRImageEffects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MRImageEffects.m"; path = "src/Blur/UIImage+MRImageEffects.m"; sourceTree = "<group>"; };
-		4A7EC90D52AA38C43FEB645679ACC322 /* Pods-Simplify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Simplify.release.xcconfig"; sourceTree = "<group>"; };
-		4D0822392E9D10310CB9F7BED9423B86 /* Pods-Simplify-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Simplify-dummy.m"; sourceTree = "<group>"; };
-		51899FAA30339578BDEBFA3F7094069A /* MRProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MRProgress-dummy.m"; sourceTree = "<group>"; };
-		5287D80FB3890C1DB3D835B223596BF0 /* MRProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRProgressView.h; path = src/Components/MRProgressView.h; sourceTree = "<group>"; };
-		5307781680E80C95778AAA5FC514E0C7 /* MRProgress-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MRProgress-Private.xcconfig"; sourceTree = "<group>"; };
-		5C86B8AE101E937BD06F73FDEA1C6FE9 /* MRIconView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRIconView.h; path = src/Components/MRIconView.h; sourceTree = "<group>"; };
+		023AFE733120E3EF40ED84A2FDE38006 /* NSArray+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Chameleon.m"; path = "Pod/Classes/Objective-C/NSArray+Chameleon.m"; sourceTree = "<group>"; };
+		0470B05837B371A7DE5C53E56DBC0CCC /* SwatchCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SwatchCell.xib; path = Pod/Assets/SwatchCell.xib; sourceTree = "<group>"; };
+		0594F165CE49451191C7B780682D666C /* MRIconView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRIconView.h; path = src/Components/MRIconView.h; sourceTree = "<group>"; };
+		071C642213CBF78BEA3F286DE9D457D5 /* UINavigationController+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Chameleon.m"; path = "Pod/Classes/Objective-C/UINavigationController+Chameleon.m"; sourceTree = "<group>"; };
+		07E6F03BD277A8AA34D44AEBEF3670A2 /* MRProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MRProgress-dummy.m"; sourceTree = "<group>"; };
+		098C34A9733C1EF1EF6F0BB520F35F64 /* MRProgress.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MRProgress.modulemap; sourceTree = "<group>"; };
+		0E90D3AFE85A204FE6520FFC9AEFCBDA /* brightness_icon_dark@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "brightness_icon_dark@2x.png"; path = "Pod/Assets/brightness_icon_dark@2x.png"; sourceTree = "<group>"; };
+		0FE2751F0BB525B1B9D9F44A2FBE3658 /* InfColorPickerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = InfColorPickerController.h; path = Pod/Classes/InfColorPickerController.h; sourceTree = "<group>"; };
+		118A463123904BDE7501DFB4D3BF4A7F /* JHColorPickerController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = JHColorPickerController.xib; path = Pod/Assets/JHColorPickerController.xib; sourceTree = "<group>"; };
+		14487EA405EC1E760F58AF6ACA59CAF8 /* UIColor+Crayola.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Crayola.h"; path = "Source/UIColor+Crayola.h"; sourceTree = "<group>"; };
+		14B28F279744ACFDEB99A9877D87B659 /* ChameleonEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonEnums.h; path = "Pod/Classes/Objective-C/ChameleonEnums.h"; sourceTree = "<group>"; };
+		1822F773DC148AB6D3EE412A168CCB90 /* InfColorPickerView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = InfColorPickerView.xib; path = Pod/Assets/InfColorPickerView.xib; sourceTree = "<group>"; };
+		182D727402F09D8EF406DE2D5036CCD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		19402B083431FFF652FE88250F5E5FCF /* brightness_icon.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = brightness_icon.png; path = Pod/Assets/brightness_icon.png; sourceTree = "<group>"; };
+		19463E5F4E28988EF536090105DF694C /* MRStopButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRStopButton.m; path = src/Components/MRStopButton.m; sourceTree = "<group>"; };
+		1CA899E69123E6CFDAF020A5D2682AF8 /* UIColor+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIColor+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		1EDA43B30277C17301EF205D77D887CD /* UIView+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIView+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		2155506C810BB6253FDB248E13E3BE71 /* brightness_icon_dark@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "brightness_icon_dark@3x.png"; path = "Pod/Assets/brightness_icon_dark@3x.png"; sourceTree = "<group>"; };
+		2293ED46F8103A329F8BDF3545A2DE53 /* MRActivityIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRActivityIndicatorView.h; path = src/Components/MRActivityIndicatorView.h; sourceTree = "<group>"; };
+		22AB2BB46AF1A354541A7E8A0ADFC342 /* ChameleonConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonConstants.h; path = "Pod/Classes/Objective-C/ChameleonConstants.h"; sourceTree = "<group>"; };
+		240714E573CC9589227078C355B42099 /* UIView+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIView+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		2472B266C7E22EC49AE6A0350320C1A6 /* UIColor+Crayola.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Crayola.m"; path = "Source/UIColor+Crayola.m"; sourceTree = "<group>"; };
+		251815D6C4B7667FB89827EC571C302C /* UIColor_Crayola.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIColor_Crayola.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		257B1D2FF08E45549762F1B4033D8770 /* JHColorPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JHColorPicker-umbrella.h"; sourceTree = "<group>"; };
+		272758545251A6FAF825697D3436605F /* UIColor-Crayola-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor-Crayola-dummy.m"; sourceTree = "<group>"; };
+		274E576CB8F76AE47B469E415013434B /* MRActivityIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRActivityIndicatorView.m; path = src/Components/MRActivityIndicatorView.m; sourceTree = "<group>"; };
+		27C73B5F72CD161C5421B96ACE8E23AD /* ChameleonFramework.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ChameleonFramework.xcconfig; sourceTree = "<group>"; };
+		29DACD4D82C05A293CE98442DA8D8FBC /* InfColorBarPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = InfColorBarPicker.h; path = Pod/Classes/InfColorBarPicker.h; sourceTree = "<group>"; };
+		2AD6C37A67D460C442AE14182A1AD453 /* UIColor+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIColor+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		2C993CD076FE1DDDD9C35147AD67DC53 /* NSArray+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+Chameleon.h"; path = "Pod/Classes/Objective-C/NSArray+Chameleon.h"; sourceTree = "<group>"; };
+		2DFFBD110C3DAE158828401CE862FB7E /* UIColor_Pantone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIColor_Pantone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31467EAAAAF7FF84C0B28B2E9225EFCC /* MRProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRProgress-prefix.pch"; sourceTree = "<group>"; };
+		327C05E3488EF2766C5AD6F66F7F9CAE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37991C671F4C5AACB23BD714BE4EC774 /* UIColor+Pantone.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Pantone.h"; path = "Source/UIColor+Pantone.h"; sourceTree = "<group>"; };
+		3990D0427C2B596A7755F81B7C166BBD /* ChameleonFramework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ChameleonFramework-dummy.m"; sourceTree = "<group>"; };
+		39F5BEA5F7C4AD99D6E8FF3F90E4D3FF /* Chameleon_.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Chameleon_.m; path = "Pod/Classes/Objective-C/Chameleon_.m"; sourceTree = "<group>"; };
+		3D983D255F9153AA8EF639E049620AB0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		3DCB50714AA572610D798E941592EA14 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		40EE29A8170D269B1E0B96C2D3EA771E /* MRProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRProgressView.h; path = src/Components/MRProgressView.h; sourceTree = "<group>"; };
+		427D2CFCA6C9D6F9D475259712A7B615 /* UIColor-Pantone-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor-Pantone-dummy.m"; sourceTree = "<group>"; };
+		4396528491FB46547254ECDBD73B11B1 /* UIColor-Crayola.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIColor-Crayola.xcconfig"; sourceTree = "<group>"; };
+		45E6F7EF59BE062809768E2A1B0E8386 /* InfColorSquarePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = InfColorSquarePicker.h; path = Pod/Classes/InfColorSquarePicker.h; sourceTree = "<group>"; };
+		4753C4382EAE2AF97F400B517E30332E /* InfColorPickerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = InfColorPickerController.m; path = Pod/Classes/InfColorPickerController.m; sourceTree = "<group>"; };
+		47852B0BB90C0F1E2546FD10B1BEF13A /* brightness_icon@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "brightness_icon@3x.png"; path = "Pod/Assets/brightness_icon@3x.png"; sourceTree = "<group>"; };
+		4883CCB40037BD72F6D534AFA4E066B1 /* UIColor-Crayola-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor-Crayola-prefix.pch"; sourceTree = "<group>"; };
+		48F7DCCE2F3BBF0BBF1F328C28958A7D /* MRProgressHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRProgressHelper.h; path = src/Utils/MRProgressHelper.h; sourceTree = "<group>"; };
+		4AA2DA12A829118CA44F25F6ABA3C98E /* UIColor-Crayola.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "UIColor-Crayola.modulemap"; sourceTree = "<group>"; };
+		4B679F02D21084BFB8F54AED6F03DC9E /* ChameleonShorthand.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChameleonShorthand.swift; path = Pod/Classes/Swift/ChameleonShorthand.swift; sourceTree = "<group>"; };
+		4BF56BAD332ADDCD5FB90431BD76C82A /* ColorUtils-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ColorUtils-umbrella.h"; sourceTree = "<group>"; };
+		4C996C9ADF32EB0AB98F74314A26F6DD /* MRCircularProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRCircularProgressView.h; path = src/Components/MRCircularProgressView.h; sourceTree = "<group>"; };
+		52B333CCDEACC45827651C133E174DCA /* UILabel+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+Chameleon.m"; path = "Pod/Classes/Objective-C/UILabel+Chameleon.m"; sourceTree = "<group>"; };
+		5475CA8667BAB7C12996E4209C3F2D23 /* UIColor-Pantone-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor-Pantone-prefix.pch"; sourceTree = "<group>"; };
+		58C3493268D22FA3D268374E78F1037E /* UIViewController+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Chameleon.m"; path = "Pod/Classes/Objective-C/UIViewController+Chameleon.m"; sourceTree = "<group>"; };
+		593C0AA4112822FB910CB2B6C19DF970 /* UIColor-Pantone.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIColor-Pantone.xcconfig"; sourceTree = "<group>"; };
+		5CCB2BDC5BF2CDD12E8C1E8038D594BE /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4EBF51A884AFE8264D9E067F54FA59 /* Pods-Simplify.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Simplify.modulemap"; sourceTree = "<group>"; };
-		631A0F784F896DF5ABEF86CF0216CDBE /* MRStopButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRStopButton.h; path = src/Components/MRStopButton.h; sourceTree = "<group>"; };
+		5ECF58847ADFBFAF78F2826D36CFA3EB /* InfHSBSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = InfHSBSupport.m; path = Pod/Classes/InfHSBSupport.m; sourceTree = "<group>"; };
+		5EEEE1148F6244CCF99BB93E70A4E47D /* MRProgress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRProgress-umbrella.h"; sourceTree = "<group>"; };
+		6256D45FA1F3B35E5A3084633153DF4B /* UIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Pod/Classes/UIColorExtension.swift; sourceTree = "<group>"; };
+		629F5D02EB9D675792F6E7480EED4A72 /* UINavigationController+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Chameleon.h"; path = "Pod/Classes/Objective-C/UINavigationController+Chameleon.h"; sourceTree = "<group>"; };
+		6388CA2D39BBA7062357BE41384D86E3 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
 		659C4F600E57BD88DF85E7B3258D7438 /* Pods-Simplify-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Simplify-frameworks.sh"; sourceTree = "<group>"; };
-		66924CE9C299E4616500C13C9D23ED78 /* MRNavigationBarProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRNavigationBarProgressView.h; path = src/Components/MRNavigationBarProgressView.h; sourceTree = "<group>"; };
 		68B3CF6DC14BBC4174FB14DAC004ED73 /* Pods-Simplify-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Simplify-acknowledgements.plist"; sourceTree = "<group>"; };
-		6B93D362905330EE03C4419F4C5CE850 /* Pods_Simplify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simplify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E9CDF0F41D7776ED0629C59F015C062 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6FAE4271ADAE6291A49010F2801A4B40 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		729054AB1BDE02898B90BC88EA041C77 /* MRProgress.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MRProgress.modulemap; sourceTree = "<group>"; };
-		80A498811D2AF069843DAD56A22096BE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		8118129A17B22255114CC4E080A0B8F0 /* Pods-Simplify-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Simplify-umbrella.h"; sourceTree = "<group>"; };
-		815913F49767FA8F8DFAC15DC72423DF /* MRProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRProgressView.m; path = src/Components/MRProgressView.m; sourceTree = "<group>"; };
-		822DB19F612D4DA655070D2613FD715E /* MRStopButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRStopButton.m; path = src/Components/MRStopButton.m; sourceTree = "<group>"; };
+		6A34FE56E10124ABD998D6A2D5EC432B /* ColorUtils-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ColorUtils-dummy.m"; sourceTree = "<group>"; };
+		6E4C9EB19601E7E4C6F31704B305E769 /* InfColorPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = InfColorPicker.h; path = Pod/Classes/InfColorPicker.h; sourceTree = "<group>"; };
+		73DC4613B745C0CC5DF2E815307DAC4E /* ChameleonFramework.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ChameleonFramework.modulemap; sourceTree = "<group>"; };
+		771169E19AFF7A7F0F28D67FCD06FA3B /* UIImage+MRImageEffects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MRImageEffects.m"; path = "src/Blur/UIImage+MRImageEffects.m"; sourceTree = "<group>"; };
+		773E26C8AE9FA8F7FBF133951E3453BB /* UIColor+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Chameleon.m"; path = "Pod/Classes/Objective-C/UIColor+Chameleon.m"; sourceTree = "<group>"; };
+		791C5B19A7170F8B78E5FF2BF56A8B50 /* MRProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A82C67506E15A272E0B2D79B574BE4C /* UIViewController+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Chameleon.h"; path = "Pod/Classes/Objective-C/UIViewController+Chameleon.h"; sourceTree = "<group>"; };
+		7AC8EA0120FCCF73F9886306DA64C4F4 /* brightness_icon@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "brightness_icon@2x.png"; path = "Pod/Assets/brightness_icon@2x.png"; sourceTree = "<group>"; };
+		7D03760E146931BFE21A9CA766941807 /* JHColorPicker.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JHColorPicker.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EF523B3248F970816151F3E81148D8C /* InfColorBarPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = InfColorBarPicker.m; path = Pod/Classes/InfColorBarPicker.m; sourceTree = "<group>"; };
+		80A32C640C1880683F02F0C76D8B29E3 /* MRProgress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRProgress.h; path = src/MRProgress.h; sourceTree = "<group>"; };
+		83FFEED335BDF8AA2C66AEEB69E0079F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85AD80CB2F381665315E6B3E110FB50B /* MRStopButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRStopButton.h; path = src/Components/MRStopButton.h; sourceTree = "<group>"; };
+		862BACDF809B180FFB8AED9D60438F09 /* UIColor_Pantone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIColor_Pantone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8681FDD28A3F6801F9DDED486DC14788 /* MRCircularProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRCircularProgressView.m; path = src/Components/MRCircularProgressView.m; sourceTree = "<group>"; };
 		86D86281B2599973F83146F6F8A02987 /* Pods-Simplify-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Simplify-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9BF5CB8FB12742B6AD3631A1F12B0679 /* MRProgressOverlayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRProgressOverlayView.h; path = src/Components/MRProgressOverlayView.h; sourceTree = "<group>"; };
-		AA05A34FC65391549E869C37BEB1C33F /* MRStopableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRStopableView.h; path = src/Components/MRStopableView.h; sourceTree = "<group>"; };
-		B607963B0913A7E445CA3BF97E85666D /* MRProgress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRProgress.h; path = src/MRProgress.h; sourceTree = "<group>"; };
+		87C4D97B77A2BC831EF29F25D989E04C /* UIButton+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Chameleon.m"; path = "Pod/Classes/Objective-C/UIButton+Chameleon.m"; sourceTree = "<group>"; };
+		88E445EC7DA8CFE03F941AA0DFD1867E /* JHColorPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JHColorPicker-prefix.pch"; sourceTree = "<group>"; };
+		89367A4D3312E5F159AC0C6108744F1D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FFE2973B413EC3A8E3F5D04681288CF /* ColorLibraries.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorLibraries.swift; path = Pod/Classes/ColorLibraries.swift; sourceTree = "<group>"; };
+		910B295928E3E000DCDDCB586F5BF362 /* InfSourceColorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = InfSourceColorView.m; path = Pod/Classes/InfSourceColorView.m; sourceTree = "<group>"; };
+		92215ED37E6C1775B2F83ECBD69870FD /* JHColorPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JHColorPicker.modulemap; sourceTree = "<group>"; };
+		92F15B919B4A9383C73D61C1182CD343 /* ChameleonFramework-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChameleonFramework-prefix.pch"; sourceTree = "<group>"; };
+		936BCF0E3EAC52824F1A305548ADDCA6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		940FA6712AD9E8FF577D5801E34DC96C /* UIButton+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+Chameleon.h"; path = "Pod/Classes/Objective-C/UIButton+Chameleon.h"; sourceTree = "<group>"; };
+		97307B586FA24BB5AB6A2FCBCB08C4C2 /* UIImage+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIImage+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		9754FACEBA3CAA59FEC56475F722EC2C /* ChameleonMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonMacros.h; path = "Pod/Classes/Objective-C/ChameleonMacros.h"; sourceTree = "<group>"; };
+		9C144A1A8B2B3AF4607E0E41DDF2556C /* Pods_Simplify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simplify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C4DDA12C7EC57A01E449DDED3F95CF4 /* JHColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JHColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EF19F54CAB617E22FB6218021916165 /* Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Chameleon.h; path = "Pod/Classes/Objective-C/Chameleon.h"; sourceTree = "<group>"; };
+		9F8036B68DC0684CBABBBFC929C5D1E7 /* ColorUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ColorUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A09F114E41DF4E22A6EA6B970B4685BD /* JHColorPickerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JHColorPickerController.swift; path = Pod/Classes/JHColorPickerController.swift; sourceTree = "<group>"; };
+		A4C9F45AC67047245CC81951287CF42C /* UIImage+MRImageEffects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MRImageEffects.h"; path = "src/Blur/UIImage+MRImageEffects.h"; sourceTree = "<group>"; };
+		A4D02A493E809C7D78A7FA91E0F8646B /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6D1AC5E3829AEDBF0F70127FA339146 /* ColorUtils.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ColorUtils.xcconfig; sourceTree = "<group>"; };
+		A6F0C0148A8186D3B1FD8379A315E1E8 /* UIColor+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Chameleon.h"; path = "Pod/Classes/Objective-C/UIColor+Chameleon.h"; sourceTree = "<group>"; };
+		AA6FF368A6EBE694FEA1972974A57A5F /* InfColorIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = InfColorIndicatorView.m; path = Pod/Classes/InfColorIndicatorView.m; sourceTree = "<group>"; };
+		AE1815D34BD5006D44B796DCBA003BE0 /* MRBlurView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRBlurView.h; path = src/Blur/MRBlurView.h; sourceTree = "<group>"; };
+		B037D198B6B3BCB1CD9EA6318F2504A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		B1DA4403143080C45DDF8E6B4F09BAE6 /* InfColorPickerNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = InfColorPickerNavigationController.m; path = Pod/Classes/InfColorPickerNavigationController.m; sourceTree = "<group>"; };
+		B24491515C42B9B359B71956F64128CA /* Pods-Simplify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Simplify.release.xcconfig"; sourceTree = "<group>"; };
+		B54C74E1940CF6D240FDF408A54DDA71 /* MRBlurView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRBlurView.m; path = src/Blur/MRBlurView.m; sourceTree = "<group>"; };
+		B6423CBEE8E2E11B6959EE2F676E9E5D /* ColorUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ColorUtils.h; path = ColorUtils/ColorUtils.h; sourceTree = "<group>"; };
+		B6AA2F11C9F3FC8C50AFADEE26C82D5B /* MRNavigationBarProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRNavigationBarProgressView.m; path = src/Components/MRNavigationBarProgressView.m; sourceTree = "<group>"; };
+		B71755254D0C3B82440D92E087E72531 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BEC480069EF1C78765FEC41587D1674D /* MRProgressOverlayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRProgressOverlayView.m; path = src/Components/MRProgressOverlayView.m; sourceTree = "<group>"; };
-		BF3A108A73D9C0B928B25C2DF49D3A9D /* MRCircularProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRCircularProgressView.m; path = src/Components/MRCircularProgressView.m; sourceTree = "<group>"; };
+		BB30796695248C03C31ED9273EB63151 /* UILabel+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+Chameleon.h"; path = "Pod/Classes/Objective-C/UILabel+Chameleon.h"; sourceTree = "<group>"; };
+		BF8D902057A36000BD7BCCF4890949B9 /* ColorUtils-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ColorUtils-prefix.pch"; sourceTree = "<group>"; };
+		BFD269C3C19AACCF6F13ABA8BE2E18A8 /* JHColorPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JHColorPicker-dummy.m"; sourceTree = "<group>"; };
+		C5341CD3658E656ADCAA52EE6C13B438 /* InfHSBSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = InfHSBSupport.h; path = Pod/Classes/InfHSBSupport.h; sourceTree = "<group>"; };
 		C5A35EC67C58906633029DBC65F16347 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7C886F29C51966573E14AE3F1F3D9DA /* MRProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB6B75235A9F589C738E43D617A38A4C /* MRBlurView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRBlurView.m; path = src/Blur/MRBlurView.m; sourceTree = "<group>"; };
+		C5DF363172E0AE97AB26EFE3303B11EB /* UIColor+Pantone.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Pantone.m"; path = "Source/UIColor+Pantone.m"; sourceTree = "<group>"; };
+		C75C831009BA79C304CEB8FE16FEC589 /* brightness_icon_dark.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = brightness_icon_dark.png; path = Pod/Assets/brightness_icon_dark.png; sourceTree = "<group>"; };
+		CA752BDDE2F9B3C18A2FC541C3B6FEDA /* MRProgressOverlayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRProgressOverlayView.m; path = src/Components/MRProgressOverlayView.m; sourceTree = "<group>"; };
+		CB6C7C239CE7D9B40F00F4F59B7AA92B /* UIColor_Crayola.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIColor_Crayola.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6B0CE07AADD920695626273CFBE5CA /* Pods-Simplify-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Simplify-resources.sh"; sourceTree = "<group>"; };
-		D886BF904D925343BCFED761CC0E82BC /* MRIconView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRIconView.m; path = src/Components/MRIconView.m; sourceTree = "<group>"; };
-		DE6C005B7D2787AA765BC094C6ABC7B8 /* MRActivityIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRActivityIndicatorView.h; path = src/Components/MRActivityIndicatorView.h; sourceTree = "<group>"; };
-		FB28077D5366751810FB5FEA973B2F64 /* MRActivityIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRActivityIndicatorView.m; path = src/Components/MRActivityIndicatorView.m; sourceTree = "<group>"; };
-		FFA3E0E1B6C4CB633027D5E8E40AEC8C /* MRProgressHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRProgressHelper.h; path = src/Utils/MRProgressHelper.h; sourceTree = "<group>"; };
+		CDA9015D4AF825A6050F8CA67FB26DC7 /* UIColor-Pantone-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor-Pantone-umbrella.h"; sourceTree = "<group>"; };
+		CDDE335E2CF27B6DB65BE4DC13E35B3F /* UIImage+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIImage+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		CFA65107D1B04F384646FF26B35688E2 /* MRStopableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRStopableView.h; path = src/Components/MRStopableView.h; sourceTree = "<group>"; };
+		D02D7A851C5AE3A79D1E09B6E786ACD3 /* ColorUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ColorUtils.m; path = ColorUtils/ColorUtils.m; sourceTree = "<group>"; };
+		D16C8DAF1180F88920F8D39D4790664D /* JHColorPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JHColorPicker.xcconfig; sourceTree = "<group>"; };
+		D92E44DD27A83DF018BE3AE524A92DF4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DACE619A06DAFCCB743D94E17C4AEA9F /* InfColorIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = InfColorIndicatorView.h; path = Pod/Classes/InfColorIndicatorView.h; sourceTree = "<group>"; };
+		DD1BBBA9D2A6B961DED308ED4208EFE0 /* Chameleon_.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Chameleon_.h; path = "Pod/Classes/Objective-C/Chameleon_.h"; sourceTree = "<group>"; };
+		DFE60614C9D810C95ED699E7A0B28326 /* InfSourceColorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = InfSourceColorView.h; path = Pod/Classes/InfSourceColorView.h; sourceTree = "<group>"; };
+		E06695E379BD11F0653B8292EAAF5633 /* UIColor-Pantone.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "UIColor-Pantone.modulemap"; sourceTree = "<group>"; };
+		E19A6ACF998669E39131A3E7D26CF489 /* ChameleonConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ChameleonConstants.m; path = "Pod/Classes/Objective-C/ChameleonConstants.m"; sourceTree = "<group>"; };
+		E84CB10663B54317001B50AA375883A3 /* UIColor-Crayola-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor-Crayola-umbrella.h"; sourceTree = "<group>"; };
+		E8A03CE66B7E1F79CB86405981CF7C10 /* MRIconView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRIconView.m; path = src/Components/MRIconView.m; sourceTree = "<group>"; };
+		E949EAFEABDB3EFEEF1BAC640D353AB1 /* Pods-Simplify-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Simplify-umbrella.h"; sourceTree = "<group>"; };
+		EB3D9B23B4E88E17A7BEDCAECC2EBD3F /* MRProgressOverlayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRProgressOverlayView.h; path = src/Components/MRProgressOverlayView.h; sourceTree = "<group>"; };
+		EE2899145C33CF66B421EF2CC424C3AE /* ChameleonFramework-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChameleonFramework-umbrella.h"; sourceTree = "<group>"; };
+		EE9376E75FA5A2401547CEC3E197B78C /* MRNavigationBarProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MRNavigationBarProgressView.h; path = src/Components/MRNavigationBarProgressView.h; sourceTree = "<group>"; };
+		F22E54A2FC3CDE019638E54D6B9048ED /* MRProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MRProgress.xcconfig; sourceTree = "<group>"; };
+		F305DF5B9F0AEFB458F5DA1A80880A35 /* Pods-Simplify-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Simplify-dummy.m"; sourceTree = "<group>"; };
+		F74FDACDD7441C4E996CB470F4B6497C /* InfColorSquarePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = InfColorSquarePicker.m; path = Pod/Classes/InfColorSquarePicker.m; sourceTree = "<group>"; };
+		F83C9BE5B25AB4A46869EC34BA8380BF /* ColorUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ColorUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F911A08313FA9DA74CFEC398AE941925 /* InfColorPickerNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = InfColorPickerNavigationController.h; path = Pod/Classes/InfColorPickerNavigationController.h; sourceTree = "<group>"; };
+		F932BC203556784984B373B855281E19 /* MRProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MRProgressView.m; path = src/Components/MRProgressView.m; sourceTree = "<group>"; };
+		F9FFCE20A9C02FE04C87B5DE628E4E78 /* ColorUtils.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ColorUtils.modulemap; sourceTree = "<group>"; };
+		FEE42D099BEE56DF3D2E670DD2907B4D /* Pods-Simplify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Simplify.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C1EF4DDBEC3856BD812458F5821E60F0 /* Frameworks */ = {
+		2269A410F3F29D3EA94E7AE0521367B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80394429E81538B18EBD76392A81E985 /* Foundation.framework in Frameworks */,
+				C6DD5AAF7350C93043F9EFDBAB686925 /* CoreGraphics.framework in Frameworks */,
+				91B32D78462E0438A18A665B71CD54AC /* Foundation.framework in Frameworks */,
+				9D406797A4A0768569B06248B8894456 /* QuartzCore.framework in Frameworks */,
+				6E62C30D5585FD9F3F8C7E6C63B82074 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F75849F6B1966A0A333C42EBA045047D /* Frameworks */ = {
+		308EB9B41341FEAF006009FC79D74EC8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3F3DEA7E21061B51B5CCF8305F3CAC4 /* Accelerate.framework in Frameworks */,
-				EFF04AF6D546634A2A4274D852B69129 /* CoreGraphics.framework in Frameworks */,
-				296A7F94F28CE4C35DB9ABCE8EA25F70 /* Foundation.framework in Frameworks */,
-				9C9E12459E8FA73102B9AAE0F5AEDF88 /* QuartzCore.framework in Frameworks */,
-				51319C0988F220779E45DE98ECFD4AA0 /* UIKit.framework in Frameworks */,
+				B13A4A7092D57C3F7A5AD9E5B596B905 /* Accelerate.framework in Frameworks */,
+				462E04E1F70AABB99FC16A3B3344AAC3 /* CoreGraphics.framework in Frameworks */,
+				FB4E16B23117578B3F241211A42A49D4 /* Foundation.framework in Frameworks */,
+				DEB2CEF71EB587F7A1197B9284A8D687 /* QuartzCore.framework in Frameworks */,
+				2C448A85F47127966D8F6703BFE65ED7 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4685B8965864B7DFF45B47C5F711A0C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C919368866A16A9A2278BC3EF53B07EB /* ChameleonFramework.framework in Frameworks */,
+				20914F22F61E59DE0D01C67E11E21BB9 /* ColorUtils.framework in Frameworks */,
+				411463B5D67DED3575833517F9D58011 /* Foundation.framework in Frameworks */,
+				EC22D765E833EFBC2CF88B27BEF144D6 /* UIColor_Crayola.framework in Frameworks */,
+				D2C4CE3B9A90491BBC457AFC82CDBF76 /* UIColor_Pantone.framework in Frameworks */,
+				FF4920D9218B1050004E4B0287749E07 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CDE577B7B7D1E5B349B326E5268D15A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B82B12FC1545D7222DC2582A1ACDC4CB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ED4BFBB774B1129DB005D65A4B97343 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				539125ADFC95C9FC9FA08E112B9CCB44 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		650BA51DCBB3C3F639B76FCD688158BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C693378991200385D0F3C4C2E6659A82 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		718D49A5A1AE988177ACBAB3E4B40A2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5E6F525448438F29F500199F0F5B738 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				453B49AD793618942338EE4E75EBEF53 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,162 +436,289 @@
 				5D4EBF51A884AFE8264D9E067F54FA59 /* Pods-Simplify.modulemap */,
 				86D86281B2599973F83146F6F8A02987 /* Pods-Simplify-acknowledgements.markdown */,
 				68B3CF6DC14BBC4174FB14DAC004ED73 /* Pods-Simplify-acknowledgements.plist */,
-				4D0822392E9D10310CB9F7BED9423B86 /* Pods-Simplify-dummy.m */,
+				F305DF5B9F0AEFB458F5DA1A80880A35 /* Pods-Simplify-dummy.m */,
 				659C4F600E57BD88DF85E7B3258D7438 /* Pods-Simplify-frameworks.sh */,
 				CD6B0CE07AADD920695626273CFBE5CA /* Pods-Simplify-resources.sh */,
-				8118129A17B22255114CC4E080A0B8F0 /* Pods-Simplify-umbrella.h */,
-				4276776810CE62C5CCD9694B314B9F7C /* Pods-Simplify.debug.xcconfig */,
-				4A7EC90D52AA38C43FEB645679ACC322 /* Pods-Simplify.release.xcconfig */,
+				E949EAFEABDB3EFEEF1BAC640D353AB1 /* Pods-Simplify-umbrella.h */,
+				FEE42D099BEE56DF3D2E670DD2907B4D /* Pods-Simplify.debug.xcconfig */,
+				B24491515C42B9B359B71956F64128CA /* Pods-Simplify.release.xcconfig */,
 			);
 			name = "Pods-Simplify";
 			path = "Target Support Files/Pods-Simplify";
 			sourceTree = "<group>";
 		};
-		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
+		13C57176636A7D8C25B47BE0B25670F5 /* Circular */ = {
 			isa = PBXGroup;
 			children = (
-				347491CC206F25C08A6A8F9A4683145F /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		347491CC206F25C08A6A8F9A4683145F /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				0F5FCEBB580D21805C2AB78E4347B99B /* Accelerate.framework */,
-				04A017D91F7BB82CFD053BF67FC537BE /* CoreGraphics.framework */,
-				6E9CDF0F41D7776ED0629C59F015C062 /* Foundation.framework */,
-				80A498811D2AF069843DAD56A22096BE /* QuartzCore.framework */,
-				45F0F40FE06A418D02BF42551DC6B92D /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		347B39359429EB6C8646E840759944E2 /* MRProgress */ = {
-			isa = PBXGroup;
-			children = (
-				B607963B0913A7E445CA3BF97E85666D /* MRProgress.h */,
-				FBB89C9E32F93C7B8DE8D52B65346F4D /* ActivityIndicator */,
-				8777F21A6A21A7F4E29CD3C531322321 /* Blur */,
-				4DC84AC6502E988C60D9EE37EFA8CE90 /* Circular */,
-				438354373EE06EDCA7C277BAB90317BB /* Helper */,
-				3B2B038CD44B0185742CF2996E81598F /* Icons */,
-				5F83900B81D6A9FC1B0E362D1F847900 /* NavigationBarProgress */,
-				B718270081AF263AC776A2C6C0947F4B /* Overlay */,
-				507C17F3A7C6BF1B2BC446828CBF604A /* ProgressBaseClass */,
-				7C7C71FC111EDC0274DE6E5B10F5F96A /* Stopable */,
-				530B1C86FFE583A03A42635FAFA49050 /* Support Files */,
-			);
-			path = MRProgress;
-			sourceTree = "<group>";
-		};
-		3B2B038CD44B0185742CF2996E81598F /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				5C86B8AE101E937BD06F73FDEA1C6FE9 /* MRIconView.h */,
-				D886BF904D925343BCFED761CC0E82BC /* MRIconView.m */,
-			);
-			name = Icons;
-			sourceTree = "<group>";
-		};
-		438354373EE06EDCA7C277BAB90317BB /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				FFA3E0E1B6C4CB633027D5E8E40AEC8C /* MRProgressHelper.h */,
-			);
-			name = Helper;
-			sourceTree = "<group>";
-		};
-		4DC84AC6502E988C60D9EE37EFA8CE90 /* Circular */ = {
-			isa = PBXGroup;
-			children = (
-				14646B766E0C7E6910A3AA4C8FB538B2 /* MRCircularProgressView.h */,
-				BF3A108A73D9C0B928B25C2DF49D3A9D /* MRCircularProgressView.m */,
+				4C996C9ADF32EB0AB98F74314A26F6DD /* MRCircularProgressView.h */,
+				8681FDD28A3F6801F9DDED486DC14788 /* MRCircularProgressView.m */,
 			);
 			name = Circular;
 			sourceTree = "<group>";
 		};
-		507C17F3A7C6BF1B2BC446828CBF604A /* ProgressBaseClass */ = {
+		19CA58888DF6574882C4300032B8ADD7 /* Blur */ = {
 			isa = PBXGroup;
 			children = (
-				5287D80FB3890C1DB3D835B223596BF0 /* MRProgressView.h */,
-				815913F49767FA8F8DFAC15DC72423DF /* MRProgressView.m */,
+				AE1815D34BD5006D44B796DCBA003BE0 /* MRBlurView.h */,
+				B54C74E1940CF6D240FDF408A54DDA71 /* MRBlurView.m */,
+				A4C9F45AC67047245CC81951287CF42C /* UIImage+MRImageEffects.h */,
+				771169E19AFF7A7F0F28D67FCD06FA3B /* UIImage+MRImageEffects.m */,
+			);
+			name = Blur;
+			sourceTree = "<group>";
+		};
+		28B2D86A131D061435170D74AF9F319A /* ActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				2293ED46F8103A329F8BDF3545A2DE53 /* MRActivityIndicatorView.h */,
+				274E576CB8F76AE47B469E415013434B /* MRActivityIndicatorView.m */,
+			);
+			name = ActivityIndicator;
+			sourceTree = "<group>";
+		};
+		37745B514C02A508E5BCE21FFC7EA4F9 /* MRProgress */ = {
+			isa = PBXGroup;
+			children = (
+				80A32C640C1880683F02F0C76D8B29E3 /* MRProgress.h */,
+				28B2D86A131D061435170D74AF9F319A /* ActivityIndicator */,
+				19CA58888DF6574882C4300032B8ADD7 /* Blur */,
+				13C57176636A7D8C25B47BE0B25670F5 /* Circular */,
+				E4BB0EF5D0F166E4D5A3BC376125E2B5 /* Helper */,
+				4B6D5BBAE82391A3497B598020F4DEB1 /* Icons */,
+				E37BACE9A13171B4CDD1CBEF1BA6F19C /* NavigationBarProgress */,
+				D3D7F2A7F8E196DB84E2690FBF412D8E /* Overlay */,
+				694C8CD9F4E8E3CFA9D41BFF2A5F4689 /* ProgressBaseClass */,
+				CFF2B6018EA24A1F6BD02AF42FB9B022 /* Stopable */,
+				A440BE2C39735BA4C411926BA153BAC1 /* Support Files */,
+			);
+			path = MRProgress;
+			sourceTree = "<group>";
+		};
+		3E2B31333B7089EE5D1CB9710FE472FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4D02A493E809C7D78A7FA91E0F8646B /* ChameleonFramework.framework */,
+				9F8036B68DC0684CBABBBFC929C5D1E7 /* ColorUtils.framework */,
+				7D03760E146931BFE21A9CA766941807 /* JHColorPicker.bundle */,
+				9C4DDA12C7EC57A01E449DDED3F95CF4 /* JHColorPicker.framework */,
+				791C5B19A7170F8B78E5FF2BF56A8B50 /* MRProgress.framework */,
+				9C144A1A8B2B3AF4607E0E41DDF2556C /* Pods_Simplify.framework */,
+				CB6C7C239CE7D9B40F00F4F59B7AA92B /* UIColor_Crayola.framework */,
+				2DFFBD110C3DAE158828401CE862FB7E /* UIColor_Pantone.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B6D5BBAE82391A3497B598020F4DEB1 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				0594F165CE49451191C7B780682D666C /* MRIconView.h */,
+				E8A03CE66B7E1F79CB86405981CF7C10 /* MRIconView.m */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		4D932B27F7E3B2FB5AD9127634B6E42E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F9FFCE20A9C02FE04C87B5DE628E4E78 /* ColorUtils.modulemap */,
+				A6D1AC5E3829AEDBF0F70127FA339146 /* ColorUtils.xcconfig */,
+				6A34FE56E10124ABD998D6A2D5EC432B /* ColorUtils-dummy.m */,
+				BF8D902057A36000BD7BCCF4890949B9 /* ColorUtils-prefix.pch */,
+				4BF56BAD332ADDCD5FB90431BD76C82A /* ColorUtils-umbrella.h */,
+				936BCF0E3EAC52824F1A305548ADDCA6 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ColorUtils";
+			sourceTree = "<group>";
+		};
+		68B297846BC78E44F7C14A01C3E6DBAB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				19402B083431FFF652FE88250F5E5FCF /* brightness_icon.png */,
+				7AC8EA0120FCCF73F9886306DA64C4F4 /* brightness_icon@2x.png */,
+				47852B0BB90C0F1E2546FD10B1BEF13A /* brightness_icon@3x.png */,
+				C75C831009BA79C304CEB8FE16FEC589 /* brightness_icon_dark.png */,
+				0E90D3AFE85A204FE6520FFC9AEFCBDA /* brightness_icon_dark@2x.png */,
+				2155506C810BB6253FDB248E13E3BE71 /* brightness_icon_dark@3x.png */,
+				1822F773DC148AB6D3EE412A168CCB90 /* InfColorPickerView.xib */,
+				118A463123904BDE7501DFB4D3BF4A7F /* JHColorPickerController.xib */,
+				0470B05837B371A7DE5C53E56DBC0CCC /* SwatchCell.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		694C8CD9F4E8E3CFA9D41BFF2A5F4689 /* ProgressBaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				40EE29A8170D269B1E0B96C2D3EA771E /* MRProgressView.h */,
+				F932BC203556784984B373B855281E19 /* MRProgressView.m */,
 			);
 			name = ProgressBaseClass;
 			sourceTree = "<group>";
 		};
-		530B1C86FFE583A03A42635FAFA49050 /* Support Files */ = {
+		786D79C2CEC4631997009362E7A16993 /* UIColor-Pantone */ = {
 			isa = PBXGroup;
 			children = (
-				6FAE4271ADAE6291A49010F2801A4B40 /* Info.plist */,
-				729054AB1BDE02898B90BC88EA041C77 /* MRProgress.modulemap */,
-				2A38E03FAC4EECA30E6F4A8FA866D108 /* MRProgress.xcconfig */,
-				5307781680E80C95778AAA5FC514E0C7 /* MRProgress-Private.xcconfig */,
-				51899FAA30339578BDEBFA3F7094069A /* MRProgress-dummy.m */,
-				2DC2A0D6FF47805E8A25B01CD4798108 /* MRProgress-prefix.pch */,
-				0A6FAA51896431BC4E70F832488FF96E /* MRProgress-umbrella.h */,
+				37991C671F4C5AACB23BD714BE4EC774 /* UIColor+Pantone.h */,
+				C5DF363172E0AE97AB26EFE3303B11EB /* UIColor+Pantone.m */,
+				807EFA373A59AE1A895D0E44917C9B1C /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/MRProgress";
-			sourceTree = "<group>";
-		};
-		5F83900B81D6A9FC1B0E362D1F847900 /* NavigationBarProgress */ = {
-			isa = PBXGroup;
-			children = (
-				66924CE9C299E4616500C13C9D23ED78 /* MRNavigationBarProgressView.h */,
-				209F77FD4A9F861568E28C65B886DAD8 /* MRNavigationBarProgressView.m */,
-			);
-			name = NavigationBarProgress;
-			sourceTree = "<group>";
-		};
-		7C7C71FC111EDC0274DE6E5B10F5F96A /* Stopable */ = {
-			isa = PBXGroup;
-			children = (
-				631A0F784F896DF5ABEF86CF0216CDBE /* MRStopButton.h */,
-				822DB19F612D4DA655070D2613FD715E /* MRStopButton.m */,
-				AA05A34FC65391549E869C37BEB1C33F /* MRStopableView.h */,
-			);
-			name = Stopable;
+			path = "UIColor-Pantone";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
-				F4637820732FBFF44F5C9B32659C84F0 /* Pods */,
-				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				BE63A3E8AADEE38159CFCF4D7BD060A4 /* Frameworks */,
+				A53C34633D944D461A013575E64EC9D1 /* Pods */,
+				3E2B31333B7089EE5D1CB9710FE472FE /* Products */,
 				E12D5139E8D044862B4250742E26A9D8 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8777F21A6A21A7F4E29CD3C531322321 /* Blur */ = {
+		807EFA373A59AE1A895D0E44917C9B1C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2F0B4248285302A7A41F70C4BE522C81 /* MRBlurView.h */,
-				CB6B75235A9F589C738E43D617A38A4C /* MRBlurView.m */,
-				36923E4860B9485735F567940B2697C2 /* UIImage+MRImageEffects.h */,
-				4978C4A570AEC4F84CCEEF84F6613EE9 /* UIImage+MRImageEffects.m */,
+				83FFEED335BDF8AA2C66AEEB69E0079F /* Info.plist */,
+				E06695E379BD11F0653B8292EAAF5633 /* UIColor-Pantone.modulemap */,
+				593C0AA4112822FB910CB2B6C19DF970 /* UIColor-Pantone.xcconfig */,
+				427D2CFCA6C9D6F9D475259712A7B615 /* UIColor-Pantone-dummy.m */,
+				5475CA8667BAB7C12996E4209C3F2D23 /* UIColor-Pantone-prefix.pch */,
+				CDA9015D4AF825A6050F8CA67FB26DC7 /* UIColor-Pantone-umbrella.h */,
 			);
-			name = Blur;
+			name = "Support Files";
+			path = "../Target Support Files/UIColor-Pantone";
 			sourceTree = "<group>";
 		};
-		B718270081AF263AC776A2C6C0947F4B /* Overlay */ = {
+		8BB2F420587B9CC6EF41A79DB9690B0F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9BF5CB8FB12742B6AD3631A1F12B0679 /* MRProgressOverlayView.h */,
-				BEC480069EF1C78765FEC41587D1674D /* MRProgressOverlayView.m */,
+				B71755254D0C3B82440D92E087E72531 /* Info.plist */,
+				4AA2DA12A829118CA44F25F6ABA3C98E /* UIColor-Crayola.modulemap */,
+				4396528491FB46547254ECDBD73B11B1 /* UIColor-Crayola.xcconfig */,
+				272758545251A6FAF825697D3436605F /* UIColor-Crayola-dummy.m */,
+				4883CCB40037BD72F6D534AFA4E066B1 /* UIColor-Crayola-prefix.pch */,
+				E84CB10663B54317001B50AA375883A3 /* UIColor-Crayola-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UIColor-Crayola";
+			sourceTree = "<group>";
+		};
+		92B2AC08F06B1F4731DFED87C3BBC4EC /* ChameleonFramework */ = {
+			isa = PBXGroup;
+			children = (
+				FD5A3C70F2F7A6AA6C638A742F331256 /* Default */,
+				FEBCC244E802F34CDE8F8BC03DFD60C2 /* Support Files */,
+				CB8890990C7CA9209D734803D82F5EB3 /* Swift */,
+			);
+			path = ChameleonFramework;
+			sourceTree = "<group>";
+		};
+		A440BE2C39735BA4C411926BA153BAC1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				89367A4D3312E5F159AC0C6108744F1D /* Info.plist */,
+				098C34A9733C1EF1EF6F0BB520F35F64 /* MRProgress.modulemap */,
+				F22E54A2FC3CDE019638E54D6B9048ED /* MRProgress.xcconfig */,
+				07E6F03BD277A8AA34D44AEBEF3670A2 /* MRProgress-dummy.m */,
+				31467EAAAAF7FF84C0B28B2E9225EFCC /* MRProgress-prefix.pch */,
+				5EEEE1148F6244CCF99BB93E70A4E47D /* MRProgress-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MRProgress";
+			sourceTree = "<group>";
+		};
+		A53C34633D944D461A013575E64EC9D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92B2AC08F06B1F4731DFED87C3BBC4EC /* ChameleonFramework */,
+				E5587085A5A296F4F8BF50B5A18EB12F /* ColorUtils */,
+				AEF311B226353048E0823EF77586FC7B /* JHColorPicker */,
+				37745B514C02A508E5BCE21FFC7EA4F9 /* MRProgress */,
+				FECA0A258735F757EB19985DA644F2B1 /* UIColor-Crayola */,
+				786D79C2CEC4631997009362E7A16993 /* UIColor-Pantone */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AEF311B226353048E0823EF77586FC7B /* JHColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				8FFE2973B413EC3A8E3F5D04681288CF /* ColorLibraries.swift */,
+				29DACD4D82C05A293CE98442DA8D8FBC /* InfColorBarPicker.h */,
+				7EF523B3248F970816151F3E81148D8C /* InfColorBarPicker.m */,
+				DACE619A06DAFCCB743D94E17C4AEA9F /* InfColorIndicatorView.h */,
+				AA6FF368A6EBE694FEA1972974A57A5F /* InfColorIndicatorView.m */,
+				6E4C9EB19601E7E4C6F31704B305E769 /* InfColorPicker.h */,
+				0FE2751F0BB525B1B9D9F44A2FBE3658 /* InfColorPickerController.h */,
+				4753C4382EAE2AF97F400B517E30332E /* InfColorPickerController.m */,
+				F911A08313FA9DA74CFEC398AE941925 /* InfColorPickerNavigationController.h */,
+				B1DA4403143080C45DDF8E6B4F09BAE6 /* InfColorPickerNavigationController.m */,
+				45E6F7EF59BE062809768E2A1B0E8386 /* InfColorSquarePicker.h */,
+				F74FDACDD7441C4E996CB470F4B6497C /* InfColorSquarePicker.m */,
+				C5341CD3658E656ADCAA52EE6C13B438 /* InfHSBSupport.h */,
+				5ECF58847ADFBFAF78F2826D36CFA3EB /* InfHSBSupport.m */,
+				DFE60614C9D810C95ED699E7A0B28326 /* InfSourceColorView.h */,
+				910B295928E3E000DCDDCB586F5BF362 /* InfSourceColorView.m */,
+				A09F114E41DF4E22A6EA6B970B4685BD /* JHColorPickerController.swift */,
+				6256D45FA1F3B35E5A3084633153DF4B /* UIColorExtension.swift */,
+				68B297846BC78E44F7C14A01C3E6DBAB /* Resources */,
+				FFD75203A0DF36EDF7DDB95B9ED68377 /* Support Files */,
+			);
+			path = JHColorPicker;
+			sourceTree = "<group>";
+		};
+		BB557FCE60C5384E4CC72B1DA9004EB4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6388CA2D39BBA7062357BE41384D86E3 /* Accelerate.framework */,
+				B037D198B6B3BCB1CD9EA6318F2504A6 /* CoreGraphics.framework */,
+				182D727402F09D8EF406DE2D5036CCD6 /* Foundation.framework */,
+				3D983D255F9153AA8EF639E049620AB0 /* QuartzCore.framework */,
+				3DCB50714AA572610D798E941592EA14 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		BE63A3E8AADEE38159CFCF4D7BD060A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CCB2BDC5BF2CDD12E8C1E8038D594BE /* ChameleonFramework.framework */,
+				F83C9BE5B25AB4A46869EC34BA8380BF /* ColorUtils.framework */,
+				251815D6C4B7667FB89827EC571C302C /* UIColor_Crayola.framework */,
+				862BACDF809B180FFB8AED9D60438F09 /* UIColor_Pantone.framework */,
+				BB557FCE60C5384E4CC72B1DA9004EB4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB8890990C7CA9209D734803D82F5EB3 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				4B679F02D21084BFB8F54AED6F03DC9E /* ChameleonShorthand.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		CFF2B6018EA24A1F6BD02AF42FB9B022 /* Stopable */ = {
+			isa = PBXGroup;
+			children = (
+				CFA65107D1B04F384646FF26B35688E2 /* MRStopableView.h */,
+				85AD80CB2F381665315E6B3E110FB50B /* MRStopButton.h */,
+				19463E5F4E28988EF536090105DF694C /* MRStopButton.m */,
+			);
+			name = Stopable;
+			sourceTree = "<group>";
+		};
+		D3D7F2A7F8E196DB84E2690FBF412D8E /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				EB3D9B23B4E88E17A7BEDCAECC2EBD3F /* MRProgressOverlayView.h */,
+				CA752BDDE2F9B3C18A2FC541C3B6FEDA /* MRProgressOverlayView.m */,
 			);
 			name = Overlay;
-			sourceTree = "<group>";
-		};
-		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C7C886F29C51966573E14AE3F1F3D9DA /* MRProgress.framework */,
-				6B93D362905330EE03C4419F4C5CE850 /* Pods_Simplify.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		E12D5139E8D044862B4250742E26A9D8 /* Targets Support Files */ = {
@@ -296,82 +729,306 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		F4637820732FBFF44F5C9B32659C84F0 /* Pods */ = {
+		E37BACE9A13171B4CDD1CBEF1BA6F19C /* NavigationBarProgress */ = {
 			isa = PBXGroup;
 			children = (
-				347B39359429EB6C8646E840759944E2 /* MRProgress */,
+				EE9376E75FA5A2401547CEC3E197B78C /* MRNavigationBarProgressView.h */,
+				B6AA2F11C9F3FC8C50AFADEE26C82D5B /* MRNavigationBarProgressView.m */,
 			);
-			name = Pods;
+			name = NavigationBarProgress;
 			sourceTree = "<group>";
 		};
-		FBB89C9E32F93C7B8DE8D52B65346F4D /* ActivityIndicator */ = {
+		E4BB0EF5D0F166E4D5A3BC376125E2B5 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				DE6C005B7D2787AA765BC094C6ABC7B8 /* MRActivityIndicatorView.h */,
-				FB28077D5366751810FB5FEA973B2F64 /* MRActivityIndicatorView.m */,
+				48F7DCCE2F3BBF0BBF1F328C28958A7D /* MRProgressHelper.h */,
 			);
-			name = ActivityIndicator;
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		E5587085A5A296F4F8BF50B5A18EB12F /* ColorUtils */ = {
+			isa = PBXGroup;
+			children = (
+				B6423CBEE8E2E11B6959EE2F676E9E5D /* ColorUtils.h */,
+				D02D7A851C5AE3A79D1E09B6E786ACD3 /* ColorUtils.m */,
+				4D932B27F7E3B2FB5AD9127634B6E42E /* Support Files */,
+			);
+			path = ColorUtils;
+			sourceTree = "<group>";
+		};
+		FD5A3C70F2F7A6AA6C638A742F331256 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				9EF19F54CAB617E22FB6218021916165 /* Chameleon.h */,
+				DD1BBBA9D2A6B961DED308ED4208EFE0 /* Chameleon_.h */,
+				39F5BEA5F7C4AD99D6E8FF3F90E4D3FF /* Chameleon_.m */,
+				22AB2BB46AF1A354541A7E8A0ADFC342 /* ChameleonConstants.h */,
+				E19A6ACF998669E39131A3E7D26CF489 /* ChameleonConstants.m */,
+				14B28F279744ACFDEB99A9877D87B659 /* ChameleonEnums.h */,
+				9754FACEBA3CAA59FEC56475F722EC2C /* ChameleonMacros.h */,
+				2C993CD076FE1DDDD9C35147AD67DC53 /* NSArray+Chameleon.h */,
+				023AFE733120E3EF40ED84A2FDE38006 /* NSArray+Chameleon.m */,
+				940FA6712AD9E8FF577D5801E34DC96C /* UIButton+Chameleon.h */,
+				87C4D97B77A2BC831EF29F25D989E04C /* UIButton+Chameleon.m */,
+				A6F0C0148A8186D3B1FD8379A315E1E8 /* UIColor+Chameleon.h */,
+				773E26C8AE9FA8F7FBF133951E3453BB /* UIColor+Chameleon.m */,
+				1CA899E69123E6CFDAF020A5D2682AF8 /* UIColor+ChameleonPrivate.h */,
+				2AD6C37A67D460C442AE14182A1AD453 /* UIColor+ChameleonPrivate.m */,
+				97307B586FA24BB5AB6A2FCBCB08C4C2 /* UIImage+ChameleonPrivate.h */,
+				CDDE335E2CF27B6DB65BE4DC13E35B3F /* UIImage+ChameleonPrivate.m */,
+				BB30796695248C03C31ED9273EB63151 /* UILabel+Chameleon.h */,
+				52B333CCDEACC45827651C133E174DCA /* UILabel+Chameleon.m */,
+				629F5D02EB9D675792F6E7480EED4A72 /* UINavigationController+Chameleon.h */,
+				071C642213CBF78BEA3F286DE9D457D5 /* UINavigationController+Chameleon.m */,
+				1EDA43B30277C17301EF205D77D887CD /* UIView+ChameleonPrivate.h */,
+				240714E573CC9589227078C355B42099 /* UIView+ChameleonPrivate.m */,
+				7A82C67506E15A272E0B2D79B574BE4C /* UIViewController+Chameleon.h */,
+				58C3493268D22FA3D268374E78F1037E /* UIViewController+Chameleon.m */,
+			);
+			name = Default;
+			sourceTree = "<group>";
+		};
+		FEBCC244E802F34CDE8F8BC03DFD60C2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				73DC4613B745C0CC5DF2E815307DAC4E /* ChameleonFramework.modulemap */,
+				27C73B5F72CD161C5421B96ACE8E23AD /* ChameleonFramework.xcconfig */,
+				3990D0427C2B596A7755F81B7C166BBD /* ChameleonFramework-dummy.m */,
+				92F15B919B4A9383C73D61C1182CD343 /* ChameleonFramework-prefix.pch */,
+				EE2899145C33CF66B421EF2CC424C3AE /* ChameleonFramework-umbrella.h */,
+				D92E44DD27A83DF018BE3AE524A92DF4 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ChameleonFramework";
+			sourceTree = "<group>";
+		};
+		FECA0A258735F757EB19985DA644F2B1 /* UIColor-Crayola */ = {
+			isa = PBXGroup;
+			children = (
+				14487EA405EC1E760F58AF6ACA59CAF8 /* UIColor+Crayola.h */,
+				2472B266C7E22EC49AE6A0350320C1A6 /* UIColor+Crayola.m */,
+				8BB2F420587B9CC6EF41A79DB9690B0F /* Support Files */,
+			);
+			path = "UIColor-Crayola";
+			sourceTree = "<group>";
+		};
+		FFD75203A0DF36EDF7DDB95B9ED68377 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				327C05E3488EF2766C5AD6F66F7F9CAE /* Info.plist */,
+				92215ED37E6C1775B2F83ECBD69870FD /* JHColorPicker.modulemap */,
+				D16C8DAF1180F88920F8D39D4790664D /* JHColorPicker.xcconfig */,
+				BFD269C3C19AACCF6F13ABA8BE2E18A8 /* JHColorPicker-dummy.m */,
+				88E445EC7DA8CFE03F941AA0DFD1867E /* JHColorPicker-prefix.pch */,
+				257B1D2FF08E45549762F1B4033D8770 /* JHColorPicker-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JHColorPicker";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1A8B8F75972345BF297F2004D73D21A4 /* Headers */ = {
+		08DA4665F97C11B2674E2245E4965358 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				587E0FE02B473EDB0D909036665FA41C /* MRActivityIndicatorView.h in Headers */,
-				1E1507C797638797B14CB0BA6E06110F /* MRBlurView.h in Headers */,
-				2EF75B37C0318906C68AF54587C8CD18 /* MRCircularProgressView.h in Headers */,
-				B62C32981ACB10EEBB025D4BE1525EC5 /* MRIconView.h in Headers */,
-				6044340D4CE729968FCA865961319F9F /* MRNavigationBarProgressView.h in Headers */,
-				D6E39A4C18E3C1E1EAFA4BF35203743A /* MRProgress-umbrella.h in Headers */,
-				2BC43BF7337E4CA2019A4BB0BA9E4F5D /* MRProgress.h in Headers */,
-				0AD45065AC5CDE40B12748818E8B8271 /* MRProgressHelper.h in Headers */,
-				21D541B314DA4623F5177EE3ADED5911 /* MRProgressOverlayView.h in Headers */,
-				CFEE9E273E1E70ADA2DC6E83E594F4FC /* MRProgressView.h in Headers */,
-				78D9BCE41F6082585E5F9BCD07A28DF8 /* MRStopButton.h in Headers */,
-				7B4B85621FD04456CB132A8A20E21B5D /* MRStopableView.h in Headers */,
-				EAE27A1C0C91D3CBAB9E7A92630B8B7B /* UIImage+MRImageEffects.h in Headers */,
+				EE442E93E5BBC6AB805C3E1B2D3482CA /* MRActivityIndicatorView.h in Headers */,
+				5F7F40B822116B9DABC6B73B8EBE338B /* MRBlurView.h in Headers */,
+				3084B72EA21046D2E806C9661E8FF54E /* MRCircularProgressView.h in Headers */,
+				89CE4E0D4BEDD88C4B05A9D54526CE7E /* MRIconView.h in Headers */,
+				75C2EC4E91C632BA530B5B1E60DC4AEE /* MRNavigationBarProgressView.h in Headers */,
+				811BF3A1EDF9B595901E2FC404641EE7 /* MRProgress-umbrella.h in Headers */,
+				7CFF3D11D2A80054659CB09F8D17A1A1 /* MRProgress.h in Headers */,
+				788907A105CE1BC948CBF1DC3F0099CD /* MRProgressHelper.h in Headers */,
+				52A5E8263E7C91DDAB94F66A5364369B /* MRProgressOverlayView.h in Headers */,
+				BD9F0543F7B4F444CA4A0948C0F03070 /* MRProgressView.h in Headers */,
+				81694B31763640FB3743C90CF3547673 /* MRStopableView.h in Headers */,
+				A28930DA66986E8D161FF256CFA2E2E9 /* MRStopButton.h in Headers */,
+				BDC0281540324E5A27D70A10BD529254 /* UIImage+MRImageEffects.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		243B6B4D14A0BB0ED0B6B19C77A830DC /* Headers */ = {
+		2E5AC890270D29A36B1AE1B096B123E7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2421AB6A32141476ADF19B8E4421AB73 /* Pods-Simplify-umbrella.h in Headers */,
+				86CD5CFCD76BACE050EE7FE3804F683A /* InfColorBarPicker.h in Headers */,
+				7D082DBFA415C5F8BFDBBCD76FA71073 /* InfColorIndicatorView.h in Headers */,
+				70A5B39E54B659490AA53F377CA2B415 /* InfColorPicker.h in Headers */,
+				43F9FAAC37CDDC26AB1CBD195E8E77ED /* InfColorPickerController.h in Headers */,
+				27F47F073A275C8181450F8EEE87C114 /* InfColorPickerNavigationController.h in Headers */,
+				68C3352CC71E177C5CC64FE229D14B65 /* InfColorSquarePicker.h in Headers */,
+				991DC5BEACC413D16F5FE49294EB82FB /* InfHSBSupport.h in Headers */,
+				D2F1F2A8365A97BD1D6774F73C442527 /* InfSourceColorView.h in Headers */,
+				FC89DFAD60AD0E553D87AD619AD9A1BF /* JHColorPicker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FB8E12235C9581355844DB0ABBB842A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				705644DC442C6E763A29A443275096B5 /* UIColor+Crayola.h in Headers */,
+				E4793933D4849C99DF30AC419B9B01F6 /* UIColor-Crayola-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D4C6E804BF1CBAE11DA74D281FEF724 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA23D9387AEED85F9D18BF167D2A332D /* ColorUtils-umbrella.h in Headers */,
+				196F0E5D2DFCF0BAEDFAC69C00F2FDB4 /* ColorUtils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF37C9AFCE7C55709F57AB5FF863F6EE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2508DEEEAA5E8D1666C68FB19CE47515 /* UIColor+Pantone.h in Headers */,
+				08C3DEB4785E0A5F165214103FBCA9F7 /* UIColor-Pantone-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2B6D4989A45652B1DBD2EB42A3108C6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70BF84E9F40C1728B6FF2A2BF6E48046 /* Chameleon.h in Headers */,
+				1C99FE67DA4EEAAA04472844AF91F666 /* Chameleon_.h in Headers */,
+				EA3FA19F3EAF7DD1B89CA7EF6CA8D555 /* ChameleonConstants.h in Headers */,
+				A96DC52DFE6DAA8D0623E7128821DB21 /* ChameleonEnums.h in Headers */,
+				B46468E03EBBD87D15E78729A4EE6853 /* ChameleonFramework-umbrella.h in Headers */,
+				549664AE2322CEF24B8D948F874C85A8 /* ChameleonMacros.h in Headers */,
+				C248B670FB60AF6726BD2B37C0300AC7 /* NSArray+Chameleon.h in Headers */,
+				BDA423B9D68C1B0E68B3F42519258C21 /* UIButton+Chameleon.h in Headers */,
+				1BE977D21CB76D5FBF41F0A3C1A76FCA /* UIColor+Chameleon.h in Headers */,
+				80D34BE804773D9AB582687D6FA73E23 /* UIColor+ChameleonPrivate.h in Headers */,
+				49A62D9FB702FA0A269EE0A8E9543B47 /* UIImage+ChameleonPrivate.h in Headers */,
+				4D1150319B058BF2367CA2E90D3F47CD /* UILabel+Chameleon.h in Headers */,
+				9B4AB6F5248C24541B5D4B968DAF4AD3 /* UINavigationController+Chameleon.h in Headers */,
+				10210854CBA662066177AD8F4AE4DB18 /* UIView+ChameleonPrivate.h in Headers */,
+				B83A4289689B6D85A34359225306CE77 /* UIViewController+Chameleon.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5699DDD61DD66AE7DFE2775B2CD2C8A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39D758991DF3725B4C3CCF4C55D0D122 /* Pods-Simplify-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3B17283643268D6E3B014C5C2DB87FB5 /* Pods-Simplify */ = {
+		09A088E92C3ED5F4A0FD3F97A25630EE /* Pods-Simplify */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE88B8AAB2542C794BBB32A57B2367D4 /* Build configuration list for PBXNativeTarget "Pods-Simplify" */;
+			buildConfigurationList = 4473BE0F5B07D3299FB3E486C9FF2475 /* Build configuration list for PBXNativeTarget "Pods-Simplify" */;
 			buildPhases = (
-				D5765505011C46D56C30EE1F6B5C1A9A /* Sources */,
-				C1EF4DDBEC3856BD812458F5821E60F0 /* Frameworks */,
-				243B6B4D14A0BB0ED0B6B19C77A830DC /* Headers */,
+				BA970FCA0633061A8BE919D393C12EF1 /* Sources */,
+				C5E6F525448438F29F500199F0F5B738 /* Frameworks */,
+				E5699DDD61DD66AE7DFE2775B2CD2C8A /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CDF4CDDEF949131AC469C9D640EB4573 /* PBXTargetDependency */,
+				6B28F3896301EDCA3FA0E751F08F3375 /* PBXTargetDependency */,
+				B52F01A3CBCC48F9EA09EAEA97E49CE7 /* PBXTargetDependency */,
+				64C6F8D526A03126FC360A2AE1949B2E /* PBXTargetDependency */,
+				F2D31D293F1163D2C50FA17C9A90E87F /* PBXTargetDependency */,
+				F7C5CF632DECC7DE5DE1C4A448ADBC4B /* PBXTargetDependency */,
+				C0C35448E330FAFBF116C35CD9F5F0FE /* PBXTargetDependency */,
 			);
 			name = "Pods-Simplify";
 			productName = "Pods-Simplify";
-			productReference = 6B93D362905330EE03C4419F4C5CE850 /* Pods_Simplify.framework */;
+			productReference = 9C144A1A8B2B3AF4607E0E41DDF2556C /* Pods_Simplify.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		51E4254CDBB5D9D766E9BBFC4C544B92 /* MRProgress */ = {
+		3DE89710E87EB8755CFCFB07BDEDB8A8 /* JHColorPicker-JHColorPicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A257E60A990F5798DC06E779CAFC2DA /* Build configuration list for PBXNativeTarget "MRProgress" */;
+			buildConfigurationList = 20032A469DCC42B796B530014A79E79A /* Build configuration list for PBXNativeTarget "JHColorPicker-JHColorPicker" */;
 			buildPhases = (
-				BE69F67242E536DF4DE82E352E2911B2 /* Sources */,
-				F75849F6B1966A0A333C42EBA045047D /* Frameworks */,
-				1A8B8F75972345BF297F2004D73D21A4 /* Headers */,
+				645C59547C6FDCF0BBB73EF50F8F9DEB /* Sources */,
+				718D49A5A1AE988177ACBAB3E4B40A2C /* Frameworks */,
+				BF054543A4F9A728FAE99729055BD7EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JHColorPicker-JHColorPicker";
+			productName = "JHColorPicker-JHColorPicker";
+			productReference = 7D03760E146931BFE21A9CA766941807 /* JHColorPicker.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		46F513BB5D3B39D85037641F08F17966 /* JHColorPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8567B56E204FF0228B605B9EAE0CBDB /* Build configuration list for PBXNativeTarget "JHColorPicker" */;
+			buildPhases = (
+				B3387B4BDBB83BEB5CFF38322812D91C /* Sources */,
+				4685B8965864B7DFF45B47C5F711A0C5 /* Frameworks */,
+				5DFC6EC0297A89AC5F5C93DAFC7BC540 /* Resources */,
+				2E5AC890270D29A36B1AE1B096B123E7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E18F5BA443DB19E27719232749F77C6 /* PBXTargetDependency */,
+				286C299F5C9F6FBF0C3E38AD09748D71 /* PBXTargetDependency */,
+				31D36C81D747383FE34488710D29D17E /* PBXTargetDependency */,
+				4CD83E68EA8A709EDD38770029FAC905 /* PBXTargetDependency */,
+				28294B4640C30164CAC4CDB5FB28E7F4 /* PBXTargetDependency */,
+			);
+			name = JHColorPicker;
+			productName = JHColorPicker;
+			productReference = 9C4DDA12C7EC57A01E449DDED3F95CF4 /* JHColorPicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6E4C13B4CC5E883C6500E673D89BB763 /* UIColor-Pantone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F2F23FB9562DA7F9C1F8FAE32BE575F /* Build configuration list for PBXNativeTarget "UIColor-Pantone" */;
+			buildPhases = (
+				457F30E6981904AA8A12E64F63987E66 /* Sources */,
+				650BA51DCBB3C3F639B76FCD688158BE /* Frameworks */,
+				CF37C9AFCE7C55709F57AB5FF863F6EE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UIColor-Pantone";
+			productName = "UIColor-Pantone";
+			productReference = 2DFFBD110C3DAE158828401CE862FB7E /* UIColor_Pantone.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9883DF06E8D2D66F932D42F0FCA1F6E9 /* ChameleonFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4FAB201A807A8F8CD48103EFD7B2489 /* Build configuration list for PBXNativeTarget "ChameleonFramework" */;
+			buildPhases = (
+				6982B7783E775F7871CBB9BE99E420F0 /* Sources */,
+				2269A410F3F29D3EA94E7AE0521367B1 /* Frameworks */,
+				D2B6D4989A45652B1DBD2EB42A3108C6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChameleonFramework;
+			productName = ChameleonFramework;
+			productReference = A4D02A493E809C7D78A7FA91E0F8646B /* ChameleonFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9CAAB2A1855182D992E2945796B03B4D /* MRProgress */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E95DB18B92B10FFD1F819FA2896C284 /* Build configuration list for PBXNativeTarget "MRProgress" */;
+			buildPhases = (
+				2EA167F2369E9F84FB1F8E9B272C5798 /* Sources */,
+				308EB9B41341FEAF006009FC79D74EC8 /* Frameworks */,
+				08DA4665F97C11B2674E2245E4965358 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -379,7 +1036,41 @@
 			);
 			name = MRProgress;
 			productName = MRProgress;
-			productReference = C7C886F29C51966573E14AE3F1F3D9DA /* MRProgress.framework */;
+			productReference = 791C5B19A7170F8B78E5FF2BF56A8B50 /* MRProgress.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B219ED651A542650C5832ADC1C31C025 /* UIColor-Crayola */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68C2BE99355641A0CD6EB2CCB2434675 /* Build configuration list for PBXNativeTarget "UIColor-Crayola" */;
+			buildPhases = (
+				1F3342B184E27A3978535136FDDC9926 /* Sources */,
+				5CDE577B7B7D1E5B349B326E5268D15A /* Frameworks */,
+				4FB8E12235C9581355844DB0ABBB842A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UIColor-Crayola";
+			productName = "UIColor-Crayola";
+			productReference = CB6C7C239CE7D9B40F00F4F59B7AA92B /* UIColor_Crayola.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F7FA51AD3FB1D297C5D843E0321E6ABE /* ColorUtils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB8F3E7CD74040C91A4B7419EFF9ACD1 /* Build configuration list for PBXNativeTarget "ColorUtils" */;
+			buildPhases = (
+				298A650F754366B3E1CA22AD125F11B5 /* Sources */,
+				5ED4BFBB774B1129DB005D65A4B97343 /* Frameworks */,
+				6D4C6E804BF1CBAE11DA74D281FEF724 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ColorUtils;
+			productName = ColorUtils;
+			productReference = 9F8036B68DC0684CBABBBFC929C5D1E7 /* ColorUtils.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -399,54 +1090,328 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			productRefGroup = 3E2B31333B7089EE5D1CB9710FE472FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				51E4254CDBB5D9D766E9BBFC4C544B92 /* MRProgress */,
-				3B17283643268D6E3B014C5C2DB87FB5 /* Pods-Simplify */,
+				9883DF06E8D2D66F932D42F0FCA1F6E9 /* ChameleonFramework */,
+				F7FA51AD3FB1D297C5D843E0321E6ABE /* ColorUtils */,
+				46F513BB5D3B39D85037641F08F17966 /* JHColorPicker */,
+				3DE89710E87EB8755CFCFB07BDEDB8A8 /* JHColorPicker-JHColorPicker */,
+				9CAAB2A1855182D992E2945796B03B4D /* MRProgress */,
+				09A088E92C3ED5F4A0FD3F97A25630EE /* Pods-Simplify */,
+				B219ED651A542650C5832ADC1C31C025 /* UIColor-Crayola */,
+				6E4C13B4CC5E883C6500E673D89BB763 /* UIColor-Pantone */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		BE69F67242E536DF4DE82E352E2911B2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		5DFC6EC0297A89AC5F5C93DAFC7BC540 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				072EC5A3FE8B7A5D12CD5C27C4DB5FAF /* MRActivityIndicatorView.m in Sources */,
-				CF8228C5CCA23744C6F451B5C0922A65 /* MRBlurView.m in Sources */,
-				EF51FC2841560BB7A64EEB386C04E183 /* MRCircularProgressView.m in Sources */,
-				B80D5D4B0136C863609F2087610D190A /* MRIconView.m in Sources */,
-				6A1143D1633BAB0B9DAAA8856899C2CA /* MRNavigationBarProgressView.m in Sources */,
-				D3156FE3004A581C6B1A056B00128CF3 /* MRProgress-dummy.m in Sources */,
-				EB86F532581DBD6CD230F97E1F940B9F /* MRProgressOverlayView.m in Sources */,
-				44B9FB5394B5AF0E4D8AAFEA52A5A93C /* MRProgressView.m in Sources */,
-				7C6C2E68FD903A7BB304C26F434CD496 /* MRStopButton.m in Sources */,
-				6E4722EFB66497BB6D2222A937656D5D /* UIImage+MRImageEffects.m in Sources */,
+				1B87A5C0CCE79E2D8E99220A974B65FD /* JHColorPicker.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D5765505011C46D56C30EE1F6B5C1A9A /* Sources */ = {
+		BF054543A4F9A728FAE99729055BD7EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A8AF121EA32A85F29D0C25489252E67 /* brightness_icon.png in Resources */,
+				1D4B00FF6FE0BB34E52A55D4307F4E1B /* brightness_icon@2x.png in Resources */,
+				30C18C204206BA8ADB7A70E1572657EF /* brightness_icon@3x.png in Resources */,
+				0E1802BD94F3A513C7941C4C7995773C /* brightness_icon_dark.png in Resources */,
+				0FCEAA9EFB1760439123D024661918EE /* brightness_icon_dark@2x.png in Resources */,
+				75DED214D25DE7FF5D961CFEE5784E39 /* brightness_icon_dark@3x.png in Resources */,
+				603BB0A5D87E0AA9B10477CA2A6B30BE /* InfColorPickerView.xib in Resources */,
+				D51DDAC094EF7314DA6183BDC4838C37 /* JHColorPickerController.xib in Resources */,
+				D87B0CF4C4FC6B0FA5D9784C529980E4 /* SwatchCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F3342B184E27A3978535136FDDC9926 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0B00AD365EB389E31385142209B0FF4 /* Pods-Simplify-dummy.m in Sources */,
+				531E90F70DDA52941C8FD84AD941C99B /* UIColor+Crayola.m in Sources */,
+				7CB3EF453BF31AD2FA2D84AC77B42A61 /* UIColor-Crayola-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		298A650F754366B3E1CA22AD125F11B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44ADC9F03D19E942B69A907361AA26CD /* ColorUtils-dummy.m in Sources */,
+				DFDF45ADD2CD1731700DA27D81DD7E8B /* ColorUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EA167F2369E9F84FB1F8E9B272C5798 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3C8626AC35DC46D1291E4B38362F4FB /* MRActivityIndicatorView.m in Sources */,
+				CD3C1E8D1BAFF179B13FDDDD6118D146 /* MRBlurView.m in Sources */,
+				0B87AEED887108FF3FDA89B00E048E1B /* MRCircularProgressView.m in Sources */,
+				19A44C55B25612B9721A27E7C49E03CF /* MRIconView.m in Sources */,
+				83BC947C81CD6B24E1F1B4423A032DE5 /* MRNavigationBarProgressView.m in Sources */,
+				2B760213EE78830957A29FF2AEC63E40 /* MRProgress-dummy.m in Sources */,
+				454E1EB4F7B62721B59982B1E983DCFA /* MRProgressOverlayView.m in Sources */,
+				F0062A0D1BD5D56ED254B194BB3B7EB4 /* MRProgressView.m in Sources */,
+				28BFEF0F25609E5CF6D310771B92CD24 /* MRStopButton.m in Sources */,
+				95167CA6D4FE6CFA3762703F17002FC6 /* UIImage+MRImageEffects.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		457F30E6981904AA8A12E64F63987E66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D957D49675BBB0DD56BD361338165896 /* UIColor+Pantone.m in Sources */,
+				95DA4DF1CD3C7C571CA1D0EE6A4DE37C /* UIColor-Pantone-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		645C59547C6FDCF0BBB73EF50F8F9DEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6982B7783E775F7871CBB9BE99E420F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F8EFD6E04BC300EE8F3E061A1F99C24 /* Chameleon_.m in Sources */,
+				85CCFD550051FD7542FBC7075168ECA2 /* ChameleonConstants.m in Sources */,
+				3D2367124B9607084EDD31DBFFE44482 /* ChameleonFramework-dummy.m in Sources */,
+				67EFFD29A3FAC5A87E0CCAD3C3CB5BC3 /* ChameleonShorthand.swift in Sources */,
+				3AADA8A23B62EED30AEA2F76F5017FC7 /* NSArray+Chameleon.m in Sources */,
+				5EB256AD85363166C2F9AC08F6AB6CFE /* UIButton+Chameleon.m in Sources */,
+				A6BC12D1B9506CD16E31DC7F02302E55 /* UIColor+Chameleon.m in Sources */,
+				DAAACB14FDB689BF049F309085B5EA7B /* UIColor+ChameleonPrivate.m in Sources */,
+				D8909DD14303314C105E05897201C46A /* UIImage+ChameleonPrivate.m in Sources */,
+				2099A9669913B4E817910296DA210AB0 /* UILabel+Chameleon.m in Sources */,
+				F239EC2C1BA606BC2469F2AF3375D1AB /* UINavigationController+Chameleon.m in Sources */,
+				FBD8A23B47AF7594688D4EAEA3E1F053 /* UIView+ChameleonPrivate.m in Sources */,
+				24D8E6650FA6889C73C4B08134C618DD /* UIViewController+Chameleon.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3387B4BDBB83BEB5CFF38322812D91C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF0AB94377DB54A66ADA2FFC7FA484DA /* ColorLibraries.swift in Sources */,
+				2635D9581BAB859D16CEF8B623DCB67C /* InfColorBarPicker.m in Sources */,
+				72BFCF186D41C3EAFE421812226087C4 /* InfColorIndicatorView.m in Sources */,
+				193674F4D01172221A753BF6AF19345E /* InfColorPickerController.m in Sources */,
+				035CE9022B59D44B20E963B508EF7501 /* InfColorPickerNavigationController.m in Sources */,
+				D6D4B93CEEDC701B705DE60B30187C20 /* InfColorSquarePicker.m in Sources */,
+				DA482AC3E3F77B49D5A4C6209E6D210D /* InfHSBSupport.m in Sources */,
+				576908A63CDD8E8CB63A9293C3BDCBD3 /* InfSourceColorView.m in Sources */,
+				55FA0B46D1B8F6593A6F705157A14506 /* JHColorPicker-dummy.m in Sources */,
+				4D26940A9B976B79BB7FFD1DBEF4C00B /* JHColorPickerController.swift in Sources */,
+				DDC4316F910EB00DDFD7A98231BAAB7D /* UIColorExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA970FCA0633061A8BE919D393C12EF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38DACD6D18D4F614DFA68B961B134B72 /* Pods-Simplify-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CDF4CDDEF949131AC469C9D640EB4573 /* PBXTargetDependency */ = {
+		1E18F5BA443DB19E27719232749F77C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ChameleonFramework;
+			target = 9883DF06E8D2D66F932D42F0FCA1F6E9 /* ChameleonFramework */;
+			targetProxy = 55C11BA0125E82950EFA7D91D2EEE560 /* PBXContainerItemProxy */;
+		};
+		28294B4640C30164CAC4CDB5FB28E7F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UIColor-Pantone";
+			target = 6E4C13B4CC5E883C6500E673D89BB763 /* UIColor-Pantone */;
+			targetProxy = 3EE5B6DB9777ADC8F41EAAE72E2AB123 /* PBXContainerItemProxy */;
+		};
+		286C299F5C9F6FBF0C3E38AD09748D71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ColorUtils;
+			target = F7FA51AD3FB1D297C5D843E0321E6ABE /* ColorUtils */;
+			targetProxy = EFFA616A3648CAD55DC83BD820786AD7 /* PBXContainerItemProxy */;
+		};
+		31D36C81D747383FE34488710D29D17E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "JHColorPicker-JHColorPicker";
+			target = 3DE89710E87EB8755CFCFB07BDEDB8A8 /* JHColorPicker-JHColorPicker */;
+			targetProxy = A517B566E1E0A25313E06E67C02EEF52 /* PBXContainerItemProxy */;
+		};
+		4CD83E68EA8A709EDD38770029FAC905 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UIColor-Crayola";
+			target = B219ED651A542650C5832ADC1C31C025 /* UIColor-Crayola */;
+			targetProxy = 9671DBC37F8323FD6309A95DB4CBB028 /* PBXContainerItemProxy */;
+		};
+		64C6F8D526A03126FC360A2AE1949B2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JHColorPicker;
+			target = 46F513BB5D3B39D85037641F08F17966 /* JHColorPicker */;
+			targetProxy = D173EADB22DA24E2ED3EDFAC187B3AD6 /* PBXContainerItemProxy */;
+		};
+		6B28F3896301EDCA3FA0E751F08F3375 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ChameleonFramework;
+			target = 9883DF06E8D2D66F932D42F0FCA1F6E9 /* ChameleonFramework */;
+			targetProxy = 8A260D8B43504E895AE3F14800AC2A9B /* PBXContainerItemProxy */;
+		};
+		B52F01A3CBCC48F9EA09EAEA97E49CE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ColorUtils;
+			target = F7FA51AD3FB1D297C5D843E0321E6ABE /* ColorUtils */;
+			targetProxy = DF42F04110001973F2117F26F96A041E /* PBXContainerItemProxy */;
+		};
+		C0C35448E330FAFBF116C35CD9F5F0FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UIColor-Pantone";
+			target = 6E4C13B4CC5E883C6500E673D89BB763 /* UIColor-Pantone */;
+			targetProxy = 792FE3749941A08DD8305F13F4D6E476 /* PBXContainerItemProxy */;
+		};
+		F2D31D293F1163D2C50FA17C9A90E87F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MRProgress;
-			target = 51E4254CDBB5D9D766E9BBFC4C544B92 /* MRProgress */;
-			targetProxy = 3B882C6FA2667AFCF734E9EEC157CE8F /* PBXContainerItemProxy */;
+			target = 9CAAB2A1855182D992E2945796B03B4D /* MRProgress */;
+			targetProxy = 5494DBE5767E45D27691937C9982FA17 /* PBXContainerItemProxy */;
+		};
+		F7C5CF632DECC7DE5DE1C4A448ADBC4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UIColor-Crayola";
+			target = B219ED651A542650C5832ADC1C31C025 /* UIColor-Crayola */;
+			targetProxy = A6E51BB6A878B87C834B37827A6661EB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0F37EB08F1281EC540FD9778E59CB5A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4396528491FB46547254ECDBD73B11B1 /* UIColor-Crayola.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UIColor-Crayola/UIColor-Crayola-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIColor-Crayola/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UIColor-Crayola/UIColor-Crayola.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = UIColor_Crayola;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2C3D0AE15F277F606D17A24F384D4883 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D16C8DAF1180F88920F8D39D4790664D /* JHColorPicker.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JHColorPicker/JHColorPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JHColorPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JHColorPicker/JHColorPicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = JHColorPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		45334444270F82044A2004E2677FBADF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F22E54A2FC3CDE019638E54D6B9048ED /* MRProgress.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MRProgress/MRProgress-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MRProgress/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MRProgress/MRProgress.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MRProgress;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4C72B5BB72082E0B26786CE077CFD7C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 593C0AA4112822FB910CB2B6C19DF970 /* UIColor-Pantone.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UIColor-Pantone/UIColor-Pantone-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIColor-Pantone/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UIColor-Pantone/UIColor-Pantone.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = UIColor_Pantone;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -486,36 +1451,21 @@
 			};
 			name = Debug;
 		};
-		63E24ED17BC305196C0D3C4A27FA2DA8 /* Debug */ = {
+		614C5C019E2B6C6EFAA8B67927E8B2B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5307781680E80C95778AAA5FC514E0C7 /* MRProgress-Private.xcconfig */;
+			baseConfigurationReference = D16C8DAF1180F88920F8D39D4790664D /* JHColorPicker.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.8.2;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.8.2;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MRProgress/MRProgress-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MRProgress/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MRProgress/MRProgress.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = MRProgress;
+				PRODUCT_NAME = JHColorPicker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
-		690D18BD2573F9241767E46472BB3E21 /* Release */ = {
+		6921C99B1C8993D309FE86B2F3491A7F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A7EC90D52AA38C43FEB645679ACC322 /* Pods-Simplify.release.xcconfig */;
+			baseConfigurationReference = B24491515C42B9B359B71956F64128CA /* Pods-Simplify.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -528,12 +1478,40 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Simplify/Pods-Simplify.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = Pods_Simplify;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		70CB8B12590AE894C7FE04CAC788A264 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6D1AC5E3829AEDBF0F70127FA339146 /* ColorUtils.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ColorUtils/ColorUtils-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ColorUtils/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ColorUtils/ColorUtils.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ColorUtils;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -576,9 +1554,21 @@
 			};
 			name = Release;
 		};
-		9F79108B7C89E421953DEBEEA8808F7F /* Debug */ = {
+		8B3EB44CDE6052DC47F68DD7AFB0902B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4276776810CE62C5CCD9694B314B9F7C /* Pods-Simplify.debug.xcconfig */;
+			baseConfigurationReference = D16C8DAF1180F88920F8D39D4790664D /* JHColorPicker.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = JHColorPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		8D886E82234808C75A705ED0F653B552 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27C73B5F72CD161C5421B96ACE8E23AD /* ChameleonFramework.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -587,33 +1577,86 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Simplify/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ChameleonFramework/ChameleonFramework-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ChameleonFramework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-Simplify/Pods-Simplify.modulemap";
+				MODULEMAP_FILE = "Target Support Files/ChameleonFramework/ChameleonFramework.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_Simplify;
+				PRODUCT_NAME = ChameleonFramework;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		B324C4BC5F85AC4ED161D6C6CDA9ABC1 /* Release */ = {
+		BD04948A6D33E026FAB981B1E969E71E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5307781680E80C95778AAA5FC514E0C7 /* MRProgress-Private.xcconfig */;
+			baseConfigurationReference = D16C8DAF1180F88920F8D39D4790664D /* JHColorPicker.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.8.2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.8.2;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JHColorPicker/JHColorPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JHColorPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JHColorPicker/JHColorPicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = JHColorPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CBF0C6FCBF983827FCB1E60BDBA61A80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27C73B5F72CD161C5421B96ACE8E23AD /* ChameleonFramework.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ChameleonFramework/ChameleonFramework-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ChameleonFramework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ChameleonFramework/ChameleonFramework.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ChameleonFramework;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D1F938EF64D4357D78949AE01E8195B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F22E54A2FC3CDE019638E54D6B9048ED /* MRProgress.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/MRProgress/MRProgress-prefix.pch";
@@ -632,9 +1675,130 @@
 			};
 			name = Release;
 		};
+		D657173C88BD6948733676DC63E97B4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 593C0AA4112822FB910CB2B6C19DF970 /* UIColor-Pantone.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UIColor-Pantone/UIColor-Pantone-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIColor-Pantone/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UIColor-Pantone/UIColor-Pantone.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = UIColor_Pantone;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D71A82C2887528AEC1C61CC716ADA099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4396528491FB46547254ECDBD73B11B1 /* UIColor-Crayola.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UIColor-Crayola/UIColor-Crayola-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIColor-Crayola/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UIColor-Crayola/UIColor-Crayola.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = UIColor_Crayola;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EA7FB3D9860EDA036D927D6767F3C587 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6D1AC5E3829AEDBF0F70127FA339146 /* ColorUtils.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ColorUtils/ColorUtils-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ColorUtils/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ColorUtils/ColorUtils.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ColorUtils;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EC710136804234BDC56243E5A734B7EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEE42D099BEE56DF3D2E670DD2907B4D /* Pods-Simplify.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Simplify/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Simplify/Pods-Simplify.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Simplify;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		20032A469DCC42B796B530014A79E79A /* Build configuration list for PBXNativeTarget "JHColorPicker-JHColorPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				614C5C019E2B6C6EFAA8B67927E8B2B6 /* Debug */,
+				8B3EB44CDE6052DC47F68DD7AFB0902B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -644,20 +1808,65 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7A257E60A990F5798DC06E779CAFC2DA /* Build configuration list for PBXNativeTarget "MRProgress" */ = {
+		2E95DB18B92B10FFD1F819FA2896C284 /* Build configuration list for PBXNativeTarget "MRProgress" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				63E24ED17BC305196C0D3C4A27FA2DA8 /* Debug */,
-				B324C4BC5F85AC4ED161D6C6CDA9ABC1 /* Release */,
+				45334444270F82044A2004E2677FBADF /* Debug */,
+				D1F938EF64D4357D78949AE01E8195B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE88B8AAB2542C794BBB32A57B2367D4 /* Build configuration list for PBXNativeTarget "Pods-Simplify" */ = {
+		3F2F23FB9562DA7F9C1F8FAE32BE575F /* Build configuration list for PBXNativeTarget "UIColor-Pantone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9F79108B7C89E421953DEBEEA8808F7F /* Debug */,
-				690D18BD2573F9241767E46472BB3E21 /* Release */,
+				D657173C88BD6948733676DC63E97B4E /* Debug */,
+				4C72B5BB72082E0B26786CE077CFD7C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4473BE0F5B07D3299FB3E486C9FF2475 /* Build configuration list for PBXNativeTarget "Pods-Simplify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC710136804234BDC56243E5A734B7EE /* Debug */,
+				6921C99B1C8993D309FE86B2F3491A7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68C2BE99355641A0CD6EB2CCB2434675 /* Build configuration list for PBXNativeTarget "UIColor-Crayola" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F37EB08F1281EC540FD9778E59CB5A6 /* Debug */,
+				D71A82C2887528AEC1C61CC716ADA099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB8F3E7CD74040C91A4B7419EFF9ACD1 /* Build configuration list for PBXNativeTarget "ColorUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA7FB3D9860EDA036D927D6767F3C587 /* Debug */,
+				70CB8B12590AE894C7FE04CAC788A264 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4FAB201A807A8F8CD48103EFD7B2489 /* Build configuration list for PBXNativeTarget "ChameleonFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D886E82234808C75A705ED0F653B552 /* Debug */,
+				CBF0C6FCBF983827FCB1E60BDBA61A80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8567B56E204FF0228B605B9EAE0CBDB /* Build configuration list for PBXNativeTarget "JHColorPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C3D0AE15F277F606D17A24F384D4883 /* Debug */,
+				BD04948A6D33E026FAB981B1E969E71E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

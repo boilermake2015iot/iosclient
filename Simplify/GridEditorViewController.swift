@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JHColorPicker
 
 private let reuseIdentifier = "Cell"
 
@@ -70,29 +71,19 @@ class GridEditorViewController: UICollectionViewController, UICollectionViewDele
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let alertController = UIAlertController(title: "Choose RGB", message: nil, preferredStyle: .Alert)
-        alertController.addTextFieldWithConfigurationHandler({ (textField: UITextField) in
-            textField.placeholder = "Red"
-            textField.text = "\(self.colors[indexPath.row][0])"
-        })
-        alertController.addTextFieldWithConfigurationHandler({ (textField: UITextField) in
-            textField.placeholder = "Green"
-            textField.text = "\(self.colors[indexPath.row][1])"
-        })
-        alertController.addTextFieldWithConfigurationHandler({ (textField: UITextField) in
-            textField.placeholder = "Blue"
-            textField.text = "\(self.colors[indexPath.row][2])"
-        })
-        alertController.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
-            self.colors[indexPath.row] = [Int(alertController.textFields![0].text!)!, Int(alertController.textFields![1].text!)!, Int(alertController.textFields![2].text!)!]
-            let r = Double(self.colors[indexPath.row][0])
-            let g = Double(self.colors[indexPath.row][1])
-            let b = Double(self.colors[indexPath.row][2])
+        let colorPickerController = JHColorPickerController()
+        colorPickerController.previousColor = collectionView.cellForItemAtIndexPath(indexPath)?.backgroundColor
+        colorPickerController.completion = { (selectedColor: UIColor) in
+            var rf = CGFloat(0), gf = CGFloat(0), bf = CGFloat(0)
+            selectedColor.getRed(&rf, green: &gf, blue: &bf, alpha: nil)
+            let r = Double(rf * 255)
+            let g = Double(gf * 255)
+            let b = Double(bf * 255)
+            self.colors[indexPath.row] = [Int(r), Int(g), Int(b)]
             let cell = collectionView.cellForItemAtIndexPath(indexPath)
             cell!.backgroundColor = UIColor(red: CGFloat(r / 255.0), green: CGFloat(g / 255.0), blue: CGFloat(b / 255.0), alpha: 1)
-        }))
-        alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
-        self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        self.navigationController?.pushViewController(colorPickerController, animated: true)
     }
     
     // MARK: UICollectionViewDelegateFlowLayout

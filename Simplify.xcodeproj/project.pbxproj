@@ -38,7 +38,7 @@
 		5EBF689E1BD1D09C0095281C /* Simplify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5EBF689C1BD1D09C0095281C /* Simplify.xcdatamodeld */; };
 		5EBF68A01BD1D09C0095281C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBF689F1BD1D09C0095281C /* Assets.xcassets */; };
 		5EBF68A31BD1D09C0095281C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EBF68A11BD1D09C0095281C /* LaunchScreen.storyboard */; };
-		BAEFB89639451DBF89CC9A87 /* Pods_Simplify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DAFCE53613CD8CA3481EF9 /* Pods_Simplify.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		BAEFB89639451DBF89CC9A87 /* Pods_Simplify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DAFCE53613CD8CA3481EF9 /* Pods_Simplify.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */

@@ -1,0 +1,1 @@
+../../../JHColorPicker/Pod/Classes/InfHSBSupport.h

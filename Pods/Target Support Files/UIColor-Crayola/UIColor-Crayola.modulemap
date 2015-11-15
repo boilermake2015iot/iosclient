@@ -1,0 +1,6 @@
+framework module UIColor_Crayola {
+  umbrella header "UIColor-Crayola-umbrella.h"
+
+  export *
+  module * { export * }
+}
