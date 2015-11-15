@@ -27,7 +27,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             "color": MessageColor
         ],
         [
-            "title": "Rotate",
+            "title": "Devices",
             "color": DevicesColor
         ],
         [

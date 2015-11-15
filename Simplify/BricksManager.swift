@@ -11,13 +11,13 @@ import UIKit
 class BricksManager: NSObject {
     
     class func getMessageBricks() -> [MessageBrick] {
-        let brick1 = MessageBrick()
-        brick1.label1Text = "It is "
-        brick1.button1Text = "Current Temperature"
-        brick1.label2Text = " C"
         let brick2 = MessageBrick()
         brick2.label1Text = "It is "
         brick2.button1Text = "Current Humidity"
+        let brick7 = MessageBrick()
+        brick7.label1Text = "Format"
+        brick7.button1Text = "It is {} C"
+        brick7.button2Text = "Current Temperature"
         let brick3 = MessageBrick()
         brick3.label1Text = "pitch "
         brick3.button1Text = "Accelerometer value"
@@ -30,7 +30,7 @@ class BricksManager: NSObject {
         let brick6 = MessageBrick()
         brick6.label1Text = "north "
         brick6.button1Text = "Compass value"
-        return [brick1, brick2, brick3, brick4, brick5, brick6]
+        return [brick2, brick7, brick3, brick4, brick5, brick6]
     }
     
     class func getDevicesBricks() -> [DevicesBrick] {
@@ -42,7 +42,12 @@ class BricksManager: NSObject {
         brick3.label1Text = "Rotate Screen - 180 degrees"
         let brick4 = DevicesBrick()
         brick4.label1Text = "Rotate Screen - 270 degrees"
-        return [brick1, brick2, brick3, brick4]
+        let brick5 = DevicesBrick()
+        brick5.label1Text = "Set"
+        brick5.button1Text = "X"
+        brick5.label2Text = "<-"
+        brick5.button2Text = "3"
+        return [brick1, brick2, brick3, brick4, brick5]
     }
     
     class func getIfBricks() -> [IfBrick] {

@@ -19,5 +19,5 @@ let RepeatUntilColor = UIColor(red: 232.0/255, green: 126.0/255, blue: 4.0/255, 
 let SleepColor = UIColor(red: 243/255, green: 156.0/255, blue: 18.0/255, alpha: 1)
 let IFTTTMakerColor = UIColor(red: 249.0/255, green: 191.0/255, blue: 59.0/255, alpha: 1)
 let GridColor = UIColor(red: 22.0/255, green: 160.0/255, blue: 133.0/255, alpha: 1)
-let SERVERURL = "https://a20bda24.ngrok.io"
+let SERVERURL = "http://2a6f44d9.ngrok.io"
 let ApplicationDelegate = UIApplication.sharedApplication().delegate as! AppDelegate

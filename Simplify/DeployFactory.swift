@@ -48,8 +48,8 @@ class DeployFactory: NSObject {
             let task = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: {(data: NSData?, response: NSURLResponse?, error: NSError?) in
                 var fail = true
                 if data != nil {
+                    print(NSString(data: data!, encoding: NSUTF8StringEncoding)!)
                     if let dict = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as? NSDictionary {
-                        print(dict)
                         if dict.objectForKey("success") != nil {
                             fail = false
                         }

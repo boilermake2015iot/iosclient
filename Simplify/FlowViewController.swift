@@ -169,8 +169,10 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
             cell.button1.tag = indexPath.row
             cell.button1.setTitle(button1Text, forState: UIControlState.Normal)
             if brickType == .Grid && cell.label1.text == "8 x 8" {
+                cell.button1.removeTarget(self, action: "changeButton1Text:", forControlEvents: .TouchUpInside)
                 cell.button1.addTarget(self, action: "changeGrid:", forControlEvents: UIControlEvents.TouchUpInside)
             } else {
+                cell.button1.removeTarget(self, action: "changeGrid:", forControlEvents: .TouchUpInside)
                 cell.button1.addTarget(self, action: "changeButton1Text:", forControlEvents: UIControlEvents.TouchUpInside)
             }
             cell.button1.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
@@ -239,11 +241,6 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
         })
         let deviceAction = UIAlertAction(title: "Choose a device value", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
             let alertController2 = UIAlertController(title: "First", message: "Example(Old Value): \(sender.titleLabel!.text!)", preferredStyle: UIAlertControllerStyle.Alert)
-//            let buttonAction = UIAlertAction(title: "Get Button Status", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
-//                self.bricks[sender.tag].button1Text = "Get Button Status"
-//                self.attemptToSaveBrick()
-//                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
-//            })
             let temperatureAction = UIAlertAction(title: "Current Temperature", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction) in
                 self.bricks[sender.tag].button1Text = "Current Temperature"
                 self.attemptToSaveBrick()
@@ -279,8 +276,36 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
             alertController2.addAction(cancelAction)
             self.presentViewController(alertController2, animated: true, completion: nil)
         })
+        let getAction = UIAlertAction(title: "Get a variable", style: .Default, handler: { (action: UIAlertAction) in
+            let alertController2 = UIAlertController(title: "Get a variable", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+            alertController2.addTextFieldWithConfigurationHandler({(textField: UITextField) in
+                textField.placeholder = "Variable name"
+            })
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction) in
+                self.bricks[sender.tag].button1Text = "Get \(alertController2.textFields![0].text!)"
+                self.attemptToSaveBrick()
+                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction) in })
+            alertController2.addAction(okAction)
+            alertController2.addAction(cancelAction)
+            self.presentViewController(alertController2, animated: true, completion: nil)
+        })
+        let joystickAction = UIAlertAction(title: "Joystick", style: .Default, handler: { (action: UIAlertAction) in
+            self.bricks[sender.tag].button1Text = "Joystick"
+            self.attemptToSaveBrick()
+            self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+        })
+        let randAction = UIAlertAction(title: "Rand", style: .Default, handler: { (action: UIAlertAction) in
+            self.bricks[sender.tag].button1Text = "Rand"
+            self.attemptToSaveBrick()
+            self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+        })
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction) in })
         alertController.addAction(deviceAction)
+        alertController.addAction(getAction)
+        alertController.addAction(joystickAction)
+        alertController.addAction(randAction)
         alertController.addAction(okAction)
         alertController.addAction(cancelAction)
         self.presentViewController(alertController, animated: true, completion: nil)
@@ -338,8 +363,36 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
             alertController2.addAction(cancelAction)
             self.presentViewController(alertController2, animated: true, completion: nil)
         })
+        let getAction = UIAlertAction(title: "Get a variable", style: .Default, handler: { (action: UIAlertAction) in
+            let alertController2 = UIAlertController(title: "Get a variable", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+            alertController2.addTextFieldWithConfigurationHandler({(textField: UITextField) in
+                textField.placeholder = "Variable name"
+            })
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction) in
+                self.bricks[sender.tag].button2Text = "Get \(alertController2.textFields![0].text!)"
+                self.attemptToSaveBrick()
+                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction) in })
+            alertController2.addAction(okAction)
+            alertController2.addAction(cancelAction)
+            self.presentViewController(alertController2, animated: true, completion: nil)
+        })
+        let joystickAction = UIAlertAction(title: "Joystick", style: .Default, handler: { (action: UIAlertAction) in
+            self.bricks[sender.tag].button2Text = "Joystick"
+            self.attemptToSaveBrick()
+            self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+        })
+        let randAction = UIAlertAction(title: "Rand", style: .Default, handler: { (action: UIAlertAction) in
+            self.bricks[sender.tag].button2Text = "Rand"
+            self.attemptToSaveBrick()
+            self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+        })
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction) in })
         alertController.addAction(deviceAction)
+        alertController.addAction(getAction)
+        alertController.addAction(joystickAction)
+        alertController.addAction(randAction)
         alertController.addAction(okAction)
         alertController.addAction(cancelAction)
         self.presentViewController(alertController, animated: true, completion: nil)
@@ -397,8 +450,36 @@ class FlowViewController: UIViewController, UITableViewDataSource, UITableViewDe
             alertController2.addAction(cancelAction)
             self.presentViewController(alertController2, animated: true, completion: nil)
         })
+        let getAction = UIAlertAction(title: "Get a variable", style: .Default, handler: { (action: UIAlertAction) in
+            let alertController2 = UIAlertController(title: "Get a variable", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+            alertController2.addTextFieldWithConfigurationHandler({(textField: UITextField) in
+                textField.placeholder = "Variable name"
+            })
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction) in
+                self.bricks[sender.tag].button3Text = "Get \(alertController2.textFields![0].text!)"
+                self.attemptToSaveBrick()
+                self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction) in })
+            alertController2.addAction(okAction)
+            alertController2.addAction(cancelAction)
+            self.presentViewController(alertController2, animated: true, completion: nil)
+        })
+        let joystickAction = UIAlertAction(title: "Joystick", style: .Default, handler: { (action: UIAlertAction) in
+            self.bricks[sender.tag].button3Text = "Joystick"
+            self.attemptToSaveBrick()
+            self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+        })
+        let randAction = UIAlertAction(title: "Rand", style: .Default, handler: { (action: UIAlertAction) in
+            self.bricks[sender.tag].button3Text = "Rand"
+            self.attemptToSaveBrick()
+            self.tableView?.reloadRowsAtIndexPaths([NSIndexPath(forRow: sender.tag, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+        })
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction) in })
         alertController.addAction(deviceAction)
+        alertController.addAction(getAction)
+        alertController.addAction(joystickAction)
+        alertController.addAction(randAction)
         alertController.addAction(okAction)
         alertController.addAction(cancelAction)
         self.presentViewController(alertController, animated: true, completion: nil)
